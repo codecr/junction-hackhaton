@@ -12,3 +12,4 @@ export * from './schemas';
 export * from './text';
 export * from './time';
 export * from './venues';
+export * from './coverage';
