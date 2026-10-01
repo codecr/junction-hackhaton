@@ -6,81 +6,81 @@
       "name": "Ana",
       "color": "--m1",
       "shape": "circle",
-      "memberId": "m_fbdgrujm2vmxcdo2"
+      "memberId": "m_amjs6seev4axuufl"
     },
     {
       "key": "luis",
       "name": "Luis",
       "color": "--m2",
       "shape": "square",
-      "memberId": "m_d6zmt6rgrv3q5hyn"
+      "memberId": "m_stvtllrr7byszmpt"
     },
     {
       "key": "marta",
       "name": "Marta",
       "color": "--m3",
       "shape": "diamond",
-      "memberId": "m_k3zzf7l6hprnvuhh"
+      "memberId": "m_pfpq27puuwygetjn"
     },
     {
       "key": "diego",
       "name": "Diego",
       "color": "--m4",
       "shape": "triangle",
-      "memberId": "m_uupsm677iiayelam"
+      "memberId": "m_rz7hlc7nl6rqn4co"
     },
     {
       "key": "sofia",
       "name": "Sofía",
       "color": "--m5",
       "shape": "cross",
-      "memberId": "m_pldmgkjofjeylg5e"
+      "memberId": "m_lr3ssfnf5url6ycq"
     }
   ],
   "charter": {
     "v": 1,
     "type": "charter",
-    "squadId": "sq_rzlsezo23y6zysjf",
+    "squadId": "sq_ixh7jpvsb2popusl",
     "name": "Demo squad",
     "eventId": "reinvent2026",
-    "leader": "m_fbdgrujm2vmxcdo2",
+    "leader": "m_amjs6seev4axuufl",
     "seq": 1,
     "issuedAt": "2026-10-05T18:00:00Z",
     "expiresAt": "2026-12-18T00:00:00Z",
     "inviteVerifier": "JC8wvXvtXZ46LV9W_gPxj7REEIvS6DBKVzALYRjTxLM",
     "members": [
       {
-        "memberId": "m_fbdgrujm2vmxcdo2",
+        "memberId": "m_amjs6seev4axuufl",
         "name": "Ana",
-        "publicKey": "rUvRVhBfOPlJfC6g4gixPvV0PhRPvgEZ2ux9nFSD54U",
+        "publicKey": "qxIIrbV0YLIv_PxUI5py9kpgzFwDoDQbi2bmXByNZJY",
         "role": "leader",
         "joinedAt": "2026-10-05T18:00:00Z"
       },
       {
-        "memberId": "m_d6zmt6rgrv3q5hyn",
+        "memberId": "m_stvtllrr7byszmpt",
         "name": "Luis",
-        "publicKey": "_F6yC5tkSeJ259zpficGYiMPvjmOT43hyv4mdPZ2F9w",
+        "publicKey": "kja2KQCT5nsLjVe7Z2UeAtQNifIST9b5bO1BTHRKZ3c",
         "role": "member",
         "joinedAt": "2026-10-05T18:00:00Z"
       },
       {
-        "memberId": "m_k3zzf7l6hprnvuhh",
+        "memberId": "m_pfpq27puuwygetjn",
         "name": "Marta",
-        "publicKey": "4lHbLZnqxfeC4mnbsvdhVEJkK4aDIG-s1EQd-Cmc5h8",
+        "publicKey": "v1UBX4NwICyhal_vmoukOJdsPWHVue5Lj9SQvIwbuwk",
         "role": "member",
         "joinedAt": "2026-10-05T18:00:00Z"
       },
       {
-        "memberId": "m_uupsm677iiayelam",
+        "memberId": "m_rz7hlc7nl6rqn4co",
         "name": "Diego",
-        "publicKey": "YJd4VUYoVWk2DJ-CPWKWiFIJnq1b4I_70VKqGa-ts1o",
+        "publicKey": "lHLw6cEdEzCrQCV_GIl1N9aBLHmP4Sk5BduSZjdxpJg",
         "role": "member",
         "joinedAt": "2026-10-05T18:00:00Z"
       },
       {
-        "memberId": "m_pldmgkjofjeylg5e",
+        "memberId": "m_lr3ssfnf5url6ycq",
         "name": "Sofía",
-        "publicKey": "nm56YyZS29LV-Bdd1vSBT1K6Itu5X7DIchTeiCRSGq0",
+        "publicKey": "LWCkSjmRRWixoHVAJ7atmNkA3cegi9zDKXGbazffQ0c",
         "role": "member",
         "joinedAt": "2026-10-05T18:00:00Z"
       }
@@ -178,8 +178,8 @@
     {
       "v": 1,
       "type": "manifest",
-      "squadId": "sq_rzlsezo23y6zysjf",
-      "memberId": "m_fbdgrujm2vmxcdo2",
+      "squadId": "sq_ixh7jpvsb2popusl",
+      "memberId": "m_amjs6seev4axuufl",
       "seq": 1,
       "issuedAt": "2026-10-08T15:04:05Z",
       "eventId": "reinvent2026",
@@ -236,8 +236,8 @@
     {
       "v": 1,
       "type": "manifest",
-      "squadId": "sq_rzlsezo23y6zysjf",
-      "memberId": "m_d6zmt6rgrv3q5hyn",
+      "squadId": "sq_ixh7jpvsb2popusl",
+      "memberId": "m_stvtllrr7byszmpt",
       "seq": 1,
       "issuedAt": "2026-10-08T15:04:05Z",
       "eventId": "reinvent2026",
@@ -284,8 +284,8 @@
     {
       "v": 1,
       "type": "manifest",
-      "squadId": "sq_rzlsezo23y6zysjf",
-      "memberId": "m_k3zzf7l6hprnvuhh",
+      "squadId": "sq_ixh7jpvsb2popusl",
+      "memberId": "m_pfpq27puuwygetjn",
       "seq": 1,
       "issuedAt": "2026-10-08T15:04:05Z",
       "eventId": "reinvent2026",
@@ -337,8 +337,8 @@
     {
       "v": 1,
       "type": "manifest",
-      "squadId": "sq_rzlsezo23y6zysjf",
-      "memberId": "m_uupsm677iiayelam",
+      "squadId": "sq_ixh7jpvsb2popusl",
+      "memberId": "m_rz7hlc7nl6rqn4co",
       "seq": 1,
       "issuedAt": "2026-10-08T15:04:05Z",
       "eventId": "reinvent2026",
@@ -390,8 +390,8 @@
     {
       "v": 1,
       "type": "manifest",
-      "squadId": "sq_rzlsezo23y6zysjf",
-      "memberId": "m_pldmgkjofjeylg5e",
+      "squadId": "sq_ixh7jpvsb2popusl",
+      "memberId": "m_lr3ssfnf5url6ycq",
       "seq": 1,
       "issuedAt": "2026-10-08T15:04:05Z",
       "eventId": "reinvent2026",

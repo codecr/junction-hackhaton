@@ -54,7 +54,7 @@ Canonical JSON is RFC 8785 (JCS), implemented with the `json-canonicalize` packa
 
 - `status`: `reserved`, `favorite`, `maybe`.
 - `priority` 1 to 5, default 3. `locked` marks sessions the solver may never move (for example the member is a speaker). `role` is `attendee` or `speaker`.
-- `holds` (session IDs only, at most 200) tells every solver what this member does not want to change. `reason` is `declined` (the member rejected a proposal that adds this session, or that removes or replaces it) or `pinned` (the member marked it as untouchable). Solvers never propose adding a `declined` session to this member, and never propose removing or replacing a `pinned` one. A hold drops out when the member clears it or after 24 hours via a new manifest that no longer lists it. Allowed at every share level.
+- `holds` (session IDs only, at most 200) tells every solver what this member does not want to change. `reason` is `declined` (the member rejected a proposal that adds this session, or that removes or replaces it) or `pinned` (the member marked it as untouchable). Solvers never propose adding a `declined` session to this member, and never propose removing or replacing a `pinned` one. UI convention that makes this work: declining a proposal that **adds** a session writes `declined` on the added session ids; declining a proposal that **removes** a session writes `pinned` on the removed ones. A hold drops out when the member clears it or after 24 hours via a new manifest that no longer lists it. Allowed at every share level.
 - `busy` only at share level L1 or higher, `at` only at L2. The schema rejects these fields at lower levels.
 - The manifest never contains titles, abstracts, speakers, rooms or free text.
 
@@ -74,6 +74,8 @@ Canonical JSON is RFC 8785 (JCS), implemented with the `json-canonicalize` packa
 ```
 
 ## Session code parsing and repeat groups
+
+> **Provisional until Spike 0.** The regex, the meaning of suffixes and the repeat grouping below are implemented in `packages/core/src/codes.ts` and `repeats.ts` and tested on invented data only. Nothing here has been checked against the real catalog. Spike 0 item 4 decides.
 
 Observed code shapes: `COM302-R` and `COM302-R1`. Working regex:
 
@@ -194,3 +196,44 @@ DynamoDB single table: `pk=SQUAD#<id>` with `sk` values `CHARTER`, `MANIFEST#<mi
 | `squad_note` | `sessionId`, `verdict`, `note` | Posts a scout note. |
 
 Tools return titles from the signed-in member's own local catalog only, and never expose another member's fields above the sharing level that member chose.
+
+## Addendum: what was built and where it differs (2026-10-01)
+
+Everything above is implemented in `packages/core`. These are the places where the code does something the text does not say, or does it differently. Each one has a test.
+
+### Schemas and messages
+
+- **Parity instead of generation.** `schemas/*.json` stay hand-maintained, because they carry rules zod cannot express in JSON Schema (the sharing-level `allOf` in the manifest). `packages/core/test/schema-parity.test.ts` compares them with the zod schemas (properties, required, enums, constants, bounds, patterns, `additionalProperties`) and fails on drift. It already found one: `mustCover[].sessionId` had no bounds in `charter.schema.json`; it now has 1 to 128 like every other session id.
+- A manifest is also rejected when the same `sessionId` appears twice in `sessions` or in `holds`. The text does not say it, and duplicate rows would make solver input ambiguous.
+- `openCharter` and `openMessage` follow the verification order of "Signed envelope". A charter is checked for one leader, unique members, member ids that match their public keys, and `expiresAt` after `issuedAt`. A signed payload that is not canonical JSON is rejected (`non-canonical`).
+- `core` never generates randomness. Key pairs come from a caller-supplied 32-byte seed (`keyPairFromSeed`), squad ids from a caller-supplied 16-byte nonce.
+
+### Time and catalog
+
+- No `Date`, `Intl` or time zone database in core. Instants are epoch seconds or minutes, and the event's local day comes from a fixed `utcOffsetMin` on the catalog snapshot (Las Vegas in December: -480). The lint rule in `eslint.config.js` enforces this for `packages/core`.
+- Core works on a normalised `CatalogSession` (epoch-minute start and end, a normalised venue id). `toCatalogSession` maps an Events API session into it, converting the local `sessionTime` of the OpenAPI, and skips with a reason when a session has no code, time or known venue. Field names for `type`, `level` and `features` are provisional until Spike 0.
+- `catalogHash` hashes the canonical JSON of the sorted rows `[sessionId, startMin, endMin, venue, room]`, prefixed `sha256:`.
+- The venue graph gives each venue a position `at` (walking minutes along the Strip). Explicit edges override it for the solver. The default graph is the one drawn in `design/reference.html` and is marked approximate.
+
+### Coverage
+
+- A hop needs `walk + travel.bufferMin` and has `end of next - start of previous` minutes. The buffer applies within a venue as well. An overlap is reported as a hop with a negative gap. A hop with an unknown venue is **not judged** and is listed in `unjudgedHops` instead of being guessed.
+- The report also carries `offered` (sessions available per topic and day), `unknownSessions` (held but missing from this catalog, a sign the catalogs differ) and `collidesWithLunch` on must-cover gaps.
+
+### Solver
+
+- **No MEET proposals yet.** MEET is a "could" item (H1) and is cut first. The `Proposal` type reserves it.
+- **SWAP** is only to another session in the same high-confidence repeat group. "Same topic and day within a level" needs a charter flag that does not exist, so it is not built.
+- **DROP** is only for unplanned duplicates, as the text says. An impossible connection is fixed by a SWAP to a repeat that fits, never by a DROP.
+- **CLAIM** is only for a must-cover session or a session in `SolverInput.newSessions` that nobody holds, and it is proposed to the owner under the claim rule only, not to everybody.
+- **ΔP** for a SWAP is 0 (the repeat inherits the priority), for a DROP it is minus the dropped value, for a CLAIM it is plus priority 3 times 200. The acceptance limit is `floor(tolerance_milli x P_current / 1000)` of the member's own value, with the charter's 0.2 as the default.
+- **Acceptance is stricter than the text.** Besides `squad delta >= 50`, no component of V (coverage, must-cover, duplicates, hops) may fall, and a must-cover session is never released by its sole holder, not even for its own repeat. Property tests found why: without this the solver asked a member to claim a must-cover session and then, next round, to swap it for its repeat (also must-cover) and claim it again.
+- **Each proposal stands alone.** Candidates are ranked by `(-squad delta, -personal delta, canonical move)` and taken in that order. One is kept only if it is still accepted after the earlier ones, **and** every earlier one is still doable if only this one is applied. This closes a case the property tests found: a DROP that made a CLAIM stop fitting because the dropped session was the claim's neighbour. Pairwise independence is guaranteed and checked; three-way interplay is not.
+- `MIN_SQUAD_GAIN` (50) is never the deciding factor with the schema limits (weight at least 1, target at most 5 make the smallest positive change 200). It is kept because the text asks for it.
+- Ties go to the lowest member id (it is part of the canonical move string). The demo keys were chosen so Ana sorts before Luis, which addresses the OPS305-R1 swap to Ana as in the reference.
+- **Claim rule.** Members carry no personal topic list, so eligibility does not filter by topic: it is "can fit it and has not declined it". The session's topics only drive the ranking. `rankClaimants` and `mayClaim` take the clock as an argument.
+- `provisional` is true when the manifests do not all carry the same `catalogHash`.
+
+### What the tests prove
+
+`solver.property.test.ts` runs the checks of "Properties to test" on random squads, with the rules re-implemented independently in `test/world.ts`: order independence, locked and pinned never moved, declined never added, feasibility, delta at least 50 and equal to an independent recomputation, tolerance, proposals standing alone, no repeated move across rounds with the value always rising, and at most 50 proposals. The golden fixture hash for the demo squad is pinned in `fixtures/generate.test.ts` and must match on Linux, macOS and Windows CI (not yet run: the repository has no remote CI result).

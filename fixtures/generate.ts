@@ -501,7 +501,10 @@ export interface DemoData {
   skipped: SkipReason[];
 }
 
-const memberKeys = (key: string) => keyPairFromSeed(sha256Bytes(utf8(`junction-demo-key:${key}`)));
+// The label is arbitrary. This one makes Ana's member id sort before Luis's, so the solver's
+// tie-break (lowest member id) addresses the OPS305-R1 swap to Ana, as in design/reference.html.
+const KEY_LABEL = 'junction-demo-key-v4';
+const memberKeys = (key: string) => keyPairFromSeed(sha256Bytes(utf8(`${KEY_LABEL}:${key}`)));
 
 export function generateDemo(seed: number = DEFAULT_SEED): DemoData {
   const rng = makeRng(seed);

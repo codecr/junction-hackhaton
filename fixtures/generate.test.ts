@@ -76,7 +76,7 @@ describe('determinism', () => {
 
   it('has a pinned hash for the default seed (golden, must match on Linux, macOS and Windows)', () => {
     expect(sha256Hex(Object.values(renderFiles(demo)).join('\n'))).toBe(
-      'a8a9d165063325db91372c9acdb31fdd00de0b45f902977dce89f2438901fba4',
+      '58ff9942ac22b738b716e61c29b3a7245bd72411554dff49d9f7d213129f8a41',
     );
   });
 });

@@ -14,3 +14,6 @@ export * from './time';
 export * from './venues';
 export * from './coverage';
 export * from './api-session';
+export * from './claim';
+export * from './feasibility';
+export * from './solver';
