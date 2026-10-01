@@ -56,7 +56,7 @@
     },
     "mustCover": {
       "type": "array", "maxItems": 100,
-      "items": { "type": "object", "required": ["sessionId"], "additionalProperties": false, "properties": { "sessionId": { "type": "string" } } }
+      "items": { "type": "object", "required": ["sessionId"], "additionalProperties": false, "properties": { "sessionId": { "type": "string", "minLength": 1, "maxLength": 128 } } }
     },
     "lunch": {
       "type": "object", "required": ["start", "end", "protected"], "additionalProperties": false,
