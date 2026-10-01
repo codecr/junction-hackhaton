@@ -36,5 +36,5 @@ Junction lets a group of attendees cover the conference as a team without any of
 
 ## Two things to know before you begin
 
-- **Our servers never call the Events API or see its tokens.** The API redirects sign-in to `localhost` ports 8484 to 8489 only, and its `/mcp` endpoint is the one that allows browser origins. Junction is a hosted web app (Amplify Hosting) where each attendee signs in and calls the API from their own browser; the squad server (API Gateway, Lambda, DynamoDB) only stores signed manifests. A local agent is the fallback if the browser path is not allowed. See `docs/02-ARCHITECTURE.md` (ADR-012).
+- **Nothing can call the Events API from AWS.** The guide says the app "has to run locally" and only registers `localhost` ports 8484 to 8489 for sign-in. Junction therefore has a local agent (runs on each attendee's machine, serves the web UI at `127.0.0.1:4848`) and a hosted part on AWS that never sees Events API credentials: the landing site and a fictional-data demo (Amplify Hosting), and the squad server (API Gateway, Lambda, DynamoDB, CDK). See `docs/02-ARCHITECTURE.md` (ADR-012).
 - **The re:Invent catalog is not public.** Never commit it, never derive demo data from it, never send it to the squad server. Demo data is generated from a seeded script with invented titles.

@@ -60,7 +60,8 @@ Kiro: `oauth.clientId` as above, `redirectUri: "http://127.0.0.1:8976"` (end at 
 - `OPTIONS https://oauth.awsevents.com/oauth2/token` returns `200` echoing the request `Origin` in `Access-Control-Allow-Origin`, allowing `POST`, `authorization` and `content-type`, with `Access-Control-Allow-Credentials: true`. A browser can exchange the authorization code and refresh tokens.
 - `OPTIONS` on `/v1/events`, `/v1/events/reinvent2026/schedule` and `/v1/events/reinvent2026/sessions` returns `404 MissingAuthenticationTokenException` with no CORS headers. A browser cannot send `Authorization` to the REST routes, because the preflight fails. Unauthenticated `GET` returns `401 "Sign in to continue"` with `Access-Control-Allow-Origin: *`.
 - `OPTIONS https://api.awsevents.com/mcp` returns `200` with `Access-Control-Allow-Origin: *`, allowing `POST` and the headers `authorization`, `content-type`, `mcp-protocol-version`. `POST /mcp` without a token returns `401` with a `WWW-Authenticate: Bearer ... resource_metadata` header and a JSON-RPC error. So the MCP endpoint is the browser-usable surface.
-- Not verified: that `/mcp` exposes all 12 operations with structured results, that the code exchange works with `redirect_uri` on `localhost` from a hosted page, and whether the hosted-app approach is allowed (the guide says "There is no hosted option"). These are Spike 0 items A to C.
+- Read from the guide the same day: `auth-signing-in` says "Your application must run on the attendee's machine. It listens at `/callback` on one of six reserved loopback ports, `8484` through `8489`. […] `redirect_uri` is matched exactly, with no wildcards. […] There is no hosted redirect URI, so you can distribute an application that signs attendees in, but it has to run locally." `auth-handling-tokens` says "In a browser application, keep both tokens in memory only." and "Send the access token only to `https://api.awsevents.com`." `auth-endpoints` lists the Builder ID sign-out endpoint `https://idp.awsevents.com/oidc/logout`, and says to always send `identity_provider=AWSBuilderID`. `rest-api` says the full OpenAPI is served at `https://api.awsevents.com/v1/openapi.json`.
+- Decision (ADR-012): the local agent is primary. A browser-side sign-in is possible technically but contradicts `auth-signing-in`, so it is only a Spike 0 experiment (item 13) and is adopted only with written confirmation.
 
 ## Reported by other participants (verify)
 
@@ -72,9 +73,7 @@ Kiro: `oauth.clientId` as above, `redirectUri: "http://127.0.0.1:8976"` (end at 
 
 Record each result in `docs/FINDINGS.md` with the date. Save redacted raw responses under `fixtures/private/` (git-ignored).
 
-A. Browser path (ADR-012), before anything else. From a throwaway page on a hosted origin, run PKCE with `redirect_uri=http://localhost:8484/callback`, paste the dead-callback URL back, exchange the code at the token endpoint, refresh it, and call `/mcp` (`initialize`, `tools/list`, then `GetSchedule`). Record: does the exchange work, do the 12 operations appear as tools, what do results look like (structured JSON or text), are quotas the same, any browser or CSP surprise. Also re-read the hackathon rules and the guide for any ban on hosted apps handling tokens. If A fails, the local agent becomes primary.
-B. Compare `/mcp` results with the REST shapes below, through the local agent if REST needs it, so the `Transport` interface hides the difference.
-1. Sign in with Builder ID on 8484, then again with 8484 occupied to prove the fallback (agent path). `ListEvents` and confirm the re:Invent 2026 event ID (done 2026-10-01: `reinvent2026`).
+1. Sign in with Builder ID on 8484, then again with 8484 occupied to prove the fallback. `ListEvents` and confirm the re:Invent 2026 event ID (done 2026-10-01: `reinvent2026`).
 2. Walk the whole catalog. Compare the count with `totalCount`. Record page sizes. Time it against the 60 per minute quota. Decide the polling cadence.
 3. Field inventory: which session fields are present, their exact names and types, the taxonomy labels for topics, tracks, services, roles, industries. Save the label lists to build the topic picker.
 4. Session codes: list every suffix pattern with counts. Confirm `-R`, `-R1` and any others. For twenty repeat groups, diff the fields that differ.
@@ -83,9 +82,10 @@ B. Compare `/mcp` results with the REST shapes below, through the local agent if
 7. `GetSchedule` shape with an empty schedule, after a favorite, after a personal-time entry. Save fixtures.
 8. Personal time on the phone: create a test entry (title, description with a tag, location) and open the official AWS Events mobile app and the portal. Does it show title, description, location? At what time? Does creating one trigger a notification? Decide `personalTimeMode`. Delete it.
 9. Favorites round trip: favorite on the phone, then `GetSchedule`. How long until it appears? Same the other way.
-10. Is there a published OpenAPI document? If yes, generate types from it.
+10. OpenAPI: published at `https://api.awsevents.com/v1/openapi.json` (found 2026-10-01). Generate types from it and diff it against the real responses seen in items 2 to 7.
 11. Bulk favorite of ten sessions where one ID is invalid. Record the response shape for partial failure.
 12. Unregistered or edge 403 behaviour if reproducible.
+13. Optional experiment, only if time allows and never as a base for features: from a throwaway local page, run PKCE, exchange the code in the browser, and call `/mcp` (`initialize`, `tools/list`, `GetSchedule`) to learn whether the 12 operations and structured results are available there. Tokens in memory only. Keep the result in `docs/FINDINGS.md`; adopting it needs written confirmation from the organizers or AWS.
 
 ## FINDINGS.md template
 

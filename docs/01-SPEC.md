@@ -6,9 +6,9 @@ Priorities: **M** must (core demo), **S** should, **C** could. Phases refer to d
 
 | ID | Pri | Requirement |
 |---|---|---|
-| A1 | M | Sign in with AWS Builder ID using OAuth 2.0 authorization code with PKCE, in the member's browser (ADR-012): redirect to `http://localhost:8484/callback`, member pastes the callback URL back, code exchange in the browser. Scope `openid email events/access`. Tokens in the app's IndexedDB only, never sent to our servers. Refresh before expiry (access token 60 min, refresh token 30 days), serialised across tabs. **Fallback (agent):** listen at `/callback` on 8484, falling back through 8485 to 8489 if taken (Claude Code's MCP setup also uses 8484), tokens in `~/.junction/credentials.json` mode 0600. |
+| A1 | M | Sign in with AWS Builder ID using OAuth 2.0 authorization code with PKCE, in the local agent (ADR-012). Listen at `/callback` on `localhost` port 8484, falling back through 8485 to 8489 if taken (Claude Code's MCP setup also uses 8484), only while signing in. Send `identity_provider=AWSBuilderID` and `code_challenge_method=S256`. Scope `openid email events/access`. Store tokens in `~/.junction/credentials.json` mode 0600. Refresh before expiry (access token 60 min, refresh token 30 days). |
 | A2 | M | Sign out revokes the refresh token, deletes stored tokens, and offers to end the Builder ID session (explain that this signs the attendee out of Builder ID in that browser). |
-| A3 | M | Typed client for all 12 operations. Validate responses with zod, treating every session field as optional. Prefer generating types from an OpenAPI document if one is published (Spike 0). |
+| A3 | M | Typed client for all 12 operations. Validate responses with zod, treating every session field as optional. Generate types from the official OpenAPI document at `https://api.awsevents.com/v1/openapi.json`. |
 | A4 | M | Per-operation token-bucket pacer using the published per-attendee quotas. Honour `429` with `Retry-After`. Split batches larger than remaining quota. |
 | A5 | M | Error model: `400` fix the request, `403` with JSON body means not registered for the event, `403` without body means the edge refused this address, `404` missing resource, `409` operation closed, `429` throttled, `5xx` reconcile before retry. |
 | A6 | M | Write safety: after any bulk write or `CreatePersonalTime`, read `GetSchedule`, compare with intent, and report per-session outcomes. No blind retries. |
@@ -18,7 +18,7 @@ Priorities: **M** must (core demo), **S** should, **C** could. Phases refer to d
 
 | ID | Pri | Requirement |
 |---|---|---|
-| B1 | M | Download the catalog with `includeAbstracts=false`, paginating until `nextToken` is absent, fetch abstracts lazily for sessions shown. Cache in IndexedDB (web app) or `node:sqlite` under `~/.junction/` (agent), behind one `CatalogStore` interface. |
+| B1 | M | Download the catalog with `includeAbstracts=false`, paginating until `nextToken` is absent, fetch abstracts lazily for sessions shown. Cache with `node:sqlite` under `~/.junction/`, behind a `CatalogStore` interface. |
 | B2 | M | `catalogHash`: sha256 over the sorted list of (sessionId, start, end, venue, room). Included in every manifest. |
 | B3 | M | Snapshot diff: added, removed, changed (time, venue, room, title), and fullness band changes. |
 | B4 | M | Session code parser and repeat groups. Codes look like `COM302-R` and `COM302-R1` (base, suffix letters, optional index). Discover the real suffix patterns from the catalog before trusting the regex. Group key is base code plus normalised title. Repeats are not identical (one card showed a community-led format, its repeat a customer story), so compute and surface differences in type, features, speakers, level and time. |
