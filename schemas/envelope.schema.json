@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://junction.example/schemas/envelope.schema.json",
+  "title": "Signed envelope",
+  "type": "object",
+  "required": ["kid", "alg", "payload", "sig"],
+  "additionalProperties": false,
+  "properties": {
+    "kid": { "type": "string", "pattern": "^m_[a-z2-7]{16}$" },
+    "alg": { "const": "Ed25519" },
+    "payload": { "type": "string", "contentEncoding": "base64url", "maxLength": 87400 },
+    "sig": { "type": "string", "contentEncoding": "base64url" }
+  }
+}

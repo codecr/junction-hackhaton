@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm test*)",
+      "Bash(npx vitest*)",
+      "Bash(npx tsc*)",
+      "Bash(npx eslint*)",
+      "Bash(npx prettier*)",
+      "Bash(npx playwright*)",
+      "Bash(npx cdk synth*)",
+      "Bash(npx cdk diff*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git add*)",
+      "Bash(git commit*)"
+    ],
+    "ask": [
+      "Bash(npx cdk deploy*)",
+      "Bash(npx cdk destroy*)",
+      "Bash(npx cdk bootstrap*)",
+      "Bash(git push*)",
+      "Bash(npm install*)",
+      "Bash(aws *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.junction/**)",
+      "Read(~/.aws/credentials)",
+      "Bash(rm -rf /*)"
+    ]
+  }
+}

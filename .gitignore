@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+coverage/
+cdk.out/
+.env
+.env.*
+.DS_Store
+*.log
+
+# Never commit catalog data, tokens or private fixtures
+fixtures/private/
+*.catalog.json
+.junction/
