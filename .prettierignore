@@ -1,0 +1,14 @@
+node_modules
+dist
+coverage
+cdk.out
+fixtures/private
+fixtures/demo
+package-lock.json
+design/reference.html
+design/*.png
+docs
+schemas
+*.md
+design
+packages/web/src/styles

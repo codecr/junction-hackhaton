@@ -1,0 +1,48 @@
+{
+  "name": "junction",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Squad coordination for AWS re:Invent 2026",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "workspaces": [
+    "packages/*",
+    "infra"
+  ],
+  "scripts": {
+    "dev": "node scripts/not-yet.mjs dev T1.4 agent and T2.2 web",
+    "demo": "node scripts/not-yet.mjs demo T2.5 demo build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "shots": "node scripts/not-yet.mjs shots T2.3 Playwright screenshots",
+    "fixtures": "tsx fixtures/generate.ts",
+    "guard": "node scripts/guard-catalog.mjs",
+    "infra:synth": "node scripts/not-yet.mjs infra:synth T3.2 CDK stacks",
+    "infra:diff": "node scripts/not-yet.mjs infra:diff T3.2 CDK stacks",
+    "infra:deploy": "node scripts/not-yet.mjs infra:deploy T3.2 CDK stacks",
+    "prepare": "simple-git-hooks || exit 0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "node scripts/guard-catalog.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.3",
+    "@vitest/coverage-v8": "^5.0.3",
+    "eslint": "^10.11.0",
+    "fast-check": "^4.10.2",
+    "prettier": "^3.9.9",
+    "simple-git-hooks": "^2.14.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3"
+  }
+}

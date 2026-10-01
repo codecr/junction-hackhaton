@@ -1,0 +1,55 @@
+/* Junction design tokens. Source of truth for the web UI and the landing site.
+   Rationale for every choice lives in docs/05-DESIGN.md. */
+:root {
+  /* Surfaces and lines */
+  --ground: #F3F6F7;        /* page. Cool, slightly green-grey paper. Never pure white, never cream. */
+  --ground-sunk: #E6EBEE;   /* protected time bands, hovered rows */
+  --rule: #D3DCE0;          /* hairlines, gridlines */
+  --rule-strong: #AEBBC3;   /* axis lines, table headers */
+
+  /* Ink */
+  --ink: #0E2233;           /* text and primary controls. Marine blue-black. */
+  --ink-2: #4A6072;         /* secondary text. 6.0:1 on --ground. */
+  --ink-3: #7A8E9C;         /* strokes and disabled only. Fails 4.5:1, never for text. */
+  --ink-hover: #1C3B54;     /* primary control on hover */
+  --on-ink: #F3F6F7;        /* text on --ink surfaces */
+  --on-ink-2: #C7D3DB;      /* secondary text on --ink surfaces (tooltips). 9.6:1 on --ink. */
+
+  /* Signal: only for "lines meet" (shared sessions, meeting points) */
+  --signal: #FFC800;
+  --signal-soft: #FFE99A;
+
+  /* State */
+  --conflict: #B3261E;      /* impossible connections, errors. 6.3:1 on --ground. */
+
+  /* Members: five slots, all >= 4.8:1 on --ground. Always paired with a marker shape and a name. */
+  --m1: #1F5FA8; /* cobalt, circle */
+  --m2: #B5446E; /* berry, square */
+  --m3: #2C7A5B; /* pine, diamond */
+  --m4: #7452B8; /* violet, triangle */
+  --m5: #9A5B13; /* ochre, cross */
+
+  /* Type: one variable family, two axes carry the hierarchy */
+  --font: "Archivo Variable", "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --w-text: 100;            /* width axis for reading text */
+  --w-data: 82;             /* semi-condensed for times, codes, chart labels */
+  --w-display: 112;         /* slightly extended for the page title and wordmark */
+
+  --fs-title: 1.875rem;     /* 30 */
+  --fs-h2: 1.125rem;        /* 18 */
+  --fs-body: 0.9375rem;     /* 15 */
+  --fs-small: 0.8125rem;    /* 13 */
+  --fs-micro: 0.71875rem;   /* 11.5, chart annotations only */
+
+  /* Space: 4px base */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 72px;
+
+  /* Shape */
+  --radius-control: 6px;
+  --radius-mark: 3px;
+
+  /* Motion: one orchestrated moment on load, everything else answers an action */
+  --ease-out: cubic-bezier(.2, .7, .2, 1);
+  --dur-reveal: 1100ms;
+  --dur-response: 140ms;
+}
