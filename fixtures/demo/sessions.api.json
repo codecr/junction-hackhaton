@@ -1,0 +1,3266 @@
+[
+  {
+    "sessionId": "demo-agt301",
+    "title": "Agent memory in production",
+    "abbreviation": "AGT301",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 301",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-agt402",
+    "title": "Multi-agent orchestration",
+    "abbreviation": "AGT402",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 402",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "16:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-agt403",
+    "title": "Evaluating agents",
+    "abbreviation": "AGT403",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 403",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "10:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-agt405",
+    "title": "Observability for agent fleets",
+    "abbreviation": "AGT405",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 405",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "15:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-bsi403",
+    "title": "Shared memory for agent fleets",
+    "abbreviation": "BSI403",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 403",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "16:15",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-con401",
+    "title": "Running EKS at 10,000 nodes",
+    "abbreviation": "CON401",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 401",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "09:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Containers"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-dat301",
+    "title": "Streaming lakehouse ingestion",
+    "abbreviation": "DAT301",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 301",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "09:15",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-dat402",
+    "title": "Zero-ETL at scale",
+    "abbreviation": "DAT402",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 402",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "13:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-dat404",
+    "title": "Vector search cost tuning",
+    "abbreviation": "DAT404",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 404",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "14:15",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-fin301",
+    "title": "Cost visibility for AI workloads",
+    "abbreviation": "FIN301",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 301",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "08:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-fin302",
+    "title": "Prompt caching economics",
+    "abbreviation": "FIN302",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 302",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "13:45",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-001",
+    "title": "Frugal gateways in regulated settings",
+    "abbreviation": "BSI704",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 704",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-002",
+    "title": "Observable pipelines for small teams",
+    "abbreviation": "OPS811",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 811",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-003",
+    "title": "Lean fleets across regions",
+    "abbreviation": "CON768",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Mandalay Bay",
+    "room": "Room 768",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-004",
+    "title": "Verifiable replicas on a tight budget",
+    "abbreviation": "AGT883",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "MGM Grand",
+    "room": "Room 883",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-005",
+    "title": "Frugal queues at the edge",
+    "abbreviation": "FIN743",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 743",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      },
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-006",
+    "title": "Portable pipelines across regions",
+    "abbreviation": "DAT846",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 846",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-007",
+    "title": "Hardened gateways under load",
+    "abbreviation": "SVS768",
+    "type": "Workshop",
+    "level": "200 - Intermediate",
+    "venue": "Caesars Forum",
+    "room": "Room 768",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-008",
+    "title": "Composable queues from scratch",
+    "abbreviation": "SEC802",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 802",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      },
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-009",
+    "title": "Resilient caches for small teams",
+    "abbreviation": "FIN704",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 704",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-010",
+    "title": "Lean schemas from scratch",
+    "abbreviation": "AGT831",
+    "type": "Workshop",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 831",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-011",
+    "title": "Portable pipelines for small teams",
+    "abbreviation": "CON853",
+    "type": "Workshop",
+    "level": "200 - Intermediate",
+    "venue": "Caesars Forum",
+    "room": "Room 853",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-012",
+    "title": "Incremental caches in regulated settings",
+    "abbreviation": "CON733",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 733",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-013",
+    "title": "Verifiable gateways at the edge",
+    "abbreviation": "AGT731",
+    "type": "Workshop",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 731",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-014",
+    "title": "Observable workflows under load",
+    "abbreviation": "DAT747",
+    "type": "Lightning talk",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 747",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-015",
+    "title": "Hardened pipelines on a tight budget",
+    "abbreviation": "SVS811",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 811",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-016",
+    "title": "Portable manifests under load",
+    "abbreviation": "FIN768",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 768",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-017",
+    "title": "Incremental fleets at the edge",
+    "abbreviation": "BSI842",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Caesars Forum",
+    "room": "Room 842",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-018",
+    "title": "Hardened schemas without downtime",
+    "abbreviation": "DAT806",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 806",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-019",
+    "title": "Frugal schemas without downtime",
+    "abbreviation": "CON891",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 891",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "13:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      },
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-020",
+    "title": "Hardened replicas from scratch",
+    "abbreviation": "FIN821",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Caesars Forum",
+    "room": "Room 821",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-021",
+    "title": "Resilient caches on a tight budget",
+    "abbreviation": "DAT773",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 773",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      },
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-022",
+    "title": "Observable gateways under load",
+    "abbreviation": "SVS746",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 746",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-023",
+    "title": "Composable schemas at the edge",
+    "abbreviation": "AGT769",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 769",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      },
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-024",
+    "title": "Portable schemas across regions",
+    "abbreviation": "SEC723",
+    "type": "Workshop",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 723",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      },
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-025",
+    "title": "Observable queues at the edge",
+    "abbreviation": "CON722",
+    "type": "Chalk talk",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 722",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "09:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      },
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-026",
+    "title": "Portable schemas from scratch",
+    "abbreviation": "FIN727-R",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 727",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "14:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-026-r1",
+    "title": "Portable schemas from scratch",
+    "abbreviation": "FIN727-R1",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 727",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "14:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-027",
+    "title": "Observable fleets at the edge",
+    "abbreviation": "DAT723",
+    "type": "Workshop",
+    "level": "200 - Intermediate",
+    "venue": "Mandalay Bay",
+    "room": "Room 723",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "14:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-028",
+    "title": "Practical queues from scratch",
+    "abbreviation": "BSI737",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 737",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "14:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      },
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-029",
+    "title": "Lean pipelines in regulated settings",
+    "abbreviation": "AGT846",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 846",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "08:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-030",
+    "title": "Frugal queues across regions",
+    "abbreviation": "CON701",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 701",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "15:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      },
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-031",
+    "title": "Observable replicas at the edge",
+    "abbreviation": "SEC805-R",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 805",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "16:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-031-r1",
+    "title": "Observable replicas at the edge",
+    "abbreviation": "SEC805-R1",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 805",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "16:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-032",
+    "title": "Composable pipelines across regions",
+    "abbreviation": "FIN898",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 898",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "16:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-033",
+    "title": "Incremental manifests on a tight budget",
+    "abbreviation": "FIN864",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 864",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-034",
+    "title": "Lean replicas under load",
+    "abbreviation": "FIN728",
+    "type": "Workshop",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 728",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "08:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-035",
+    "title": "Observable ledgers for small teams",
+    "abbreviation": "CON774",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 774",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "15:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      },
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-036",
+    "title": "Verifiable manifests from scratch",
+    "abbreviation": "FIN744-R",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 744",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "14:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-036-r1",
+    "title": "Verifiable manifests from scratch",
+    "abbreviation": "FIN744-R1",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 744",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "14:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-037",
+    "title": "Frugal queues from scratch",
+    "abbreviation": "FIN828",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 828",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "09:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      },
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-038",
+    "title": "Composable caches in regulated settings",
+    "abbreviation": "DAT858",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 858",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "15:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      },
+      {
+        "name": "Calla Brandt"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-039",
+    "title": "Lean fleets under load",
+    "abbreviation": "SVS825",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 825",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "15:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-040",
+    "title": "Resilient replicas for small teams",
+    "abbreviation": "CON803",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 803",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-11-30",
+      "time": "08:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      },
+      {
+        "name": "Pavel Ostrow"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-041",
+    "title": "Hardened pipelines at the edge",
+    "abbreviation": "DAT856-R",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 856",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "11:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-041-r1",
+    "title": "Hardened pipelines at the edge",
+    "abbreviation": "DAT856-R1",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 856",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "11:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-042",
+    "title": "Incremental caches on a tight budget",
+    "abbreviation": "DAT883",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 883",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "13:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      },
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-043",
+    "title": "Incremental workflows without downtime",
+    "abbreviation": "SEC837",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 837",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "11:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-044",
+    "title": "Composable manifests on a tight budget",
+    "abbreviation": "SEC838",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 838",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "17:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-045",
+    "title": "Resilient gateways on a tight budget",
+    "abbreviation": "AGT717",
+    "type": "Chalk talk",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 717",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "12:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      },
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-046",
+    "title": "Incremental fleets from scratch",
+    "abbreviation": "DAT710-R",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 710",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "15:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-046-r1",
+    "title": "Incremental fleets from scratch",
+    "abbreviation": "DAT710-R1",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 710",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "15:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-047",
+    "title": "Practical gateways without downtime",
+    "abbreviation": "SVS864",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 864",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "12:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      },
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-048",
+    "title": "Practical ledgers across regions",
+    "abbreviation": "SVS705",
+    "type": "Workshop",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 705",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "13:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-049",
+    "title": "Incremental queues at the edge",
+    "abbreviation": "SVS877",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 877",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "09:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-050",
+    "title": "Practical schemas for small teams",
+    "abbreviation": "BSI732",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 732",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "16:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-051",
+    "title": "Verifiable schemas for small teams",
+    "abbreviation": "CON744-R",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 744",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "15:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-051-r1",
+    "title": "Verifiable schemas for small teams",
+    "abbreviation": "CON744-R1",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 744",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "15:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-052",
+    "title": "Portable manifests across regions",
+    "abbreviation": "SVS842",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Mandalay Bay",
+    "room": "Room 842",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-053",
+    "title": "Composable pipelines under load",
+    "abbreviation": "FIN786",
+    "type": "Workshop",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 786",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "12:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-054",
+    "title": "Portable fleets under load",
+    "abbreviation": "BSI844",
+    "type": "Chalk talk",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 844",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "11:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-055",
+    "title": "Portable replicas for small teams",
+    "abbreviation": "DAT864",
+    "type": "Workshop",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 864",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "08:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-056",
+    "title": "Portable queues without downtime",
+    "abbreviation": "DAT847-R",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 847",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "14:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-056-r1",
+    "title": "Portable queues without downtime",
+    "abbreviation": "DAT847-R1",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 847",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "14:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-057",
+    "title": "Resilient schemas under load",
+    "abbreviation": "FIN781",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 781",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "11:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-058",
+    "title": "Observable fleets for small teams",
+    "abbreviation": "AGT817",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 817",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "08:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      },
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-059",
+    "title": "Practical queues in regulated settings",
+    "abbreviation": "SVS726",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 726",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "13:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      },
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-060",
+    "title": "Portable manifests from scratch",
+    "abbreviation": "SVS792",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 792",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-061",
+    "title": "Lean workflows at the edge",
+    "abbreviation": "SVS713-R",
+    "type": "Lightning talk",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 713",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "11:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-061-r1",
+    "title": "Lean workflows at the edge",
+    "abbreviation": "SVS713-R1",
+    "type": "Lightning talk",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 713",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "11:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-062",
+    "title": "Composable queues without downtime",
+    "abbreviation": "SVS765",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 765",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "11:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      },
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-063",
+    "title": "Portable workflows for small teams",
+    "abbreviation": "DAT791",
+    "type": "Chalk talk",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 791",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "10:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      },
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-064",
+    "title": "Verifiable queues from scratch",
+    "abbreviation": "DAT761",
+    "type": "Lightning talk",
+    "level": "200 - Intermediate",
+    "venue": "Mandalay Bay",
+    "room": "Room 761",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "12:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      },
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-065",
+    "title": "Lean manifests at the edge",
+    "abbreviation": "OPS851",
+    "type": "Lightning talk",
+    "level": "200 - Intermediate",
+    "venue": "MGM Grand",
+    "room": "Room 851",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "12:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-066",
+    "title": "Incremental manifests under load",
+    "abbreviation": "FIN832",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 832",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      },
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-067",
+    "title": "Resilient gateways across regions",
+    "abbreviation": "CON775",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 775",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "08:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-068",
+    "title": "Lean manifests without downtime",
+    "abbreviation": "OPS780",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 780",
+    "isAllDaySession": false,
+    "isReservable": false,
+    "seatAvailability": "walkUp",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "15:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      },
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-069",
+    "title": "Frugal manifests without downtime",
+    "abbreviation": "CON842",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 842",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "11:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-070",
+    "title": "Hardened replicas on a tight budget",
+    "abbreviation": "SEC737",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 737",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "14:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-071",
+    "title": "Resilient fleets on a tight budget",
+    "abbreviation": "DAT717",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 717",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "11:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-072",
+    "title": "Verifiable caches on a tight budget",
+    "abbreviation": "FIN729",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 729",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "08:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-073",
+    "title": "Observable queues across regions",
+    "abbreviation": "SVS893",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 893",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "15:00",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-074",
+    "title": "Hardened fleets from scratch",
+    "abbreviation": "SVS723",
+    "type": "Lightning talk",
+    "level": "300 - Advanced",
+    "venue": "Mandalay Bay",
+    "room": "Room 723",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "16:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-075",
+    "title": "Resilient pipelines under load",
+    "abbreviation": "AGT814",
+    "type": "Breakout session",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 814",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "16:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-076",
+    "title": "Verifiable schemas without downtime",
+    "abbreviation": "FIN820",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 820",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "12:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-077",
+    "title": "Verifiable pipelines without downtime",
+    "abbreviation": "OPS836",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Wynn",
+    "room": "Room 836",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "15:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      },
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-078",
+    "title": "Portable ledgers across regions",
+    "abbreviation": "FIN753",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Venetian",
+    "room": "Room 753",
+    "isAllDaySession": false,
+    "isReservable": false,
+    "seatAvailability": "walkUp",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "11:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-079",
+    "title": "Practical pipelines in regulated settings",
+    "abbreviation": "DAT874",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Wynn",
+    "room": "Room 874",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "16:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-080",
+    "title": "Observable manifests for small teams",
+    "abbreviation": "DAT836",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 836",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-03",
+      "time": "09:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-081",
+    "title": "Composable schemas on a tight budget",
+    "abbreviation": "OPS793",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 793",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "11:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Teodor Vance"
+      },
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-082",
+    "title": "Verifiable fleets without downtime",
+    "abbreviation": "AGT795",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 795",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "11:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Rowan Alder"
+      },
+      {
+        "name": "Pavel Ostrow"
+      }
+    ],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-083",
+    "title": "Incremental replicas in regulated settings",
+    "abbreviation": "DAT760",
+    "type": "Lightning talk",
+    "level": "200 - Intermediate",
+    "venue": "Venetian",
+    "room": "Room 760",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "13:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Data and analytics"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-084",
+    "title": "Lean caches for small teams",
+    "abbreviation": "CON859",
+    "type": "Workshop",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 859",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "08:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Noor Haddad"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-085",
+    "title": "Composable fleets across regions",
+    "abbreviation": "SEC744",
+    "type": "Breakout session",
+    "level": "400 - Expert",
+    "venue": "Caesars Forum",
+    "room": "Room 744",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "15:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-086",
+    "title": "Portable manifests at the edge",
+    "abbreviation": "SEC775",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "MGM Grand",
+    "room": "Room 775",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "08:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Iris Lindqvist"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-087",
+    "title": "Composable pipelines without downtime",
+    "abbreviation": "SVS767",
+    "type": "Workshop",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 767",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "veryLimited",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "14:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Mina Okafor"
+      },
+      {
+        "name": "Teodor Vance"
+      }
+    ],
+    "topics": [
+      "Serverless"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-gen-088",
+    "title": "Hardened gateways at the edge",
+    "abbreviation": "BSI729",
+    "type": "Chalk talk",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 729",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "10:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Agentic AI"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-089",
+    "title": "Portable caches under load",
+    "abbreviation": "FIN865",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Caesars Forum",
+    "room": "Room 865",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "12:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Calla Brandt"
+      }
+    ],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-090",
+    "title": "Resilient caches under load",
+    "abbreviation": "OPS725",
+    "type": "Lightning talk",
+    "level": "400 - Expert",
+    "venue": "Mandalay Bay",
+    "room": "Room 725",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "limited",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "16:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-091",
+    "title": "Frugal gateways under load",
+    "abbreviation": "SEC783",
+    "type": "Workshop",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 783",
+    "isAllDaySession": false,
+    "isReservable": false,
+    "seatAvailability": "walkUp",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "10:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Pavel Ostrow"
+      },
+      {
+        "name": "Rowan Alder"
+      }
+    ],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-092",
+    "title": "Frugal replicas in regulated settings",
+    "abbreviation": "FIN745",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Wynn",
+    "room": "Room 745",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "unavailable",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "11:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Cost and FinOps"
+    ],
+    "features": [
+      "Interactive"
+    ]
+  },
+  {
+    "sessionId": "demo-gen-093",
+    "title": "Observable fleets on a tight budget",
+    "abbreviation": "CON736",
+    "type": "Chalk talk",
+    "level": "200 - Intermediate",
+    "venue": "Caesars Forum",
+    "room": "Room 736",
+    "isAllDaySession": false,
+    "isReservable": false,
+    "seatAvailability": "walkUp",
+    "sessionTime": {
+      "date": "2026-12-04",
+      "time": "09:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [
+      {
+        "name": "Joaquin Rey"
+      }
+    ],
+    "topics": [
+      "Containers"
+    ],
+    "features": [
+      "Hands-on"
+    ]
+  },
+  {
+    "sessionId": "demo-ops305-r",
+    "title": "Guardrails for generated infrastructure",
+    "abbreviation": "OPS305-R",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 305",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "10:30",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Community-led"
+    ]
+  },
+  {
+    "sessionId": "demo-ops305-r1",
+    "title": "Guardrails for generated infrastructure",
+    "abbreviation": "OPS305-R1",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 305",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-02",
+      "time": "16:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": [
+      "Customer story"
+    ]
+  },
+  {
+    "sessionId": "demo-sec301",
+    "title": "Compliance evidence, automated",
+    "abbreviation": "SEC301",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 301",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "12:00",
+      "length": "60",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-sec303",
+    "title": "Identity for agents",
+    "abbreviation": "SEC303",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Venetian",
+    "room": "Room 303",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "14:00",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Security and compliance"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-svs302",
+    "title": "Event-driven patterns that hold up",
+    "abbreviation": "SVS302",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "Caesars Forum",
+    "room": "Room 302",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "13:30",
+      "length": "90",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": []
+  },
+  {
+    "sessionId": "demo-svs303",
+    "title": "Serverless data pipelines",
+    "abbreviation": "SVS303",
+    "type": "Breakout session",
+    "level": "300 - Advanced",
+    "venue": "MGM Grand",
+    "room": "Room 303",
+    "isAllDaySession": false,
+    "isReservable": true,
+    "seatAvailability": "available",
+    "sessionTime": {
+      "date": "2026-12-01",
+      "time": "10:30",
+      "length": "45",
+      "timezone": "America/Los_Angeles"
+    },
+    "speakers": [],
+    "topics": [
+      "Serverless"
+    ],
+    "features": []
+  }
+]

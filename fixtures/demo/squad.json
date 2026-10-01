@@ -1,0 +1,449 @@
+{
+  "seed": 20261201,
+  "members": [
+    {
+      "key": "ana",
+      "name": "Ana",
+      "color": "--m1",
+      "shape": "circle",
+      "memberId": "m_fbdgrujm2vmxcdo2"
+    },
+    {
+      "key": "luis",
+      "name": "Luis",
+      "color": "--m2",
+      "shape": "square",
+      "memberId": "m_d6zmt6rgrv3q5hyn"
+    },
+    {
+      "key": "marta",
+      "name": "Marta",
+      "color": "--m3",
+      "shape": "diamond",
+      "memberId": "m_k3zzf7l6hprnvuhh"
+    },
+    {
+      "key": "diego",
+      "name": "Diego",
+      "color": "--m4",
+      "shape": "triangle",
+      "memberId": "m_uupsm677iiayelam"
+    },
+    {
+      "key": "sofia",
+      "name": "Sofía",
+      "color": "--m5",
+      "shape": "cross",
+      "memberId": "m_pldmgkjofjeylg5e"
+    }
+  ],
+  "charter": {
+    "v": 1,
+    "type": "charter",
+    "squadId": "sq_rzlsezo23y6zysjf",
+    "name": "Demo squad",
+    "eventId": "reinvent2026",
+    "leader": "m_fbdgrujm2vmxcdo2",
+    "seq": 1,
+    "issuedAt": "2026-10-05T18:00:00Z",
+    "expiresAt": "2026-12-18T00:00:00Z",
+    "inviteVerifier": "JC8wvXvtXZ46LV9W_gPxj7REEIvS6DBKVzALYRjTxLM",
+    "members": [
+      {
+        "memberId": "m_fbdgrujm2vmxcdo2",
+        "name": "Ana",
+        "publicKey": "rUvRVhBfOPlJfC6g4gixPvV0PhRPvgEZ2ux9nFSD54U",
+        "role": "leader",
+        "joinedAt": "2026-10-05T18:00:00Z"
+      },
+      {
+        "memberId": "m_d6zmt6rgrv3q5hyn",
+        "name": "Luis",
+        "publicKey": "_F6yC5tkSeJ259zpficGYiMPvjmOT43hyv4mdPZ2F9w",
+        "role": "member",
+        "joinedAt": "2026-10-05T18:00:00Z"
+      },
+      {
+        "memberId": "m_k3zzf7l6hprnvuhh",
+        "name": "Marta",
+        "publicKey": "4lHbLZnqxfeC4mnbsvdhVEJkK4aDIG-s1EQd-Cmc5h8",
+        "role": "member",
+        "joinedAt": "2026-10-05T18:00:00Z"
+      },
+      {
+        "memberId": "m_uupsm677iiayelam",
+        "name": "Diego",
+        "publicKey": "YJd4VUYoVWk2DJ-CPWKWiFIJnq1b4I_70VKqGa-ts1o",
+        "role": "member",
+        "joinedAt": "2026-10-05T18:00:00Z"
+      },
+      {
+        "memberId": "m_pldmgkjofjeylg5e",
+        "name": "Sofía",
+        "publicKey": "nm56YyZS29LV-Bdd1vSBT1K6Itu5X7DIchTeiCRSGq0",
+        "role": "member",
+        "joinedAt": "2026-10-05T18:00:00Z"
+      }
+    ],
+    "topics": [
+      {
+        "id": "agentic",
+        "label": "Agentic AI",
+        "weight": 5,
+        "target": 2,
+        "match": {
+          "topics": [
+            "Agentic AI"
+          ]
+        }
+      },
+      {
+        "id": "security",
+        "label": "Security and compliance",
+        "weight": 4,
+        "target": 1,
+        "match": {
+          "topics": [
+            "Security and compliance"
+          ]
+        }
+      },
+      {
+        "id": "data",
+        "label": "Data and analytics",
+        "weight": 3,
+        "target": 1,
+        "match": {
+          "topics": [
+            "Data and analytics"
+          ]
+        }
+      },
+      {
+        "id": "containers",
+        "label": "Containers",
+        "weight": 3,
+        "target": 1,
+        "match": {
+          "topics": [
+            "Containers"
+          ]
+        }
+      },
+      {
+        "id": "finops",
+        "label": "Cost and FinOps",
+        "weight": 3,
+        "target": 1,
+        "match": {
+          "topics": [
+            "Cost and FinOps"
+          ]
+        }
+      },
+      {
+        "id": "serverless",
+        "label": "Serverless",
+        "weight": 3,
+        "target": 1,
+        "match": {
+          "topics": [
+            "Serverless"
+          ]
+        }
+      }
+    ],
+    "mustCover": [
+      {
+        "sessionId": "demo-sec301"
+      },
+      {
+        "sessionId": "demo-bsi403"
+      }
+    ],
+    "lunch": {
+      "start": "12:00",
+      "end": "13:00",
+      "protected": true
+    },
+    "caps": {
+      "maxPerDay": 5
+    },
+    "travel": {
+      "bufferMin": 0
+    },
+    "tolerance": 0.2
+  },
+  "manifests": [
+    {
+      "v": 1,
+      "type": "manifest",
+      "squadId": "sq_rzlsezo23y6zysjf",
+      "memberId": "m_fbdgrujm2vmxcdo2",
+      "seq": 1,
+      "issuedAt": "2026-10-08T15:04:05Z",
+      "eventId": "reinvent2026",
+      "catalogHash": "sha256:00296a1949be13618452d0b815d25e8e425cf4237a1791228a2f406040cefe0f",
+      "share": "L0",
+      "sessions": [
+        {
+          "sessionId": "demo-gen-001",
+          "code": "BSI704",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-agt301",
+          "code": "AGT301",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-ops305-r",
+          "code": "OPS305-R",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-fin302",
+          "code": "FIN302",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-agt405",
+          "code": "AGT405",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-gen-008",
+          "code": "SEC802",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-009",
+          "code": "FIN704",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-013",
+          "code": "AGT731",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-020",
+          "code": "FIN821",
+          "status": "favorite"
+        }
+      ]
+    },
+    {
+      "v": 1,
+      "type": "manifest",
+      "squadId": "sq_rzlsezo23y6zysjf",
+      "memberId": "m_d6zmt6rgrv3q5hyn",
+      "seq": 1,
+      "issuedAt": "2026-10-08T15:04:05Z",
+      "eventId": "reinvent2026",
+      "catalogHash": "sha256:00296a1949be13618452d0b815d25e8e425cf4237a1791228a2f406040cefe0f",
+      "share": "L0",
+      "sessions": [
+        {
+          "sessionId": "demo-gen-002",
+          "code": "OPS811",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-agt301",
+          "code": "AGT301",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-ops305-r",
+          "code": "OPS305-R",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-dat402",
+          "code": "DAT402",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-dat404",
+          "code": "DAT404",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-gen-014",
+          "code": "DAT747",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-021",
+          "code": "DAT773",
+          "status": "favorite"
+        }
+      ]
+    },
+    {
+      "v": 1,
+      "type": "manifest",
+      "squadId": "sq_rzlsezo23y6zysjf",
+      "memberId": "m_k3zzf7l6hprnvuhh",
+      "seq": 1,
+      "issuedAt": "2026-10-08T15:04:05Z",
+      "eventId": "reinvent2026",
+      "catalogHash": "sha256:552f95efef095c39a7011524d0f8dd5610b6e547977808fe908269818106537c",
+      "share": "L0",
+      "sessions": [
+        {
+          "sessionId": "demo-gen-003",
+          "code": "CON768",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-con401",
+          "code": "CON401",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-svs302",
+          "code": "SVS302",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-agt402",
+          "code": "AGT402",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-gen-010",
+          "code": "AGT831",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-011",
+          "code": "CON853",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-015",
+          "code": "SVS811",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-022",
+          "code": "SVS746",
+          "status": "favorite"
+        }
+      ]
+    },
+    {
+      "v": 1,
+      "type": "manifest",
+      "squadId": "sq_rzlsezo23y6zysjf",
+      "memberId": "m_uupsm677iiayelam",
+      "seq": 1,
+      "issuedAt": "2026-10-08T15:04:05Z",
+      "eventId": "reinvent2026",
+      "catalogHash": "sha256:00296a1949be13618452d0b815d25e8e425cf4237a1791228a2f406040cefe0f",
+      "share": "L0",
+      "sessions": [
+        {
+          "sessionId": "demo-gen-004",
+          "code": "AGT883",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-005",
+          "code": "FIN743",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-fin301",
+          "code": "FIN301",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-agt403",
+          "code": "AGT403",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-sec303",
+          "code": "SEC303",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-gen-016",
+          "code": "FIN768",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-023",
+          "code": "AGT769",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-024",
+          "code": "SEC723",
+          "status": "favorite"
+        }
+      ]
+    },
+    {
+      "v": 1,
+      "type": "manifest",
+      "squadId": "sq_rzlsezo23y6zysjf",
+      "memberId": "m_pldmgkjofjeylg5e",
+      "seq": 1,
+      "issuedAt": "2026-10-08T15:04:05Z",
+      "eventId": "reinvent2026",
+      "catalogHash": "sha256:00296a1949be13618452d0b815d25e8e425cf4237a1791228a2f406040cefe0f",
+      "share": "L0",
+      "sessions": [
+        {
+          "sessionId": "demo-gen-006",
+          "code": "DAT846",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-007",
+          "code": "SVS768",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-dat301",
+          "code": "DAT301",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-svs303",
+          "code": "SVS303",
+          "status": "reserved"
+        },
+        {
+          "sessionId": "demo-gen-012",
+          "code": "CON733",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-017",
+          "code": "BSI842",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-018",
+          "code": "DAT806",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-019",
+          "code": "CON891",
+          "status": "favorite"
+        },
+        {
+          "sessionId": "demo-gen-025",
+          "code": "CON722",
+          "status": "favorite"
+        }
+      ]
+    }
+  ]
+}

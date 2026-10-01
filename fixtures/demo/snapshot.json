@@ -1,0 +1,2354 @@
+{
+  "eventId": "reinvent2026",
+  "utcOffsetMin": -480,
+  "sessions": [
+    {
+      "sessionId": "demo-agt301",
+      "code": "AGT301",
+      "title": "Agent memory in production",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29935740,
+      "endMin": 29935800,
+      "venue": "venetian",
+      "room": "Room 301",
+      "full": false
+    },
+    {
+      "sessionId": "demo-agt402",
+      "code": "AGT402",
+      "title": "Multi-agent orchestration",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29936160,
+      "endMin": 29936220,
+      "venue": "venetian",
+      "room": "Room 402",
+      "full": false
+    },
+    {
+      "sessionId": "demo-agt403",
+      "code": "AGT403",
+      "title": "Evaluating agents",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29935830,
+      "endMin": 29935920,
+      "venue": "wynn",
+      "room": "Room 403",
+      "full": false
+    },
+    {
+      "sessionId": "demo-agt405",
+      "code": "AGT405",
+      "title": "Observability for agent fleets",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29936130,
+      "endMin": 29936190,
+      "venue": "caesars-forum",
+      "room": "Room 405",
+      "full": false
+    },
+    {
+      "sessionId": "demo-bsi403",
+      "code": "BSI403",
+      "title": "Shared memory for agent fleets",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29936175,
+      "endMin": 29936235,
+      "venue": "wynn",
+      "room": "Room 403",
+      "full": false
+    },
+    {
+      "sessionId": "demo-con401",
+      "code": "CON401",
+      "title": "Running EKS at 10,000 nodes",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29935770,
+      "endMin": 29935860,
+      "venue": "caesars-forum",
+      "room": "Room 401",
+      "full": false
+    },
+    {
+      "sessionId": "demo-dat301",
+      "code": "DAT301",
+      "title": "Streaming lakehouse ingestion",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29935755,
+      "endMin": 29935815,
+      "venue": "mgm-grand",
+      "room": "Room 301",
+      "full": false
+    },
+    {
+      "sessionId": "demo-dat402",
+      "code": "DAT402",
+      "title": "Zero-ETL at scale",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29935980,
+      "endMin": 29936040,
+      "venue": "mgm-grand",
+      "room": "Room 402",
+      "full": false
+    },
+    {
+      "sessionId": "demo-dat404",
+      "code": "DAT404",
+      "title": "Vector search cost tuning",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29936055,
+      "endMin": 29936115,
+      "venue": "mandalay-bay",
+      "room": "Room 404",
+      "full": false
+    },
+    {
+      "sessionId": "demo-fin301",
+      "code": "FIN301",
+      "title": "Cost visibility for AI workloads",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29935710,
+      "endMin": 29935800,
+      "venue": "wynn",
+      "room": "Room 301",
+      "full": false
+    },
+    {
+      "sessionId": "demo-fin302",
+      "code": "FIN302",
+      "title": "Prompt caching economics",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29936025,
+      "endMin": 29936085,
+      "venue": "wynn",
+      "room": "Room 302",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-001",
+      "code": "BSI704",
+      "title": "Frugal gateways in regulated settings",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29934300,
+      "endMin": 29934360,
+      "venue": "mandalay-bay",
+      "room": "Room 704",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-002",
+      "code": "OPS811",
+      "title": "Observable pipelines for small teams",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29934300,
+      "endMin": 29934360,
+      "venue": "wynn",
+      "room": "Room 811",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-003",
+      "code": "CON768",
+      "title": "Lean fleets across regions",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [],
+      "speakers": [
+        "Noor Haddad",
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29934300,
+      "endMin": 29934360,
+      "venue": "mandalay-bay",
+      "room": "Room 768",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-004",
+      "code": "AGT883",
+      "title": "Verifiable replicas on a tight budget",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29934300,
+      "endMin": 29934360,
+      "venue": "mgm-grand",
+      "room": "Room 883",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-005",
+      "code": "FIN743",
+      "title": "Frugal queues at the edge",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Mina Okafor",
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934390,
+      "endMin": 29934450,
+      "venue": "mgm-grand",
+      "room": "Room 743",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-006",
+      "code": "DAT846",
+      "title": "Portable pipelines across regions",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29934300,
+      "endMin": 29934360,
+      "venue": "caesars-forum",
+      "room": "Room 846",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-007",
+      "code": "SVS768",
+      "title": "Hardened gateways under load",
+      "type": "Workshop",
+      "level": "200 - Intermediate",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29934390,
+      "endMin": 29934450,
+      "venue": "caesars-forum",
+      "room": "Room 768",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-008",
+      "code": "SEC802",
+      "title": "Composable queues from scratch",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Iris Lindqvist",
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29937180,
+      "endMin": 29937240,
+      "venue": "venetian",
+      "room": "Room 802",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-009",
+      "code": "FIN704",
+      "title": "Resilient caches for small teams",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29937270,
+      "endMin": 29937330,
+      "venue": "venetian",
+      "room": "Room 704",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-010",
+      "code": "AGT831",
+      "title": "Lean schemas from scratch",
+      "type": "Workshop",
+      "level": "400 - Expert",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29937180,
+      "endMin": 29937240,
+      "venue": "caesars-forum",
+      "room": "Room 831",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-011",
+      "code": "CON853",
+      "title": "Portable pipelines for small teams",
+      "type": "Workshop",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29937270,
+      "endMin": 29937330,
+      "venue": "caesars-forum",
+      "room": "Room 853",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-012",
+      "code": "CON733",
+      "title": "Incremental caches in regulated settings",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Calla Brandt"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29937180,
+      "endMin": 29937240,
+      "venue": "caesars-forum",
+      "room": "Room 733",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-013",
+      "code": "AGT731",
+      "title": "Verifiable gateways at the edge",
+      "type": "Workshop",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Noor Haddad",
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29938620,
+      "endMin": 29938680,
+      "venue": "caesars-forum",
+      "room": "Room 731",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-014",
+      "code": "DAT747",
+      "title": "Observable workflows under load",
+      "type": "Lightning talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29938620,
+      "endMin": 29938680,
+      "venue": "wynn",
+      "room": "Room 747",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-015",
+      "code": "SVS811",
+      "title": "Hardened pipelines on a tight budget",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Calla Brandt"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29938620,
+      "endMin": 29938680,
+      "venue": "wynn",
+      "room": "Room 811",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-016",
+      "code": "FIN768",
+      "title": "Portable manifests under load",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29938620,
+      "endMin": 29938680,
+      "venue": "wynn",
+      "room": "Room 768",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-017",
+      "code": "BSI842",
+      "title": "Incremental fleets at the edge",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29938620,
+      "endMin": 29938680,
+      "venue": "caesars-forum",
+      "room": "Room 842",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-018",
+      "code": "DAT806",
+      "title": "Hardened schemas without downtime",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29938710,
+      "endMin": 29938770,
+      "venue": "caesars-forum",
+      "room": "Room 806",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-019",
+      "code": "CON891",
+      "title": "Frugal schemas without downtime",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Rowan Alder",
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29938860,
+      "endMin": 29938920,
+      "venue": "caesars-forum",
+      "room": "Room 891",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-020",
+      "code": "FIN821",
+      "title": "Hardened replicas from scratch",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29940060,
+      "endMin": 29940120,
+      "venue": "caesars-forum",
+      "room": "Room 821",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-021",
+      "code": "DAT773",
+      "title": "Resilient caches on a tight budget",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Pavel Ostrow",
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29940060,
+      "endMin": 29940120,
+      "venue": "venetian",
+      "room": "Room 773",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-022",
+      "code": "SVS746",
+      "title": "Observable gateways under load",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29940060,
+      "endMin": 29940120,
+      "venue": "wynn",
+      "room": "Room 746",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-023",
+      "code": "AGT769",
+      "title": "Composable schemas at the edge",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Calla Brandt",
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29940060,
+      "endMin": 29940120,
+      "venue": "venetian",
+      "room": "Room 769",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-024",
+      "code": "SEC723",
+      "title": "Portable schemas across regions",
+      "type": "Workshop",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Joaquin Rey",
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29940150,
+      "endMin": 29940210,
+      "venue": "venetian",
+      "room": "Room 723",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-025",
+      "code": "CON722",
+      "title": "Observable queues at the edge",
+      "type": "Chalk talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Pavel Ostrow",
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29940060,
+      "endMin": 29940120,
+      "venue": "mgm-grand",
+      "room": "Room 722",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-026",
+      "code": "FIN727-R",
+      "title": "Portable schemas from scratch",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934630,
+      "endMin": 29934690,
+      "venue": "venetian",
+      "room": "Room 727",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-026-r1",
+      "code": "FIN727-R1",
+      "title": "Portable schemas from scratch",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29936070,
+      "endMin": 29936130,
+      "venue": "venetian",
+      "room": "Room 727",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-027",
+      "code": "DAT723",
+      "title": "Observable fleets at the edge",
+      "type": "Workshop",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Noor Haddad",
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29934600,
+      "endMin": 29934660,
+      "venue": "mandalay-bay",
+      "room": "Room 723",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-028",
+      "code": "BSI737",
+      "title": "Practical queues from scratch",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Calla Brandt",
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29934600,
+      "endMin": 29934690,
+      "venue": "mandalay-bay",
+      "room": "Room 737",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-029",
+      "code": "AGT846",
+      "title": "Lean pipelines in regulated settings",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29934270,
+      "endMin": 29934330,
+      "venue": "mandalay-bay",
+      "room": "Room 846",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-030",
+      "code": "CON701",
+      "title": "Frugal queues across regions",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Calla Brandt",
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29934660,
+      "endMin": 29934705,
+      "venue": "venetian",
+      "room": "Room 701",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-031",
+      "code": "SEC805-R",
+      "title": "Observable replicas at the edge",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [],
+      "speakers": [
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29934720,
+      "endMin": 29934780,
+      "venue": "wynn",
+      "room": "Room 805",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-031-r1",
+      "code": "SEC805-R1",
+      "title": "Observable replicas at the edge",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [],
+      "speakers": [
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29936160,
+      "endMin": 29936220,
+      "venue": "wynn",
+      "room": "Room 805",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-032",
+      "code": "FIN898",
+      "title": "Composable pipelines across regions",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Noor Haddad",
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934750,
+      "endMin": 29934795,
+      "venue": "wynn",
+      "room": "Room 898",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-033",
+      "code": "FIN864",
+      "title": "Incremental manifests on a tight budget",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934330,
+      "endMin": 29934375,
+      "venue": "wynn",
+      "room": "Room 864",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-034",
+      "code": "FIN728",
+      "title": "Lean replicas under load",
+      "type": "Workshop",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [
+        "Noor Haddad",
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934270,
+      "endMin": 29934360,
+      "venue": "mgm-grand",
+      "room": "Room 728",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-035",
+      "code": "CON774",
+      "title": "Observable ledgers for small teams",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Mina Okafor",
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29934660,
+      "endMin": 29934750,
+      "venue": "mandalay-bay",
+      "room": "Room 774",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-036",
+      "code": "FIN744-R",
+      "title": "Verifiable manifests from scratch",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934630,
+      "endMin": 29934720,
+      "venue": "mandalay-bay",
+      "room": "Room 744",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-036-r1",
+      "code": "FIN744-R1",
+      "title": "Verifiable manifests from scratch",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29937510,
+      "endMin": 29937600,
+      "venue": "mandalay-bay",
+      "room": "Room 744",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-037",
+      "code": "FIN828",
+      "title": "Frugal queues from scratch",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [
+        "Rowan Alder",
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29934330,
+      "endMin": 29934375,
+      "venue": "wynn",
+      "room": "Room 828",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-038",
+      "code": "DAT858",
+      "title": "Composable caches in regulated settings",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Pavel Ostrow",
+        "Calla Brandt"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29934660,
+      "endMin": 29934705,
+      "venue": "venetian",
+      "room": "Room 858",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-039",
+      "code": "SVS825",
+      "title": "Lean fleets under load",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29934690,
+      "endMin": 29934735,
+      "venue": "mgm-grand",
+      "room": "Room 825",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-040",
+      "code": "CON803",
+      "title": "Resilient replicas for small teams",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [
+        "Iris Lindqvist",
+        "Pavel Ostrow"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29934270,
+      "endMin": 29934315,
+      "venue": "mgm-grand",
+      "room": "Room 803",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-041",
+      "code": "DAT856-R",
+      "title": "Hardened pipelines at the edge",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29935890,
+      "endMin": 29935980,
+      "venue": "venetian",
+      "room": "Room 856",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-041-r1",
+      "code": "DAT856-R1",
+      "title": "Hardened pipelines at the edge",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29937330,
+      "endMin": 29937420,
+      "venue": "venetian",
+      "room": "Room 856",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-042",
+      "code": "DAT883",
+      "title": "Incremental caches on a tight budget",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [
+        "Pavel Ostrow",
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29936010,
+      "endMin": 29936055,
+      "venue": "wynn",
+      "room": "Room 883",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-043",
+      "code": "SEC837",
+      "title": "Incremental workflows without downtime",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29935860,
+      "endMin": 29935920,
+      "venue": "venetian",
+      "room": "Room 837",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-044",
+      "code": "SEC838",
+      "title": "Composable manifests on a tight budget",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29936220,
+      "endMin": 29936310,
+      "venue": "mandalay-bay",
+      "room": "Room 838",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-045",
+      "code": "AGT717",
+      "title": "Resilient gateways on a tight budget",
+      "type": "Chalk talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Iris Lindqvist",
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29935920,
+      "endMin": 29935965,
+      "venue": "mandalay-bay",
+      "room": "Room 717",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-046",
+      "code": "DAT710-R",
+      "title": "Incremental fleets from scratch",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29936100,
+      "endMin": 29936160,
+      "venue": "mandalay-bay",
+      "room": "Room 710",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-046-r1",
+      "code": "DAT710-R1",
+      "title": "Incremental fleets from scratch",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29937540,
+      "endMin": 29937600,
+      "venue": "mandalay-bay",
+      "room": "Room 710",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-047",
+      "code": "SVS864",
+      "title": "Practical gateways without downtime",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Pavel Ostrow",
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29935920,
+      "endMin": 29935965,
+      "venue": "mgm-grand",
+      "room": "Room 864",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-048",
+      "code": "SVS705",
+      "title": "Practical ledgers across regions",
+      "type": "Workshop",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29936010,
+      "endMin": 29936100,
+      "venue": "wynn",
+      "room": "Room 705",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-049",
+      "code": "SVS877",
+      "title": "Incremental queues at the edge",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29935770,
+      "endMin": 29935815,
+      "venue": "mgm-grand",
+      "room": "Room 877",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-050",
+      "code": "BSI732",
+      "title": "Practical schemas for small teams",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29936190,
+      "endMin": 29936280,
+      "venue": "mandalay-bay",
+      "room": "Room 732",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-051",
+      "code": "CON744-R",
+      "title": "Verifiable schemas for small teams",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29937540,
+      "endMin": 29937600,
+      "venue": "wynn",
+      "room": "Room 744",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-051-r1",
+      "code": "CON744-R1",
+      "title": "Verifiable schemas for small teams",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29938980,
+      "endMin": 29939040,
+      "venue": "wynn",
+      "room": "Room 744",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-052",
+      "code": "SVS842",
+      "title": "Portable manifests across regions",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Calla Brandt"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29937270,
+      "endMin": 29937330,
+      "venue": "mandalay-bay",
+      "room": "Room 842",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-053",
+      "code": "FIN786",
+      "title": "Composable pipelines under load",
+      "type": "Workshop",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29937390,
+      "endMin": 29937450,
+      "venue": "mandalay-bay",
+      "room": "Room 786",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-054",
+      "code": "BSI844",
+      "title": "Portable fleets under load",
+      "type": "Chalk talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Pavel Ostrow"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29937330,
+      "endMin": 29937390,
+      "venue": "mandalay-bay",
+      "room": "Room 844",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-055",
+      "code": "DAT864",
+      "title": "Portable replicas for small teams",
+      "type": "Workshop",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29937120,
+      "endMin": 29937210,
+      "venue": "venetian",
+      "room": "Room 864",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-056",
+      "code": "DAT847-R",
+      "title": "Portable queues without downtime",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29937510,
+      "endMin": 29937555,
+      "venue": "mandalay-bay",
+      "room": "Room 847",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-056-r1",
+      "code": "DAT847-R1",
+      "title": "Portable queues without downtime",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29938950,
+      "endMin": 29938995,
+      "venue": "mandalay-bay",
+      "room": "Room 847",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-057",
+      "code": "FIN781",
+      "title": "Resilient schemas under load",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29937300,
+      "endMin": 29937345,
+      "venue": "caesars-forum",
+      "room": "Room 781",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-058",
+      "code": "AGT817",
+      "title": "Observable fleets for small teams",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Calla Brandt",
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29937120,
+      "endMin": 29937180,
+      "venue": "venetian",
+      "room": "Room 817",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-059",
+      "code": "SVS726",
+      "title": "Practical queues in regulated settings",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Mina Okafor",
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29937420,
+      "endMin": 29937510,
+      "venue": "wynn",
+      "room": "Room 726",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-060",
+      "code": "SVS792",
+      "title": "Portable manifests from scratch",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29937270,
+      "endMin": 29937330,
+      "venue": "mandalay-bay",
+      "room": "Room 792",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-061",
+      "code": "SVS713-R",
+      "title": "Lean workflows at the edge",
+      "type": "Lightning talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29937300,
+      "endMin": 29937360,
+      "venue": "venetian",
+      "room": "Room 713",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-061-r1",
+      "code": "SVS713-R1",
+      "title": "Lean workflows at the edge",
+      "type": "Lightning talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29938740,
+      "endMin": 29938800,
+      "venue": "venetian",
+      "room": "Room 713",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-062",
+      "code": "SVS765",
+      "title": "Composable queues without downtime",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Joaquin Rey",
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29937330,
+      "endMin": 29937420,
+      "venue": "wynn",
+      "room": "Room 765",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-063",
+      "code": "DAT791",
+      "title": "Portable workflows for small teams",
+      "type": "Chalk talk",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [
+        "Joaquin Rey",
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29937240,
+      "endMin": 29937285,
+      "venue": "wynn",
+      "room": "Room 791",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-064",
+      "code": "DAT761",
+      "title": "Verifiable queues from scratch",
+      "type": "Lightning talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Joaquin Rey",
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29937390,
+      "endMin": 29937480,
+      "venue": "mandalay-bay",
+      "room": "Room 761",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-065",
+      "code": "OPS851",
+      "title": "Lean manifests at the edge",
+      "type": "Lightning talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Pavel Ostrow"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29937390,
+      "endMin": 29937435,
+      "venue": "mgm-grand",
+      "room": "Room 851",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-066",
+      "code": "FIN832",
+      "title": "Incremental manifests under load",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Rowan Alder",
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29938650,
+      "endMin": 29938710,
+      "venue": "wynn",
+      "room": "Room 832",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-067",
+      "code": "CON775",
+      "title": "Resilient gateways across regions",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29938560,
+      "endMin": 29938620,
+      "venue": "caesars-forum",
+      "room": "Room 775",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-068",
+      "code": "OPS780",
+      "title": "Lean manifests without downtime",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Rowan Alder",
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29939010,
+      "endMin": 29939100,
+      "venue": "mgm-grand",
+      "room": "Room 780",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-069",
+      "code": "CON842",
+      "title": "Frugal manifests without downtime",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [
+        "Pavel Ostrow"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29938770,
+      "endMin": 29938815,
+      "venue": "mandalay-bay",
+      "room": "Room 842",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-070",
+      "code": "SEC737",
+      "title": "Hardened replicas on a tight budget",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29938920,
+      "endMin": 29939010,
+      "venue": "caesars-forum",
+      "room": "Room 737",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-071",
+      "code": "DAT717",
+      "title": "Resilient fleets on a tight budget",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29938740,
+      "endMin": 29938830,
+      "venue": "caesars-forum",
+      "room": "Room 717",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-072",
+      "code": "FIN729",
+      "title": "Verifiable caches on a tight budget",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29938560,
+      "endMin": 29938650,
+      "venue": "wynn",
+      "room": "Room 729",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-073",
+      "code": "SVS893",
+      "title": "Observable queues across regions",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29938980,
+      "endMin": 29939025,
+      "venue": "wynn",
+      "room": "Room 893",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-074",
+      "code": "SVS723",
+      "title": "Hardened fleets from scratch",
+      "type": "Lightning talk",
+      "level": "300 - Advanced",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Pavel Ostrow"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29939040,
+      "endMin": 29939100,
+      "venue": "mandalay-bay",
+      "room": "Room 723",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-075",
+      "code": "AGT814",
+      "title": "Resilient pipelines under load",
+      "type": "Breakout session",
+      "level": "200 - Intermediate",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Noor Haddad",
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29939070,
+      "endMin": 29939160,
+      "venue": "venetian",
+      "room": "Room 814",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-076",
+      "code": "FIN820",
+      "title": "Verifiable schemas without downtime",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29938830,
+      "endMin": 29938875,
+      "venue": "mgm-grand",
+      "room": "Room 820",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-077",
+      "code": "OPS836",
+      "title": "Verifiable pipelines without downtime",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Noor Haddad",
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29939010,
+      "endMin": 29939100,
+      "venue": "wynn",
+      "room": "Room 836",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-078",
+      "code": "FIN753",
+      "title": "Portable ledgers across regions",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Mina Okafor"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29938770,
+      "endMin": 29938860,
+      "venue": "venetian",
+      "room": "Room 753",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-079",
+      "code": "DAT874",
+      "title": "Practical pipelines in regulated settings",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29939040,
+      "endMin": 29939100,
+      "venue": "wynn",
+      "room": "Room 874",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-080",
+      "code": "DAT836",
+      "title": "Observable manifests for small teams",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Calla Brandt"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29938650,
+      "endMin": 29938695,
+      "venue": "caesars-forum",
+      "room": "Room 836",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-081",
+      "code": "OPS793",
+      "title": "Composable schemas on a tight budget",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [
+        "Teodor Vance",
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29940210,
+      "endMin": 29940300,
+      "venue": "venetian",
+      "room": "Room 793",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-082",
+      "code": "AGT795",
+      "title": "Verifiable fleets without downtime",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Rowan Alder",
+        "Pavel Ostrow"
+      ],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29940210,
+      "endMin": 29940300,
+      "venue": "caesars-forum",
+      "room": "Room 795",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-083",
+      "code": "DAT760",
+      "title": "Incremental replicas in regulated settings",
+      "type": "Lightning talk",
+      "level": "200 - Intermediate",
+      "features": [],
+      "speakers": [
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Data and analytics"
+      ],
+      "startMin": 29940330,
+      "endMin": 29940375,
+      "venue": "venetian",
+      "room": "Room 760",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-084",
+      "code": "CON859",
+      "title": "Lean caches for small teams",
+      "type": "Workshop",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Noor Haddad"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29940000,
+      "endMin": 29940060,
+      "venue": "mandalay-bay",
+      "room": "Room 859",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-085",
+      "code": "SEC744",
+      "title": "Composable fleets across regions",
+      "type": "Breakout session",
+      "level": "400 - Expert",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29940420,
+      "endMin": 29940480,
+      "venue": "caesars-forum",
+      "room": "Room 744",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-086",
+      "code": "SEC775",
+      "title": "Portable manifests at the edge",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [],
+      "speakers": [
+        "Iris Lindqvist"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29940000,
+      "endMin": 29940090,
+      "venue": "mgm-grand",
+      "room": "Room 775",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-087",
+      "code": "SVS767",
+      "title": "Composable pipelines without downtime",
+      "type": "Workshop",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [
+        "Mina Okafor",
+        "Teodor Vance"
+      ],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29940390,
+      "endMin": 29940450,
+      "venue": "venetian",
+      "room": "Room 767",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-088",
+      "code": "BSI729",
+      "title": "Hardened gateways at the edge",
+      "type": "Chalk talk",
+      "level": "400 - Expert",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [],
+      "topics": [
+        "Agentic AI"
+      ],
+      "startMin": 29940150,
+      "endMin": 29940240,
+      "venue": "mandalay-bay",
+      "room": "Room 729",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-089",
+      "code": "FIN865",
+      "title": "Portable caches under load",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Calla Brandt"
+      ],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29940240,
+      "endMin": 29940330,
+      "venue": "caesars-forum",
+      "room": "Room 865",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-090",
+      "code": "OPS725",
+      "title": "Resilient caches under load",
+      "type": "Lightning talk",
+      "level": "400 - Expert",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29940510,
+      "endMin": 29940570,
+      "venue": "mandalay-bay",
+      "room": "Room 725",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-091",
+      "code": "SEC783",
+      "title": "Frugal gateways under load",
+      "type": "Workshop",
+      "level": "200 - Intermediate",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [
+        "Pavel Ostrow",
+        "Rowan Alder"
+      ],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29940150,
+      "endMin": 29940240,
+      "venue": "wynn",
+      "room": "Room 783",
+      "full": false
+    },
+    {
+      "sessionId": "demo-gen-092",
+      "code": "FIN745",
+      "title": "Frugal replicas in regulated settings",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Interactive"
+      ],
+      "speakers": [],
+      "topics": [
+        "Cost and FinOps"
+      ],
+      "startMin": 29940210,
+      "endMin": 29940255,
+      "venue": "wynn",
+      "room": "Room 745",
+      "full": true
+    },
+    {
+      "sessionId": "demo-gen-093",
+      "code": "CON736",
+      "title": "Observable fleets on a tight budget",
+      "type": "Chalk talk",
+      "level": "200 - Intermediate",
+      "features": [
+        "Hands-on"
+      ],
+      "speakers": [
+        "Joaquin Rey"
+      ],
+      "topics": [
+        "Containers"
+      ],
+      "startMin": 29940090,
+      "endMin": 29940180,
+      "venue": "caesars-forum",
+      "room": "Room 736",
+      "full": false
+    },
+    {
+      "sessionId": "demo-ops305-r",
+      "code": "OPS305-R",
+      "title": "Guardrails for generated infrastructure",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Community-led"
+      ],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29935830,
+      "endMin": 29935890,
+      "venue": "venetian",
+      "room": "Room 305",
+      "full": false
+    },
+    {
+      "sessionId": "demo-ops305-r1",
+      "code": "OPS305-R1",
+      "title": "Guardrails for generated infrastructure",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [
+        "Customer story"
+      ],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29937600,
+      "endMin": 29937660,
+      "venue": "venetian",
+      "room": "Room 305",
+      "full": false
+    },
+    {
+      "sessionId": "demo-sec301",
+      "code": "SEC301",
+      "title": "Compliance evidence, automated",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29935920,
+      "endMin": 29935980,
+      "venue": "mgm-grand",
+      "room": "Room 301",
+      "full": false
+    },
+    {
+      "sessionId": "demo-sec303",
+      "code": "SEC303",
+      "title": "Identity for agents",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Security and compliance"
+      ],
+      "startMin": 29936040,
+      "endMin": 29936130,
+      "venue": "venetian",
+      "room": "Room 303",
+      "full": false
+    },
+    {
+      "sessionId": "demo-svs302",
+      "code": "SVS302",
+      "title": "Event-driven patterns that hold up",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29936010,
+      "endMin": 29936100,
+      "venue": "caesars-forum",
+      "room": "Room 302",
+      "full": false
+    },
+    {
+      "sessionId": "demo-svs303",
+      "code": "SVS303",
+      "title": "Serverless data pipelines",
+      "type": "Breakout session",
+      "level": "300 - Advanced",
+      "features": [],
+      "speakers": [],
+      "topics": [
+        "Serverless"
+      ],
+      "startMin": 29935830,
+      "endMin": 29935875,
+      "venue": "mgm-grand",
+      "room": "Room 303",
+      "full": false
+    }
+  ]
+}

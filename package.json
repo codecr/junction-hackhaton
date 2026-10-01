@@ -22,7 +22,7 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "shots": "node scripts/not-yet.mjs shots T2.3 Playwright screenshots",
-    "fixtures": "tsx fixtures/generate.ts",
+    "fixtures": "tsx fixtures/cli.ts",
     "guard": "node scripts/guard-catalog.mjs",
     "infra:synth": "node scripts/not-yet.mjs infra:synth T3.2 CDK stacks",
     "infra:diff": "node scripts/not-yet.mjs infra:diff T3.2 CDK stacks",
