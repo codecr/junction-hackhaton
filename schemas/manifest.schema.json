@@ -32,6 +32,20 @@
         }
       }
     },
+    "holds": {
+      "type": "array",
+      "maxItems": 200,
+      "description": "Sessions this member does not want the solver to change. Session IDs only. Allowed at every share level.",
+      "items": {
+        "type": "object",
+        "required": ["sessionId", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "sessionId": { "type": "string", "minLength": 1, "maxLength": 128 },
+          "reason": { "enum": ["declined", "pinned"] }
+        }
+      }
+    },
     "busy": {
       "type": "array",
       "maxItems": 100,

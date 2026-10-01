@@ -65,7 +65,7 @@ Done when: two simulated members and one real member exchange manifests by file 
 ## Prompt 5: solver and UI (T2.1 to T2.6)
 
 ```text
-Part A, solver: implement propose() and the claim rule in packages/core per docs/03. Add fast-check property tests: order independence, locked sessions never move, feasibility always holds, strictly positive squad delta on each applied step, idempotence, and a golden fixture that must be byte-identical across Linux and macOS CI.
+Part A, solver: implement propose() and the claim rule in packages/core per docs/03. Add fast-check property tests: order independence, locked sessions never move, feasibility always holds, strictly positive squad delta on each applied step, idempotence, and a golden fixture that must be byte-identical across Linux, macOS and Windows CI.
 
 Part B, UI: build packages/web to match design/reference.html at 1440 and 390 px, using only design/tokens.css and hand-written SVG with d3-scale. No Tailwind, no component kit, no icon pack. Screens per docs/01 section K and the states in docs/05. Build the Marey chart as a component driven by data, not hard-coded coordinates. Wire the accept flow to the agent: writes, reconcile with GetSchedule, per-session results, undo. Add the demo build with fixtures and no network.
 

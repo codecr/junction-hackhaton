@@ -54,6 +54,14 @@ Legend: **[docs]** verified from the official developer guide on Sept 29, 2026. 
 
 Kiro: `oauth.clientId` as above, `redirectUri: "http://127.0.0.1:8976"` (end at the port), scopes as above. Claude Code: `claude mcp add --transport http --scope user awsevents https://api.awsevents.com/mcp --callback-port 8484 --client-id 7vmom55m1qstvq8i71ph127bfq`. Always set the port; a random port cannot sign in.
 
+## Verified by probe, 2026-10-01 (no credentials, public requests)
+
+- `GET https://api.awsevents.com/v1/events` returns `200` with `Access-Control-Allow-Origin: *`. re:Invent 2026 is `eventId: "reinvent2026"`, `authenticationRequired: true`, `timezone: "America/Los_Angeles"`, `startDate` 2026-11-30, `endDate` 2026-12-04, `timeFormat: "12 hour"`. The event ID is confirmed.
+- `OPTIONS https://oauth.awsevents.com/oauth2/token` returns `200` echoing the request `Origin` in `Access-Control-Allow-Origin`, allowing `POST`, `authorization` and `content-type`, with `Access-Control-Allow-Credentials: true`. A browser can exchange the authorization code and refresh tokens.
+- `OPTIONS` on `/v1/events`, `/v1/events/reinvent2026/schedule` and `/v1/events/reinvent2026/sessions` returns `404 MissingAuthenticationTokenException` with no CORS headers. A browser cannot send `Authorization` to the REST routes, because the preflight fails. Unauthenticated `GET` returns `401 "Sign in to continue"` with `Access-Control-Allow-Origin: *`.
+- `OPTIONS https://api.awsevents.com/mcp` returns `200` with `Access-Control-Allow-Origin: *`, allowing `POST` and the headers `authorization`, `content-type`, `mcp-protocol-version`. `POST /mcp` without a token returns `401` with a `WWW-Authenticate: Bearer ... resource_metadata` header and a JSON-RPC error. So the MCP endpoint is the browser-usable surface.
+- Not verified: that `/mcp` exposes all 12 operations with structured results, that the code exchange works with `redirect_uri` on `localhost` from a hosted page, and whether the hosted-app approach is allowed (the guide says "There is no hosted option"). These are Spike 0 items A to C.
+
 ## Reported by other participants (verify)
 
 - Personal time entries display as local time in the official app even though the reference says UTC. [report]
@@ -64,7 +72,9 @@ Kiro: `oauth.clientId` as above, `redirectUri: "http://127.0.0.1:8976"` (end at 
 
 Record each result in `docs/FINDINGS.md` with the date. Save redacted raw responses under `fixtures/private/` (git-ignored).
 
-1. Sign in with Builder ID on 8484, then again with 8484 occupied to prove the fallback. `ListEvents` and confirm the re:Invent 2026 event ID.
+A. Browser path (ADR-012), before anything else. From a throwaway page on a hosted origin, run PKCE with `redirect_uri=http://localhost:8484/callback`, paste the dead-callback URL back, exchange the code at the token endpoint, refresh it, and call `/mcp` (`initialize`, `tools/list`, then `GetSchedule`). Record: does the exchange work, do the 12 operations appear as tools, what do results look like (structured JSON or text), are quotas the same, any browser or CSP surprise. Also re-read the hackathon rules and the guide for any ban on hosted apps handling tokens. If A fails, the local agent becomes primary.
+B. Compare `/mcp` results with the REST shapes below, through the local agent if REST needs it, so the `Transport` interface hides the difference.
+1. Sign in with Builder ID on 8484, then again with 8484 occupied to prove the fallback (agent path). `ListEvents` and confirm the re:Invent 2026 event ID (done 2026-10-01: `reinvent2026`).
 2. Walk the whole catalog. Compare the count with `totalCount`. Record page sizes. Time it against the 60 per minute quota. Decide the polling cadence.
 3. Field inventory: which session fields are present, their exact names and types, the taxonomy labels for topics, tracks, services, roles, industries. Save the label lists to build the topic picker.
 4. Session codes: list every suffix pattern with counts. Confirm `-R`, `-R1` and any others. For twenty repeat groups, diff the fields that differ.

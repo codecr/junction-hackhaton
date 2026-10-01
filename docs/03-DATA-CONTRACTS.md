@@ -46,6 +46,7 @@ Canonical JSON is RFC 8785 (JCS), implemented with the `json-canonicalize` packa
   "issuedAt": "2026-10-08T15:04:05Z", "eventId": "reinvent2026", "catalogHash": "sha256:...",
   "share": "L0",
   "sessions": [ { "sessionId": "...", "code": "OPS305-R", "status": "reserved", "priority": 3, "locked": false, "role": "attendee" } ],
+  "holds": [ { "sessionId": "...", "reason": "declined" } ],
   "busy": [ { "start": "2026-12-01T18:30:00Z", "end": "2026-12-01T19:30:00Z" } ],
   "at": { "venue": "venetian", "since": "2026-12-01T18:00:00Z" }
 }
@@ -53,6 +54,7 @@ Canonical JSON is RFC 8785 (JCS), implemented with the `json-canonicalize` packa
 
 - `status`: `reserved`, `favorite`, `maybe`.
 - `priority` 1 to 5, default 3. `locked` marks sessions the solver may never move (for example the member is a speaker). `role` is `attendee` or `speaker`.
+- `holds` (session IDs only, at most 200) tells every solver what this member does not want to change. `reason` is `declined` (the member rejected a proposal that adds this session, or that removes or replaces it) or `pinned` (the member marked it as untouchable). Solvers never propose adding a `declined` session to this member, and never propose removing or replacing a `pinned` one. A hold drops out when the member clears it or after 24 hours via a new manifest that no longer lists it. Allowed at every share level.
 - `busy` only at share level L1 or higher, `at` only at L2. The schema rejects these fields at lower levels.
 - The manifest never contains titles, abstracts, speakers, rooms or free text.
 
@@ -89,9 +91,9 @@ Do not trust the meaning of suffixes until Spike 0 lists every suffix present in
 
 For every topic `t`, day `d`: `count(t,d)` = number of distinct members holding at least one session in `t` on `d` (statuses reserved or favorite, plus maybe when the member's view includes maybes). States: `none` (0), `under` (0 < count < target), `ok`. Topic membership of a session comes from the charter's `match` against the session's taxonomy lists.
 
-Duplicates: a session held by more than one member. Planned when attendees at most the topic target, otherwise unplanned.
+Duplicates: a session held by more than one member. Planned when attendees at most the topic target, otherwise unplanned. If a session matches several topics, the target is the highest `target` among them, ties broken by lowest topic `id`.
 
-Infeasible hop: consecutive sessions of a member with walking minutes (from the venue graph) greater than the gap between end and next start, minus `buffer`.
+Infeasible hop: consecutive sessions of a member where `need = walking minutes (venue graph) + travel.bufferMin` is greater than `have = start of next minus end of previous`. The UI shows both numbers ("needs 28 min, has 15"); the buffer is part of `need`.
 
 ## Solver (pure function)
 
@@ -99,6 +101,7 @@ Infeasible hop: consecutive sessions of a member with walking minutes (from the 
 export interface SolverInput {
   charter: Charter; manifests: Manifest[];      // verified, latest per member, sorted by memberId
   catalog: CatalogSnapshot; venueGraph: VenueGraph;
+  firstSeen?: Record<string, string>;           // sessionId -> ISO time, only for the claim rule. Supplied by the caller; core never reads a clock.
 }
 export interface Proposal {
   id: string;                                   // sha256 of canonical JSON of the proposal without id
@@ -124,15 +127,17 @@ export function propose(input: SolverInput): Proposal[];
 
 **Personal value** `P` for member `i`: sum over their sessions of `priority × 200`.
 
+**Independence (ADR-013).** Proposals are computed against the **current** manifests, never against the result of earlier proposals. Each proposal is valid on its own, so accepting or declining one never invalidates another. Two proposals that would break a shared constraint together (the same uncovered session offered to two members, for instance) are not both emitted: the one that wins the order below is emitted, the other is dropped until the next sync. `holds` are respected as described above.
+
 **Moves** are generated per member: SWAP to a session in the same repeat group, or in the same topic and day within a level of the original (if the charter allows); CLAIM an uncovered must-cover or newly added session; DROP a session that is an unplanned duplicate; MEET as in section H of the spec.
 
 **Feasibility** for a candidate: no time overlap with the member's other sessions, walking time plus buffer fits, per-day cap respected, protected lunch window not overlapped unless the member already holds that session, target session not marked `full`, member's `locked` sessions untouched.
 
-**Acceptance** of a move: `ΔV ≥ 50` and `ΔP ≥ −tolerance × priority × 1000` for each moved session.
+**Acceptance** of a move: `ΔV ≥ 50` and `ΔP ≥ −floor(tolerance_milli × P_current / 1000)`, where `P_current` is the member's personal value before the move and `tolerance_milli` is the charter `tolerance` times 1000 as an integer (0.2 becomes 200). The member never loses more than that share of their own value for the squad's gain. (The earlier per-session form accepted every drop, since dropping a session of priority `p` costs exactly `200 × p`.)
 
-**Search.** Deterministic hill climb, at most 50 iterations. Each iteration sorts all feasible accepted moves by (−ΔV, −ΔP, canonical string of the move), applies the first, and repeats until none remain. The applied moves, in order, are the proposals.
+**Search.** Deterministic hill climb, at most 50 iterations, used only to **rank** moves. Each iteration sorts all feasible accepted moves by (−ΔV, −ΔP, canonical string of the move) and takes the first, to find the order and to detect conflicts between moves. The emitted proposals are the selected moves, each re-evaluated against the current state (see Independence), in that order.
 
-**Properties to test** (fast-check): same inputs give identical output in any manifest arrival order; never moves a locked session; never violates feasibility; ΔV strictly positive on every applied step; output is stable under re-run with the applied moves already reflected (idempotence); golden fixture identical on Linux, macOS and Windows CI.
+**Properties to test** (fast-check): same inputs give identical output in any manifest arrival order; never moves a locked session; never touches a `pinned` hold nor adds a `declined` one; never violates feasibility; each proposal stands alone (applying any one leaves the others still valid or cleanly dropped); ΔV strictly positive for every proposal; output is stable under re-run with the applied moves already reflected (idempotence); golden fixture identical on Linux, macOS and Windows CI.
 
 ## Launch claim rule
 
@@ -140,7 +145,7 @@ For a session newly added to the catalog:
 
 1. `eligible` = members with a feasible slot for it (no overlap, walking fits, cap respected, not locked out) and whose topics match.
 2. Rank eligible members by (topic sessions that day ascending, total sessions that day ascending, lower-case hex of sha256(`memberId` + `:` + `sessionId`) ascending). Rank 0 is the owner.
-3. Rank `r` may claim after `announceTime + r × 5 min`. `announceTime` is the earliest announcement the squad server recorded for that session (a conditional put), or the local first-seen time when offline.
+3. Rank `r` may claim after `announceTime + r × 5 min`. `announceTime` is the earliest announcement the squad server recorded for that session (a conditional put), or the local first-seen time when offline. Either value is an input (`firstSeen`); the rule itself never reads a clock.
 4. A claim is a conditional write on `CLAIM#<sessionId>` with `attribute_not_exists`. The first wins. A losing call returns the winner's `memberId` and the loser removes the proposal.
 
 ## Personal-time ownership tag
@@ -151,7 +156,7 @@ Description starts with a tag so Junction can find its own entries after the API
 [jn1:<kind>:<squad8>:<hash6>] <plain text>
 ```
 
-- `kind`: `meet`, `walk`, `buf`. `squad8` first 8 characters of the squad ID without the prefix. `hash6` first 6 hex of sha256(kind | squadId | start | end | location).
+- `kind`: `meet`, `walk`, `buf`. `squad8` first 8 characters of the squad ID without the prefix. `hash6` first 6 hex of sha256(kind | squadId | proposalId), the proposal's stable ID, so the tag still matches after an `UpdatePersonalTime` changes times or location.
 - Title at most 128 characters. Description at most 250 including the tag. Start and end in 5-minute increments.
 - Before creating, read `GetSchedule` and skip if an entry with the same tag exists. After creating, read `GetSchedule` and store the returned ID against the tag. Update and delete only entries whose description matches the tag pattern.
 - **Timezone:** the reference says start and end are UTC with no offset or `Z`; another participant reports the official app displays them as local time. Spike 0 decides and stores `personalTimeMode` (`utc` or `event-local`) in config. Never guess.
@@ -176,7 +181,7 @@ All routes are signed. Header: `Authorization: Junction kid=<memberId>, ts=<unix
 | `DELETE /v1/squads/{id}` | leader | Purges the squad. |
 | `GET /v1/health` | anyone | 200. |
 
-DynamoDB single table: `pk=SQUAD#<id>` with `sk` values `CHARTER`, `MANIFEST#<mid>`, `SIGNAL#<iso>#<mid>#<sessionId>`, `ANNOUNCE#<sessionId>`, `CLAIM#<sessionId>`, `JOIN#<mid>`, `NONCE#<nonce>`. Every item has `ttl` = 14 days after the charter's `expiresAt` (nonces: 10 minutes).
+DynamoDB single table: `pk=SQUAD#<id>` with `sk` values `CHARTER`, `MANIFEST#<mid>`, `SIGNAL#<iso>#<mid>#<sessionId>`, `ANNOUNCE#<sessionId>`, `CLAIM#<sessionId>`, `JOIN#<mid>`, `NONCE#<nonce>`. Every item has `ttl` = the charter's `expiresAt` as epoch seconds (nonces: 10 minutes). `expiresAt` itself is the event end plus 14 days, set once by the leader, so nothing counts the 14 days twice.
 
 ## Local MCP tools
 

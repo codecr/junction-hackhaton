@@ -61,7 +61,7 @@ Junction is complementary by construction: a squad member can use any of them to
 
 ## Open questions to verify (do this first)
 
-1. Official hackathon rules: dates, eligibility (one report says Heroes and Community Builders registered to attend), required deliverables, video length, repository visibility, licensing, judging weights.
-2. Whether a hosted demo with fictional data and a hosted squad server (that never touches Events API credentials) is within the rules. The API docs say sign-in must run locally; the server never signs anyone in.
+1. Official hackathon rules: dates, required deliverables, video length, repository visibility, licensing, judging weights. **Eligibility confirmed 2026-09-30:** Community Builders can take part.
+2. Whether a hosted app is within the rules. The author wants a real, usable web app (decision 2026-10-01, ADR-012): sign-in and Events API calls run in each member's own browser through `/mcp`, our servers never see tokens. The API guide says "There is no hosted option", so this is the main rules risk. Spike 0 item A and the About tab must settle it; the local agent is the fallback.
 3. Whether other participants' proposals overlap with squad coordination. Re-check the Builder Center gallery weekly.
 4. Whether the AWS Events mobile app shows personal-time titles and descriptions (Spike 0). This decides how much of the "proposals appear in the official app" idea can be used.

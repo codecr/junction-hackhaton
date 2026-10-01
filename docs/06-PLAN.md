@@ -46,7 +46,7 @@ Gate: CLI shows the coverage of a three-member squad from exchanged files.
 
 | Task | What | Done when |
 |---|---|---|
-| T2.1 | Solver, claim rule, property tests, golden fixture. | Determinism tests pass across Linux and macOS CI. |
+| T2.1 | Solver, claim rule, property tests, golden fixture. | Determinism tests pass across Linux, macOS and Windows CI. |
 | T2.2 | Web shell, tokens, first-run (sign in, create or join, sharing level). | Works against the real agent and in demo mode. |
 | T2.3 | Marey chart component matching `design/reference.html`. | `/design-review` shows no meaningful deviation at 1440 and 390. |
 | T2.4 | Coverage table, proposals list, accept flow with writes, reconcile and undo. | Acceptance scenario 5 passes against a real account. |
