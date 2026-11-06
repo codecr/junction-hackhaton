@@ -1,0 +1,266 @@
+/* Landing page. Uses only design/tokens.css (copied next to this file at build time). */
+
+@font-face {
+  font-family: 'Archivo Variable';
+  src: url('/fonts/archivo-latin-wdth-normal.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 100%;
+  font-variation-settings: 'wdth' var(--w-text);
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 0 var(--s4);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  font-variation-settings: 'wdth' var(--w-display);
+}
+
+.top nav {
+  display: flex;
+  gap: var(--s5);
+}
+
+.top nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.top nav a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.hero {
+  padding: var(--s8) 0 var(--s7);
+  border-bottom: 1px solid var(--rule);
+}
+
+h1 {
+  max-width: 20ch;
+  margin: 0 0 var(--s5);
+  font-size: clamp(1.875rem, 4.6vw, 3rem);
+  line-height: 1.12;
+  font-weight: 700;
+  font-variation-settings: 'wdth' var(--w-display);
+  letter-spacing: -0.01em;
+}
+
+.lede {
+  max-width: 60ch;
+  margin: 0 0 var(--s6);
+  color: var(--ink-2);
+  font-size: 1.0625rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s5);
+  margin: 0 0 var(--s7);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--s5);
+  border-radius: var(--radius-control);
+  background: var(--ink);
+  color: var(--on-ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--dur-response) var(--ease-out);
+}
+
+.button:hover {
+  background: var(--ink-hover);
+}
+
+.quiet {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.lines {
+  margin: 0;
+}
+
+.lines svg {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  overflow: visible;
+}
+
+.lines .grid {
+  stroke: var(--rule);
+  stroke-width: 1;
+}
+
+.lines .venue {
+  fill: var(--ink-2);
+  font-size: 12px;
+  font-variation-settings: 'wdth' var(--w-data);
+}
+
+.lines .m {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.lines .m.m1 {
+  stroke: var(--m1);
+}
+.lines .m.m2 {
+  stroke: var(--m2);
+}
+.lines .m.m3 {
+  stroke: var(--m3);
+}
+
+.lines .mark.m1 {
+  fill: var(--m1);
+}
+.lines .mark.m2 {
+  fill: var(--m2);
+}
+.lines .mark.m3 {
+  fill: var(--m3);
+}
+
+.lines .meet {
+  fill: var(--signal);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.lines .who {
+  font-size: 13px;
+  font-weight: 600;
+  font-variation-settings: 'wdth' var(--w-data);
+}
+.lines .who.m1 {
+  fill: var(--m1);
+}
+.lines .who.m2 {
+  fill: var(--m2);
+}
+.lines .who.m3 {
+  fill: var(--m3);
+}
+
+figcaption {
+  margin-top: var(--s3);
+  color: var(--ink-2);
+  font-size: var(--fs-small);
+}
+
+.how {
+  padding: var(--s7) 0;
+}
+
+h2 {
+  margin: 0 0 var(--s5);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s6);
+}
+
+h3 {
+  margin: 0 0 var(--s2);
+  font-size: var(--fs-body);
+  font-weight: 650;
+}
+
+.steps p {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.foot {
+  padding: var(--s5) 0 var(--s7);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: var(--fs-small);
+}
+
+.foot p {
+  max-width: 70ch;
+  margin: 0 0 var(--s2);
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: var(--s7);
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: var(--s5);
+  }
+  /* The figure scales down with the viewport; keep its labels readable. */
+  .lines .venue {
+    font-size: 20px;
+  }
+  .lines .who {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

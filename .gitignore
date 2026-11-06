@@ -12,3 +12,4 @@ cdk.out/
 fixtures/private/
 *.catalog.json
 .junction/
+site-dist/

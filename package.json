@@ -24,6 +24,7 @@
     "shots": "node scripts/not-yet.mjs shots T2.3 Playwright screenshots",
     "fixtures": "tsx fixtures/cli.ts",
     "guard": "node scripts/guard-catalog.mjs",
+    "site": "node scripts/assemble-site.mjs",
     "infra:synth": "npm run synth -w @junction/infra",
     "infra:diff": "npm run diff -w @junction/infra",
     "infra:deploy": "npm run deploy -w @junction/infra",
