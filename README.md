@@ -152,7 +152,7 @@ The demo build runs the same solver in the browser and ships a `connect-src 'non
 
 Checks: `npm run typecheck`, `npm test` (440 tests, including fast-check property tests for solver determinism, feasibility and independence of proposals), `npm run lint`, `npm run shots` (Playwright screenshots at 1440 and 390), `npm run infra:synth`. A pre-commit hook refuses catalog or private data.
 
-Deploy the squad server: `aws sso login`, then `npm run infra:diff` and `npm run infra:deploy` (add `-c hostedZoneId=… -c hostedZoneName=…` for the custom domain). The site deploys from `main` through Amplify Hosting.
+Deploy the squad server: `aws sso login`, then `npm run infra:diff` and `npm run infra:deploy` (add `-c hostedZoneId=… -c hostedZoneName=…` for the custom domain). The site is static: `npm run build:demo -w @junction/web && npm run site` assembles `site-dist/`, which is published to Amplify Hosting (a manual deployment today, see ADR-021; `amplify.yml` is ready for a Git-connected app).
 
 ## Privacy
 
