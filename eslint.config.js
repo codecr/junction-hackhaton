@@ -36,7 +36,7 @@ export default tseslint.config(
       'fixtures/private/**',
       'fixtures/demo/**',
       'design/**',
-      'packages/web/**',
+      '**/dist-demo/**',
     ],
   },
   js.configs.recommended,
@@ -53,7 +53,7 @@ export default tseslint.config(
   {
     files: ['**/*.mjs', '**/*.js'],
     languageOptions: {
-      globals: { console: 'readonly', process: 'readonly' },
+      globals: { console: 'readonly', process: 'readonly', URL: 'readonly' },
     },
   },
   {

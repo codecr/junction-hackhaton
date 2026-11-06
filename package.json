@@ -13,21 +13,22 @@
   ],
   "scripts": {
     "dev": "node scripts/not-yet.mjs dev T1.4 agent and T2.2 web",
-    "demo": "node scripts/not-yet.mjs demo T2.5 demo build",
+    "demo": "npm run dev -w @junction/web -- --mode demo",
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
-    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p packages/web/tsconfig.json",
     "lint": "eslint .",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
-    "shots": "node scripts/not-yet.mjs shots T2.3 Playwright screenshots",
+    "shots": "npm run shots -w @junction/web",
     "fixtures": "tsx fixtures/cli.ts",
     "guard": "node scripts/guard-catalog.mjs",
     "infra:synth": "node scripts/not-yet.mjs infra:synth T3.2 CDK stacks",
     "infra:diff": "node scripts/not-yet.mjs infra:diff T3.2 CDK stacks",
     "infra:deploy": "node scripts/not-yet.mjs infra:deploy T3.2 CDK stacks",
-    "prepare": "simple-git-hooks || exit 0"
+    "prepare": "simple-git-hooks || exit 0",
+    "build:web": "npm run build -w @junction/web && npm run build:demo -w @junction/web"
   },
   "simple-git-hooks": {
     "pre-commit": "node scripts/guard-catalog.mjs"

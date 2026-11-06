@@ -15,3 +15,6 @@ fixtures/private/
 
 # Local worktrees for parallel agents
 .claude/worktrees/
+
+# Web builds
+dist-demo/
