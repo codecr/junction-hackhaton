@@ -5,7 +5,15 @@ import { clockRange, nameList } from '../lib/format';
 
 // The chart as a per-person list: same facts, readable by screen readers and keyboard.
 
-export function DayList({ view, model, hidden }: { view: SquadView; model: DayModel; hidden: ReadonlySet<string> }) {
+export function DayList({
+  view,
+  model,
+  hidden,
+}: {
+  view: SquadView;
+  model: DayModel;
+  hidden: ReadonlySet<string>;
+}) {
   const venue = (id: string) => view.venues.find((v) => v.id === id)?.name ?? id;
   const dup = new Map(view.coverage.duplicates.map((d) => [d.sessionId, d]));
   return (
@@ -34,7 +42,8 @@ export function DayList({ view, model, hidden }: { view: SquadView; model: DayMo
                       <li key={s.sessionId}>
                         {hop?.impossible && (
                           <p className="flag cant">
-                            Can&rsquo;t make the walk: needs {hop.impossible.needMin} min, has {hop.impossible.haveMin}.
+                            Can&rsquo;t make the walk: needs {hop.impossible.needMin} min, has{' '}
+                            {hop.impossible.haveMin}.
                           </p>
                         )}
                         <span className="when">{clockRange(s.startLocal, s.endLocal)}</span>{' '}
@@ -61,7 +70,11 @@ export function DayList({ view, model, hidden }: { view: SquadView; model: DayMo
               <li key={o.session.sessionId}>
                 <span className="when">{clockRange(o.session.startLocal, o.session.endLocal)}</span>{' '}
                 <strong>{o.session.code}</strong> {o.session.title}, {venue(o.session.venue)}.
-                {o.owner ? ` Suggested for ${o.owner.name}.` : o.collidesWithLunch ? ' Falls in the squad lunch window.' : ''}
+                {o.owner
+                  ? ` Suggested for ${o.owner.name}.`
+                  : o.collidesWithLunch
+                    ? ' Falls in the squad lunch window.'
+                    : ''}
               </li>
             ))}
           </ol>

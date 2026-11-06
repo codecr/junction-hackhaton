@@ -30,7 +30,12 @@ export function Coverage({ view, selectedDay }: { view: SquadView; selectedDay: 
                 Topic
               </th>
               {view.days.map((d) => (
-                <th key={d.day} scope="col" className={d.day === selectedDay ? 'today' : undefined} abbr={weekdayName(d)}>
+                <th
+                  key={d.day}
+                  scope="col"
+                  className={d.day === selectedDay ? 'today' : undefined}
+                  abbr={weekdayName(d)}
+                >
                   {weekdayShort(d)}
                 </th>
               ))}
@@ -96,7 +101,9 @@ export function Coverage({ view, selectedDay }: { view: SquadView; selectedDay: 
           </tbody>
         </table>
       </div>
-      <p className="covkey">Hatched cells have nobody. A red count means the topic is below the target your squad set.</p>
+      <p className="covkey">
+        Hatched cells have nobody. A red count means the topic is below the target your squad set.
+      </p>
     </section>
   );
 }

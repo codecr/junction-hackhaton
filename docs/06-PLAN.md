@@ -108,6 +108,6 @@ Never cut: signed manifests, coverage, solver, the day chart, server claims, dem
 | Another entry ships the same idea | Low | Loses novelty | Check the gallery weekly. Stress the local-first consensus design. |
 | Squad server abused | Low | Cost or noise | Throttling, payload cap, budget alarm, TTL. |
 
-## Recruiting message (Spanish, ready to send)
+## Recruiting message (ready to send)
 
-> Estoy armando una herramienta para el hackathon de AWS re:Invent que ayuda a un grupo a repartirse las sesiones sin pisarse: quién cubre qué tema, qué repeticiones vale la pena y quién toma las sesiones nuevas que salen a mitad de semana. Necesito 3 o 4 personas que ya estén registradas en re:Invent 2026 para probarla en serio. Toma unos 15 minutos instalarla. Cada quien la corre en su propia computadora, solo se comparten códigos de sesión (nada de cuentas ni contraseñas), y todo se borra al terminar el evento. ¿Te sumas?
+> I'm building a tool for the AWS re:Invent hackathon that helps a group split up sessions without stepping on each other: who covers which topic, which repeats are worth it, and who takes the new sessions that appear mid-week. I need 3 or 4 people already registered for re:Invent 2026 to try it for real. It takes about 15 minutes to install. Everyone runs it on their own computer, only session codes are shared (no accounts or passwords), and everything is deleted when the event ends. Are you in?

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildSquadView, defaultVenueGraph } from '@junction/core';
+import { buildSquadView, reinvent2026VenueGraph } from '@junction/core';
 import { loadDemoInput } from '../data/demo';
 import { attendeesOf, dayModel, initialDay } from './model';
 
@@ -8,7 +8,7 @@ const view = buildSquadView({
   charter: input.charter,
   manifests: input.manifests,
   catalog: input.snapshot,
-  venueGraph: defaultVenueGraph,
+  venueGraph: reinvent2026VenueGraph,
   me: input.charter.leader,
 });
 const tuesday = view.days[1]!.day;

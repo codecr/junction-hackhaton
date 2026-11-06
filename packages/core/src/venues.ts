@@ -92,7 +92,8 @@ export function walkMinutes(graph: VenueGraph, from: string, to: string): number
 /**
  * re:Invent 2026 venues as they appear in the real catalog (Spike 0, 2026-11-06): Wynn/Encore,
  * Venetian, Caesars Forum, Caesars Palace and MGM Grand. No Mandalay Bay this year. Positions are
- * approximate walking minutes along the Strip; the demo keeps `defaultVenueGraph`.
+ * approximate walking minutes along the Strip. The agent and the demo use it; `defaultVenueGraph`
+ * stays for the abstract tests.
  */
 export const reinvent2026VenueGraph: VenueGraph = {
   approximate: true,

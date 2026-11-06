@@ -27,7 +27,8 @@ export function describeProposal(p: Proposal, view: SquadView): ProposalText {
   const forMe = view.me !== undefined && p.memberId === view.me;
   const owner = view.members.find((m) => m.memberId === p.memberId);
   const ownerName = owner?.name ?? 'Someone';
-  const s = (id: string | undefined): ViewSession | undefined => (id ? view.sessions[id] : undefined);
+  const s = (id: string | undefined): ViewSession | undefined =>
+    id ? view.sessions[id] : undefined;
   const dayOf = (v: ViewSession) => {
     const d = view.days.find((x) => x.day === v.day);
     return d ? weekdayName(d) : 'that day';
@@ -42,12 +43,14 @@ export function describeProposal(p: Proposal, view: SquadView): ProposalText {
       .filter((m) => m !== p.memberId)
       .map((m) => view.members.find((x) => x.memberId === m)?.name ?? 'someone');
   };
-  const attends = (names: string[]) => `${nameList(names)} ${names.length === 1 ? 'attends' : 'attend'}`;
+  const attends = (names: string[]) =>
+    `${nameList(names)} ${names.length === 1 ? 'attends' : 'attend'}`;
   const subject = forMe ? 'you' : ownerName;
   const possessive = forMe ? 'yours' : `${ownerName}'s`;
 
   const value = (() => {
-    const squad = p.squadDelta >= 0 ? `goes up by ${units(p.squadDelta)}` : `drops by ${units(p.squadDelta)}`;
+    const squad =
+      p.squadDelta >= 0 ? `goes up by ${units(p.squadDelta)}` : `drops by ${units(p.squadDelta)}`;
     const mine =
       p.personalDelta === 0
         ? `${possessive} stays the same`
@@ -56,7 +59,9 @@ export function describeProposal(p: Proposal, view: SquadView): ProposalText {
           : `${possessive} drops by ${units(p.personalDelta)}`;
     return `Squad value ${squad} and ${mine}.`;
   })();
-  const fixes = p.reasons.includes('fixes-connection') ? ' It also fixes a walk that can’t be made.' : '';
+  const fixes = p.reasons.includes('fixes-connection')
+    ? ' It also fixes a walk that can’t be made.'
+    : '';
 
   const add = s(p.add?.[0]);
   const remove = s(p.remove?.[0]);
@@ -67,7 +72,9 @@ export function describeProposal(p: Proposal, view: SquadView): ProposalText {
       const r = remove;
       if (!a || !r) break;
       const title =
-        a.day !== r.day ? `Take ${a.code} on ${dayOf(a)} instead` : `Take ${a.code} at ${clock(a.startLocal)} instead`;
+        a.day !== r.day
+          ? `Take ${a.code} on ${dayOf(a)} instead`
+          : `Take ${a.code} at ${clock(a.startLocal)} instead`;
       const others = othersOn(r.sessionId);
       const lead = others.length
         ? `${attends(others)} ${r.code} on ${when(r)} as well.`
@@ -134,11 +141,15 @@ export function describeProposal(p: Proposal, view: SquadView): ProposalText {
       const meet = p.meet;
       if (!meet) break;
       const venue = view.venues.find((v) => v.id === meet.venue)?.name ?? meet.venue;
-      const names = meet.members.map((id) => view.members.find((m) => m.memberId === id)?.name ?? 'someone');
+      const names = meet.members.map(
+        (id) => view.members.find((m) => m.memberId === id)?.name ?? 'someone',
+      );
       return {
         title: `Meet at the ${venue}, ${meet.start} to ${meet.end}`,
         sentence: `${nameList(names)} can all reach the ${venue} then and still make their next session.`,
-        why: ['This adds one personal time entry to your schedule, tagged so Junction only ever edits its own.'],
+        why: [
+          'This adds one personal time entry to your schedule, tagged so Junction only ever edits its own.',
+        ],
         accept: 'Add to my schedule',
         decline: 'Skip',
         forMe,
@@ -148,7 +159,8 @@ export function describeProposal(p: Proposal, view: SquadView): ProposalText {
   }
   return {
     title: 'A change to your picks',
-    sentence: 'The sessions this proposal names are not in your catalog yet. Sync, then look again.',
+    sentence:
+      'The sessions this proposal names are not in your catalog yet. Sync, then look again.',
     why: [value],
     accept: 'Accept',
     decline: 'Not now',

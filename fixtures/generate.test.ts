@@ -6,7 +6,7 @@ import {
   analyseCoverage,
   catalogSnapshotSchema,
   charterSchema,
-  defaultVenueGraph,
+  reinvent2026VenueGraph,
   findRepeatGroups,
   groupOf,
   issuesOnDay,
@@ -29,7 +29,7 @@ const report: CoverageReport = analyseCoverage({
   charter: demo.charter,
   manifests: demo.manifests,
   catalog: demo.snapshot,
-  venueGraph: defaultVenueGraph,
+  venueGraph: reinvent2026VenueGraph,
 });
 const day = (date: string): number => localDay(parseInstantMinutes(`${date}T12:00:00Z`)!, -480);
 const TUE = day('2026-12-01');
@@ -76,7 +76,7 @@ describe('determinism', () => {
 
   it('has a pinned hash for the default seed (golden, must match on Linux, macOS and Windows)', () => {
     expect(sha256Hex(Object.values(renderFiles(demo)).join('\n'))).toBe(
-      '58ff9942ac22b738b716e61c29b3a7245bd72411554dff49d9f7d213129f8a41',
+      '2137e833b0c7047033d58ff186e56a54124067f0f124675a1133f3228802fe13',
     );
   });
 });

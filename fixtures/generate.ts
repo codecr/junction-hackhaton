@@ -9,7 +9,7 @@
 // byte-identical output.
 import {
   catalogHash,
-  defaultVenueGraph,
+  reinvent2026VenueGraph,
   keyPairFromSeed,
   memberIdFromPublicKey,
   parseInstantMinutes,
@@ -68,13 +68,15 @@ const DATES: Record<DayKey, string> = {
   fri: '2026-12-04',
 };
 
-const VENUES = ['wynn', 'venetian', 'caesars-forum', 'mgm-grand', 'mandalay-bay'] as const;
+// The five re:Invent 2026 venues (Spike 0). The last slot was Mandalay Bay in the first reference
+// drawing; it is Caesars Palace now, kept in the same slot so the seeded draws do not move.
+const VENUES = ['wynn', 'venetian', 'caesars-forum', 'mgm-grand', 'caesars-palace'] as const;
 const VENUE_NAMES: Record<(typeof VENUES)[number], string> = {
   wynn: 'Wynn',
   venetian: 'Venetian',
   'caesars-forum': 'Caesars Forum',
   'mgm-grand': 'MGM Grand',
-  'mandalay-bay': 'Mandalay Bay',
+  'caesars-palace': 'Caesars Palace',
 };
 type VenueId = (typeof VENUES)[number];
 
@@ -199,7 +201,7 @@ const TUESDAY: Draft[] = [
   authored(
     'DAT404',
     'Vector search cost tuning',
-    'mandalay-bay',
+    'caesars-palace',
     'tue',
     t(14, 15),
     t(15, 15),
@@ -512,7 +514,7 @@ export function generateDemo(seed: number = DEFAULT_SEED): DemoData {
   const apiSessions = drafts.map(toApiSession);
   const { sessions, skipped } = toCatalogSessions(apiSessions, {
     utcOffsetMin: UTC_OFFSET_MIN,
-    venueGraph: defaultVenueGraph,
+    venueGraph: reinvent2026VenueGraph,
   });
   const snapshot: CatalogSnapshot = {
     eventId: 'reinvent2026',

@@ -20,11 +20,14 @@ function Summary({ model }: { model: DayModel }) {
       </>,
     );
   if (model.unplanned > 0)
-    parts.push(<strong>{plural(model.unplanned, 'unplanned duplicate', 'unplanned duplicates')}</strong>);
+    parts.push(
+      <strong>{plural(model.unplanned, 'unplanned duplicate', 'unplanned duplicates')}</strong>,
+    );
   if (model.hops.length > 0)
     parts.push(
       <>
-        <strong>{plural(model.hops.length, 'connection', 'connections')}</strong> that can&rsquo;t be made
+        <strong>{plural(model.hops.length, 'connection', 'connections')}</strong> that can&rsquo;t
+        be made
       </>,
     );
   if (parts.length === 0) return <p className="summary">Nothing needs attention on this day.</p>;
@@ -45,7 +48,9 @@ function provisionalNotice(view: SquadView): string | undefined {
   if (!view.provisional) return undefined;
   const mine = view.members.find((m) => m.memberId === view.me)?.catalogHash;
   if (mine) {
-    const behind = view.members.filter((m) => m.hasPicks && m.catalogHash && m.catalogHash !== mine);
+    const behind = view.members.filter(
+      (m) => m.hasPicks && m.catalogHash && m.catalogHash !== mine,
+    );
     if (behind.length > 0) {
       const names = nameList(behind.map((m) => `${m.name}’s`));
       return `${names} catalog ${behind.length === 1 ? 'is' : 'are'} one update behind, so the proposals below are provisional until ${behind.length === 1 ? 'it matches' : 'they match'} yours.`;
@@ -75,7 +80,9 @@ export function SquadScreen({
   const [asList, setAsList] = useState(false);
 
   const day =
-    picked !== undefined && view.days.some((d) => d.day === picked) ? picked : initialDay(view, todayLocal(view));
+    picked !== undefined && view.days.some((d) => d.day === picked)
+      ? picked
+      : initialDay(view, todayLocal(view));
   const viewDay = view.days.find((d) => d.day === day);
   const model = useMemo(() => (day === undefined ? undefined : dayModel(view, day)), [view, day]);
   const layout = useMemo(() => {
@@ -90,7 +97,10 @@ export function SquadScreen({
     return (
       <section className="head">
         <h1>{view.squadName}</h1>
-        <p className="summary">Nobody in the squad has picks with dates yet. Once someone shares theirs, the week shows here.</p>
+        <p className="summary">
+          Nobody in the squad has picks with dates yet. Once someone shares theirs, the week shows
+          here.
+        </p>
       </section>
     );
   }
@@ -107,7 +117,8 @@ export function SquadScreen({
     const next = view.days[j];
     if (next) {
       setPicked(next.day);
-      const tabs = e.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+      const tabs =
+        e.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
       tabs?.[j]?.focus();
     }
   };
@@ -156,11 +167,17 @@ export function SquadScreen({
           <div>
             <h2 id="h-where">Where everyone is</h2>
             <p className="cap">
-              Each line is one person. Thick runs are sessions, thin slopes are walks between venues.
+              Each line is one person. Thick runs are sessions, thin slopes are walks between
+              venues.
               {view.venueApproximate ? ' Walking times are estimates.' : ''}
             </p>
           </div>
-          <button className="linklike" type="button" aria-pressed={asList} onClick={() => setAsList((v) => !v)}>
+          <button
+            className="linklike"
+            type="button"
+            aria-pressed={asList}
+            onClick={() => setAsList((v) => !v)}
+          >
             {asList ? 'Show as a chart' : 'Show as a list'}
           </button>
         </div>

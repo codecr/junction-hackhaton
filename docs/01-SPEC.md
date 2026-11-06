@@ -118,7 +118,7 @@ Priorities: **M** must (core demo), **S** should, **C** could. Phases refer to d
 ## Acceptance scenarios (write these as tests)
 
 1. **Duplicate.** Given Ana and Luis both hold OPS305-R and the topic target is 1, the coverage view flags an unplanned duplicate and the solver proposes moving one of them to the repeat `OPS305-R1` if it fits their schedule.
-2. **Impossible walk.** Given Luis ends at MGM Grand at 2:00 PM and starts at Mandalay Bay at 2:15 PM with a 28-minute walk, the chart draws a dashed line ending in a cross and states the needed and available minutes.
+2. **Impossible walk.** Given Luis ends at MGM Grand at 2:00 PM and starts at Caesars Palace at 2:15 PM with a 28-minute walk, the chart draws a dashed line ending in a cross and states the needed and available minutes.
 3. **Determinism.** Given the same charter, manifests and catalog on two machines, the proposal lists are byte-identical.
 4. **Launch claim.** Given a new session that three members could take, all agents name the same owner. A second member claiming before their grace period is refused by the server, and after it succeeds only if the owner has not claimed.
 5. **Partial failure.** Given ten sessions to reserve where two are full, the UI reports eight reserved and two full, confirmed from `GetSchedule`, and offers backups.

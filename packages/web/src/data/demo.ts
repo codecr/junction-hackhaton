@@ -3,7 +3,7 @@ import {
   buildSquadView,
   catalogSnapshotSchema,
   charterSchema,
-  defaultVenueGraph,
+  reinvent2026VenueGraph,
   manifestSchema,
   type Charter,
   type CatalogSnapshot,
@@ -79,7 +79,7 @@ export function createDemoSource(input: DemoInput = loadDemoInput()): DataSource
       charter,
       manifests,
       catalog: snapshot,
-      venueGraph: defaultVenueGraph,
+      venueGraph: reinvent2026VenueGraph,
       me,
     });
     view.proposals = view.proposals.filter((p) => !declined.has(p.id));
@@ -117,7 +117,7 @@ export function createDemoSource(input: DemoInput = loadDemoInput()): DataSource
         );
       accepted.set(id, { before: manifests, proposal });
       manifests = applyProposal(
-        { charter, catalog: snapshot, venueGraph: defaultVenueGraph },
+        { charter, catalog: snapshot, venueGraph: reinvent2026VenueGraph },
         manifests,
         proposal,
       );

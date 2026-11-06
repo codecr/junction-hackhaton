@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildSquadView, canonicalJson, defaultVenueGraph } from '@junction/core';
+import { buildSquadView, canonicalJson, reinvent2026VenueGraph } from '@junction/core';
 import { generateDemo } from './generate';
 
 const demo = generateDemo();
@@ -7,7 +7,7 @@ const input = {
   charter: demo.charter,
   manifests: demo.manifests,
   catalog: demo.snapshot,
-  venueGraph: defaultVenueGraph,
+  venueGraph: reinvent2026VenueGraph,
 };
 
 describe('buildSquadView on the demo squad', () => {
@@ -45,8 +45,8 @@ describe('buildSquadView on the demo squad', () => {
       'wynn',
       'venetian',
       'caesars-forum',
+      'caesars-palace',
       'mgm-grand',
-      'mandalay-bay',
     ]);
   });
 });

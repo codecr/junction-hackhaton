@@ -10,7 +10,7 @@ export const CHART = {
   /** y of the first venue line. */
   top: 92,
   /** Pixels per walking minute between venues. */
-  kY: 3.1,
+  kY: 4,
   /** Minimum distance between venue lines, enough for five lanes. */
   minRowGap: 40,
   /** Vertical distance between member lanes. */

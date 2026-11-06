@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { applyProposal, defaultVenueGraph, propose, rankClaimants } from '@junction/core';
+import { applyProposal, reinvent2026VenueGraph, propose, rankClaimants } from '@junction/core';
 import { generateDemo } from './generate';
 
 // The solver on the demo squad must tell the story of design/reference.html.
@@ -8,7 +8,7 @@ const input = {
   charter: demo.charter,
   manifests: demo.manifests,
   catalog: demo.snapshot,
-  venueGraph: defaultVenueGraph,
+  venueGraph: reinvent2026VenueGraph,
 };
 const name = (id: string) => demo.members.find((m) => m.memberId === id)?.name;
 const codeOf = (id: string) => demo.snapshot.sessions.find((s) => s.sessionId === id)?.code;
@@ -40,7 +40,9 @@ describe('the solver on the reference squad', () => {
 
   it('shows the claim ranking the reference describes: Sofía is free and has no agentic session yet', () => {
     const ranks = rankClaimants(input, 'demo-bsi403').map((r) => name(r.memberId));
-    expect(ranks).toEqual(['Sofía', 'Diego']); // Ana, Luis and Marta cannot make it
+    // Ana and Marta cannot make it. Luis can walk from Caesars Palace in time and ranks last
+    // under the claim rule.
+    expect(ranks).toEqual(['Sofía', 'Diego', 'Luis']);
   });
 
   it("marks both as provisional, because Marta's catalog is one update behind", () => {

@@ -1,5 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { ago, clock, clockRange, hourLabel, longDay, nameList, plural, tabDay, units } from './format';
+import {
+  ago,
+  clock,
+  clockRange,
+  hourLabel,
+  longDay,
+  nameList,
+  plural,
+  tabDay,
+  units,
+} from './format';
 
 const tue = { day: 20788, y: 2026, m: 12, d: 1, weekday: 2, issues: 4 };
 

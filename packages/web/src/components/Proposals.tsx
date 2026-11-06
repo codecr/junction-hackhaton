@@ -103,7 +103,9 @@ export function Proposals({
       const back = out.results.filter((r) => r.ok && r.action === 'add').map((r) => r.code);
       const gone = out.results.filter((r) => r.ok && r.action === 'remove').map((r) => r.code);
       const parts = [
-        back.length ? `${nameList(back)} ${back.length === 1 ? 'is' : 'are'} back on your schedule` : '',
+        back.length
+          ? `${nameList(back)} ${back.length === 1 ? 'is' : 'are'} back on your schedule`
+          : '',
         gone.length ? `${nameList(gone)} ${gone.length === 1 ? 'is' : 'are'} released` : '',
       ].filter(Boolean);
       setNotice({
@@ -166,10 +168,20 @@ export function Proposals({
               </details>
               {text.forMe ? (
                 <div className="actions">
-                  <button className="btn" type="button" disabled={busy !== null} onClick={() => accept(p, text)}>
+                  <button
+                    className="btn"
+                    type="button"
+                    disabled={busy !== null}
+                    onClick={() => accept(p, text)}
+                  >
                     {busy === p.id ? 'Working' : text.accept}
                   </button>
-                  <button className="linklike" type="button" disabled={busy !== null} onClick={() => decline(p)}>
+                  <button
+                    className="linklike"
+                    type="button"
+                    disabled={busy !== null}
+                    onClick={() => decline(p)}
+                  >
                     {text.decline}
                   </button>
                 </div>

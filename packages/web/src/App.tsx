@@ -6,12 +6,12 @@ import { ago } from './lib/format';
 import type { AppState, DataSource } from './data/types';
 
 type Phase =
-  | { kind: 'loading' }
-  | { kind: 'error'; message: string }
-  | { kind: 'ready'; state: AppState };
+  { kind: 'loading' } | { kind: 'error'; message: string } | { kind: 'ready'; state: AppState };
 
 const message = (e: unknown) =>
-  e instanceof Error ? e.message : 'Something went wrong talking to the local agent. Reload the page.';
+  e instanceof Error
+    ? e.message
+    : 'Something went wrong talking to the local agent. Reload the page.';
 
 function Skeleton() {
   return (
@@ -61,7 +61,8 @@ function SignedOut({ source, onState }: { source: DataSource; onState: (s: AppSt
     <section className="head state" aria-labelledby="h-signin">
       <h1 id="h-signin">Sign in to see your squad</h1>
       <p className="summary">
-        Junction reads your re:Invent schedule with your AWS Builder ID. The sign-in stays on this machine.
+        Junction reads your re:Invent schedule with your AWS Builder ID. The sign-in stays on this
+        machine.
       </p>
       <div className="actions">
         <button className="btn" type="button" onClick={signIn} disabled={waiting}>
@@ -70,7 +71,8 @@ function SignedOut({ source, onState }: { source: DataSource; onState: (s: AppSt
       </div>
       {waiting && (
         <p className="notice" role="status">
-          Finish signing in in the browser tab that just opened. This page updates when you are done.
+          Finish signing in in the browser tab that just opened. This page updates when you are
+          done.
         </p>
       )}
       {error && (
@@ -82,13 +84,21 @@ function SignedOut({ source, onState }: { source: DataSource; onState: (s: AppSt
   );
 }
 
-function NoSquad({ source, onState, name }: { source: DataSource; onState: (s: AppState) => void; name: string }) {
+function NoSquad({
+  source,
+  onState,
+  name,
+}: {
+  source: DataSource;
+  onState: (s: AppState) => void;
+  name: string;
+}) {
   return (
     <section className="head state" aria-labelledby="h-nosquad">
       <h1 id="h-nosquad">Bring your squad in</h1>
       <p className="summary">
-        Signed in as {name}. Share your picks with the people you are going with, and paste theirs here. Junction
-        then shows where everyone is and what nobody covers.
+        Signed in as {name}. Share your picks with the people you are going with, and paste theirs
+        here. Junction then shows where everyone is and what nobody covers.
       </p>
       <div className="picks-grid">
         <ExportPicks source={source} />
@@ -111,7 +121,9 @@ export function App({ source }: { source: DataSource }) {
 
   const load = useCallback(() => {
     setPhase({ kind: 'loading' });
-    source.getState().then(onState, (e: unknown) => setPhase({ kind: 'error', message: message(e) }));
+    source
+      .getState()
+      .then(onState, (e: unknown) => setPhase({ kind: 'error', message: message(e) }));
   }, [source, onState]);
 
   useEffect(load, [load]);
@@ -155,14 +167,25 @@ export function App({ source }: { source: DataSource }) {
         {squad && (
           <>
             <span className="when">
-              {demo ? 'Fictional demo squad' : syncing ? 'Syncing' : synced ? `Synced ${synced}` : 'Not synced yet'}
+              {demo
+                ? 'Fictional demo squad'
+                : syncing
+                  ? 'Syncing'
+                  : synced
+                    ? `Synced ${synced}`
+                    : 'Not synced yet'}
             </span>
             {!demo && (
               <button className="linklike sync" type="button" onClick={sync} disabled={syncing}>
                 Sync now
               </button>
             )}
-            <button className="btn quiet" type="button" aria-expanded={sharing} onClick={() => setSharing((v) => !v)}>
+            <button
+              className="btn quiet"
+              type="button"
+              aria-expanded={sharing}
+              onClick={() => setSharing((v) => !v)}
+            >
               Share my picks
             </button>
           </>
@@ -179,8 +202,9 @@ export function App({ source }: { source: DataSource }) {
           <div className="share" ref={shareRef} tabIndex={-1} aria-label="Share my picks">
             {demo ? (
               <p className="summary">
-                In the app on your own machine, this gives you a block of text with your picks to send to your squad,
-                and a place to paste theirs. The demo squad is fictional, so there is nothing to share here.
+                In the app on your own machine, this gives you a block of text with your picks to
+                send to your squad, and a place to paste theirs. The demo squad is fictional, so
+                there is nothing to share here.
               </p>
             ) : (
               <div className="picks-grid">
@@ -201,7 +225,9 @@ export function App({ source }: { source: DataSource }) {
             <p className="err" role="alert">
               {phase.message}
             </p>
-            <p className="summary">Squad picks you exchanged as text still work once the agent is back.</p>
+            <p className="summary">
+              Squad picks you exchanged as text still work once the agent is back.
+            </p>
             <div className="actions">
               <button className="btn" type="button" onClick={load}>
                 Try again
@@ -219,13 +245,14 @@ export function App({ source }: { source: DataSource }) {
       <Footer>
         {demo ? (
           <p>
-            This demo runs entirely in your browser with fictional data. The real Junction runs on your machine: your
-            AWS Events sign-in never leaves it, and the squad server only stores session codes.
+            This demo runs entirely in your browser with fictional data. The real Junction runs on
+            your machine: your AWS Events sign-in never leaves it, and the squad server only stores
+            session codes.
           </p>
         ) : (
           <p>
-            Junction runs on this machine. Your AWS Events sign-in never leaves it, and the squad server only stores
-            session codes.
+            Junction runs on this machine. Your AWS Events sign-in never leaves it, and the squad
+            server only stores session codes.
             {state?.signedIn && state.member && (
               <>
                 {' '}

@@ -14,7 +14,8 @@ export function ExportPicks({ source }: { source: DataSource }) {
     let live = true;
     source.exportPicks().then(
       (t) => live && setText(t),
-      (e: unknown) => live && setError(e instanceof Error ? e.message : 'Your picks could not be read.'),
+      (e: unknown) =>
+        live && setError(e instanceof Error ? e.message : 'Your picks could not be read.'),
     );
     return () => {
       live = false;
@@ -34,14 +35,23 @@ export function ExportPicks({ source }: { source: DataSource }) {
   return (
     <div className="picks-block">
       <label htmlFor={id}>Your picks</label>
-      <p className="cap">Send this block to your squad. It holds session codes and your signature, nothing else.</p>
+      <p className="cap">
+        Send this block to your squad. It holds session codes and your signature, nothing else.
+      </p>
       {error ? (
         <p className="err" role="alert">
           {error}
         </p>
       ) : (
         <>
-          <textarea id={id} readOnly rows={4} value={text ?? ''} placeholder="Reading your picks" onFocus={(e) => e.currentTarget.select()} />
+          <textarea
+            id={id}
+            readOnly
+            rows={4}
+            value={text ?? ''}
+            placeholder="Reading your picks"
+            onFocus={(e) => e.currentTarget.select()}
+          />
           <div className="actions">
             <button className="btn quiet" type="button" disabled={!text} onClick={copy}>
               Copy
@@ -56,7 +66,13 @@ export function ExportPicks({ source }: { source: DataSource }) {
   );
 }
 
-export function ImportPicks({ source, onState }: { source: DataSource; onState: (s: AppState) => void }) {
+export function ImportPicks({
+  source,
+  onState,
+}: {
+  source: DataSource;
+  onState: (s: AppState) => void;
+}) {
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -88,7 +104,13 @@ export function ImportPicks({ source, onState }: { source: DataSource; onState: 
     >
       <label htmlFor={id}>Picks from your squad</label>
       <p className="cap">Paste the block someone in your squad sent you.</p>
-      <textarea id={id} rows={4} value={text} onChange={(e) => setText(e.target.value)} spellCheck={false} />
+      <textarea
+        id={id}
+        rows={4}
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        spellCheck={false}
+      />
       <div className="actions">
         <button className="btn" type="submit" disabled={busy || text.trim() === ''}>
           {busy ? 'Adding' : 'Add picks'}

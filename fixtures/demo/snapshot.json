@@ -151,7 +151,7 @@
       ],
       "startMin": 29936055,
       "endMin": 29936115,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 404",
       "full": false
     },
@@ -204,7 +204,7 @@
       ],
       "startMin": 29934300,
       "endMin": 29934360,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 704",
       "full": false
     },
@@ -243,7 +243,7 @@
       ],
       "startMin": 29934300,
       "endMin": 29934360,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 768",
       "full": false
     },
@@ -751,7 +751,7 @@
       ],
       "startMin": 29934600,
       "endMin": 29934660,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 723",
       "full": false
     },
@@ -773,7 +773,7 @@
       ],
       "startMin": 29934600,
       "endMin": 29934690,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 737",
       "full": false
     },
@@ -794,7 +794,7 @@
       ],
       "startMin": 29934270,
       "endMin": 29934330,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 846",
       "full": false
     },
@@ -937,7 +937,7 @@
       ],
       "startMin": 29934660,
       "endMin": 29934750,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 774",
       "full": true
     },
@@ -958,7 +958,7 @@
       ],
       "startMin": 29934630,
       "endMin": 29934720,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 744",
       "full": true
     },
@@ -979,7 +979,7 @@
       ],
       "startMin": 29937510,
       "endMin": 29937600,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 744",
       "full": true
     },
@@ -1164,7 +1164,7 @@
       ],
       "startMin": 29936220,
       "endMin": 29936310,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 838",
       "full": true
     },
@@ -1186,7 +1186,7 @@
       ],
       "startMin": 29935920,
       "endMin": 29935965,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 717",
       "full": false
     },
@@ -1207,7 +1207,7 @@
       ],
       "startMin": 29936100,
       "endMin": 29936160,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 710",
       "full": false
     },
@@ -1228,7 +1228,7 @@
       ],
       "startMin": 29937540,
       "endMin": 29937600,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 710",
       "full": false
     },
@@ -1309,7 +1309,7 @@
       ],
       "startMin": 29936190,
       "endMin": 29936280,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 732",
       "full": false
     },
@@ -1372,7 +1372,7 @@
       ],
       "startMin": 29937270,
       "endMin": 29937330,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 842",
       "full": true
     },
@@ -1389,7 +1389,7 @@
       ],
       "startMin": 29937390,
       "endMin": 29937450,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 786",
       "full": false
     },
@@ -1410,7 +1410,7 @@
       ],
       "startMin": 29937330,
       "endMin": 29937390,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 844",
       "full": false
     },
@@ -1448,7 +1448,7 @@
       ],
       "startMin": 29937510,
       "endMin": 29937555,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 847",
       "full": false
     },
@@ -1467,7 +1467,7 @@
       ],
       "startMin": 29938950,
       "endMin": 29938995,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 847",
       "full": false
     },
@@ -1549,7 +1549,7 @@
       ],
       "startMin": 29937270,
       "endMin": 29937330,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 792",
       "full": false
     },
@@ -1651,7 +1651,7 @@
       ],
       "startMin": 29937390,
       "endMin": 29937480,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 761",
       "full": false
     },
@@ -1756,7 +1756,7 @@
       ],
       "startMin": 29938770,
       "endMin": 29938815,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 842",
       "full": true
     },
@@ -1851,7 +1851,7 @@
       ],
       "startMin": 29939040,
       "endMin": 29939100,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 723",
       "full": false
     },
@@ -2059,7 +2059,7 @@
       ],
       "startMin": 29940000,
       "endMin": 29940060,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 859",
       "full": false
     },
@@ -2136,7 +2136,7 @@
       ],
       "startMin": 29940150,
       "endMin": 29940240,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 729",
       "full": false
     },
@@ -2178,7 +2178,7 @@
       ],
       "startMin": 29940510,
       "endMin": 29940570,
-      "venue": "mandalay-bay",
+      "venue": "caesars-palace",
       "room": "Room 725",
       "full": false
     },
