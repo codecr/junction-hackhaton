@@ -4,9 +4,9 @@
   "context": {
     "alertEmail": "gerardo@akarui.cloud",
     "relayDomain": "api.junction.gerardo.dev",
-    "hostedZoneName": "",
-    "hostedZoneId": "",
-    "reservedConcurrency": 20,
+    "hostedZoneName": "gerardo.dev",
+    "hostedZoneId": "Z0407100FOAC02XR4PST",
+    "reservedConcurrency": 0,
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": ["aws"]
