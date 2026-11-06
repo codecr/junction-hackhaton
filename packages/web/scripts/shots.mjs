@@ -16,7 +16,7 @@ const dist = join(web, 'dist-demo');
 const out = resolve(web, '../../design/current');
 
 if (!process.argv.includes('--no-build')) {
-  const r = spawnSync('npx', ['vite', 'build', '--mode', 'demo'], { cwd: web, stdio: 'inherit', shell: true });
+  const r = spawnSync('npx vite build --mode demo', { cwd: web, stdio: 'inherit', shell: true });
   if (r.status !== 0) process.exit(r.status ?? 1);
 }
 

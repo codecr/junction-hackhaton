@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { Proposal, SquadView } from '@junction/core';
 import { describeProposal, type ProposalText } from '../lib/proposals';
 import type { AppState, DataSource, SessionResult } from '../data/types';
-import { plural } from '../lib/format';
+import { nameList, plural } from '../lib/format';
 
 // Proposals as a plain list. Accepting writes to the attendee's own schedule through the local
 // agent; the outcome is shown per session, as the schedule confirms it, never as a bare "done".
@@ -100,10 +100,16 @@ export function Proposals({
       const out = await source.undo(s.proposal.id);
       setSettled((prev) => prev.filter((x) => x.proposal.id !== s.proposal.id));
       const failed = out.results.filter((r) => !r.ok).length;
+      const back = out.results.filter((r) => r.ok && r.action === 'add').map((r) => r.code);
+      const gone = out.results.filter((r) => r.ok && r.action === 'remove').map((r) => r.code);
+      const parts = [
+        back.length ? `${nameList(back)} ${back.length === 1 ? 'is' : 'are'} back on your schedule` : '',
+        gone.length ? `${nameList(gone)} ${gone.length === 1 ? 'is' : 'are'} released` : '',
+      ].filter(Boolean);
       setNotice({
         text:
           failed === 0
-            ? `Undone. ${s.text.title} is back to how it was.`
+            ? `Undone. ${parts.length ? `${parts.join(' and ')}.` : 'Your schedule is as it was.'}`
             : `Undo finished, but ${plural(failed, 'change', 'changes')} did not go through. Check the list.`,
         results: out.results,
       });

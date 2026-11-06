@@ -127,6 +127,7 @@ Estimated cost during the hackathon: under 5 USD a month, dominated by CloudFron
 | ADR-014 | Amplify Hosting for the static site, CDK for the backend | CI from GitHub with no hosting stacks to maintain, while signature checks and DynamoDB conditional writes stay in our own Lambda (Amplify Gen 2 data would put AppSync in front of them). |
 | ADR-015 | CI matrix on Linux, macOS and Windows, LF line endings enforced | Byte-identical solver output is the core promise and the author develops on Windows. `.gitattributes` forces LF so golden fixtures do not drift. |
 | ADR-016 | Local agent UI port is 4848, outside the OAuth callback range | 8484 is the first callback port and Claude Code's MCP setup uses it. |
+| ADR-017 | The web UI picks its data source at build time, and the demo build ships a `connect-src 'none'` CSP | `vite build` talks to the agent at `/api` with the `X-Junction-Secret` from the page's meta tag; `vite build --mode demo` (base `/demo/`) builds the `SquadView` in the browser from `fixtures/demo` with the same core functions. The CSP makes "the demo makes no network requests" something the browser enforces, and `npm run shots` fails if the demo requests anything outside its own files. |
 
 Add new records here as they are made.
 

@@ -52,14 +52,14 @@ function sessionResults(
       code: codeOf(id),
       action: 'add' as const,
       ok: true,
-      detail: 'Added to your schedule in this demo. Nothing was sent anywhere.',
+      detail: 'Demo only, nothing was sent.',
     })),
     ...removes.map((id) => ({
       sessionId: id,
       code: codeOf(id),
       action: 'remove' as const,
       ok: true,
-      detail: 'Released in this demo. Nothing was sent anywhere.',
+      detail: 'Demo only, nothing was sent.',
     })),
   ];
 }
