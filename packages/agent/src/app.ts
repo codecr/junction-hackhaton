@@ -456,7 +456,7 @@ export class Junction {
     const charter = loadCharter();
     const squadId = charter?.squadId ?? 'sq_solo';
     const squad8 = squadId.replace(/^sq_/, '').slice(0, 8);
-    return `[jn1:meet:${squad8}:${sha256Hex(`meet|${squadId}|${label}`).slice(0, 6)}]`;
+    return `jn1-meet-${squad8}-${sha256Hex(`meet|${squadId}|${label}`).slice(0, 6)}`;
   }
 
   async listOwnPersonalTime(): Promise<PersonalTime[]> {
@@ -509,7 +509,7 @@ export class Junction {
       throw new Error(
         'Junction only changes personal time it created. That entry is not one of them.',
       );
-    const tag = own.description.slice(0, own.description.indexOf(']') + 1);
+    const tag = own.description.split(' ')[0] ?? '';
     await this.api.updatePersonalTime(EVENT_ID, personalTimeId, personalTimeBody(tag, input));
     return (await this.listOwnPersonalTime()).find((p) => p.personalTimeId === personalTimeId);
   }
@@ -525,7 +525,8 @@ export class Junction {
   }
 }
 
-export const JUNCTION_TAG = /^\[jn1:(meet|walk|buf):[a-z2-7_]{1,8}:[0-9a-f]{6}\]/;
+// Plain letters, digits and hyphens: the API refuses a description that starts with `[jn1:...]` (Spike 0, 2026-11-06).
+export const JUNCTION_TAG = /^jn1-(meet|walk|buf)-[a-z2-7]{1,8}-[0-9a-f]{6}(\s|$)/;
 
 const CLOCK = /^([01]\d|2[0-3]):([0-5]\d)$/;
 

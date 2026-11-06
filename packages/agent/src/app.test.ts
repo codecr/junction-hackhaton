@@ -235,7 +235,7 @@ describe('Junction agent, end to end against a fake Events API', () => {
 
 describe('personal time body', () => {
   it('uses event-local wall clock, 5-minute steps, and keeps the tag inside 250 characters', () => {
-    const b = personalTimeBody('[jn1:meet:abcdefgh:0a1b2c]', {
+    const b = personalTimeBody('jn1-meet-abcdefgh-0a1b2c', {
       label: 'x',
       date: '2026-12-01',
       start: '12:30',

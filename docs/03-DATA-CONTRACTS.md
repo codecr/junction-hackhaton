@@ -155,7 +155,7 @@ For a session newly added to the catalog:
 Description starts with a tag so Junction can find its own entries after the API returns no IDs on create:
 
 ```
-[jn1:<kind>:<squad8>:<hash6>] <plain text>
+jn1-<kind>-<squad8>-<hash6> <plain text>
 ```
 
 - `kind`: `meet`, `walk`, `buf`. `squad8` first 8 characters of the squad ID without the prefix. `hash6` first 6 hex of sha256(kind | squadId | proposalId), the proposal's stable ID, so the tag still matches after an `UpdatePersonalTime` changes times or location.

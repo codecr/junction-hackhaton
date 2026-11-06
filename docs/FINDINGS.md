@@ -15,6 +15,18 @@ Source: `https://api.awsevents.com/v1/openapi.json`, fetched today. Changes agai
 - `429` carries `Retry-After` in seconds.
 - `ListEvents` and `GetEvent` need no credentials. Verified live today with `junction doctor`: `reinvent2026` is listed.
 
-## Spike 0 (real sign-in)
+## 2026-11-06 Spike 0 (real sign-in, one registered attendee)
 
-Pending the first real sign-in. Record here: catalog total, pages and walk time; field presence; venue strings and whether `defaultVenueGraph` aliases match; code suffix patterns; `GetSchedule` shape; favorites round trip.
+- **Sign-in:** PKCE with `identity_provider=AWSBuilderID` on `http://127.0.0.1:8484/callback` worked on the first try. Tokens in `~/.junction/credentials.json`.
+- **Catalog walk:** 2476 sessions in 10 pages, `totalCount` 2476, 8.8 s end to end with `includeAbstracts=false`, well inside the 60 per minute quota. Page size 250 except the last.
+- **Field presence (of 2476):** always `sessionId`, `abbreviation`, `isAllDaySession`, `isReservable`, `title`, `type`; nearly always `room`, `sessionTime`, `level`; `venue` 2438; `topics` 2358; `features` 2307; `speakers` 2125; `areasOfInterest` 1914; `roles` 1900; `services` 1664; `seatAvailability` 1482; `industries` 215. **`tracks` is never present.** Charter topic matching uses `topics` and `services`.
+- **Venues:** five strings: `MGM Grand`, `Wynn/Encore`, `Caesars Forum`, `Caesars Palace`, `Venetian`. **No Mandalay Bay.** `defaultVenueGraph` mapped Caesars Palace to Caesars Forum through the alias `caesars`; fixed with `reinvent2026VenueGraph` (core), which the agent uses. The demo keeps the default graph.
+- **Placed on the chart:** 2352. Skipped: 84 all-day, 21 without venue, 4 without time, 15 with codes the parser rejects: double suffixes (`XXX000-S-R`, `XXX000-S-R1`) and a few `abbreviation` values that are record ids (`rec...`) rather than codes.
+- **Code suffixes:** none 1002, `R<n>` 593, `R` 552, `S` 308, `D<n>` 21.
+- **Levels** use an en dash: `300 – Advanced`. **Types:** Chalk talk, Breakout session, Workshop, Lightning talk, Builders' session, Code talk and others. **Features** include `Community-led` and `Customer story`, confirming that repeats can differ in format.
+- **Fullness:** `seatAvailability` is `unavailable` for 1471 of 1482 reservable sessions in November; `limited` 4, `veryLimited` 7.
+- **GetSchedule:** `{ schedule: { reserved, favorites, personalTime } }`, all three present. This attendee: 0 reserved, 18 favorites, all 18 placed on the chart.
+- **Favorites round trip:** `AssociateFavorites` with one valid and one invalid id returned 200 with `successful: [valid]` and `failed: [{ code: "other" }]` for the invalid one. The favorite appeared in `GetSchedule` immediately. Favoriting it again gave `failed: [{ code: "alreadyFavorited" }]`. `DisassociateFavorite` removed it at once; a second call returned 404 "This session is not among your favorites."
+- **Personal time:** create with a plain description at event-local times returned 204 and the entry appeared in `GetSchedule` with its `personalTimeId`. **A description starting with `[jn1:meet:...]` was refused with 400 "The personal time entry could not be applied."** The ownership tag is now `jn1-<kind>-<squad8>-<hash6>` (letters, digits, hyphens), pending one confirming create.
+- **DeletePersonalTime returned 204 but one entry stayed** in `GetSchedule` for more than 5 minutes after two deletes; two other entries from the same run were deleted normally. A 204 on delete is therefore not proof; Junction confirms every delete from `GetSchedule` (`deleteMeet` returns whether the entry is gone). The leftover test entry was removed by hand in the portal.
+- **Existing entries made by another tool earlier appear 8 hours late**, consistent with having been written in UTC before the API documented event-local wall clock.
