@@ -12,7 +12,7 @@
     "infra"
   ],
   "scripts": {
-    "dev": "node scripts/not-yet.mjs dev T1.4 agent and T2.2 web",
+    "dev": "npm run build -w @junction/web && tsx packages/agent/src/cli.ts ui",
     "demo": "npm run dev -w @junction/web -- --mode demo",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -29,7 +29,9 @@
     "infra:diff": "npm run diff -w @junction/infra",
     "infra:deploy": "npm run deploy -w @junction/infra",
     "prepare": "simple-git-hooks || exit 0",
-    "build:web": "npm run build -w @junction/web && npm run build:demo -w @junction/web"
+    "build:web": "npm run build -w @junction/web && npm run build:demo -w @junction/web",
+    "junction": "tsx packages/agent/src/cli.ts",
+    "mcp": "tsx packages/mcp/src/index.ts"
   },
   "simple-git-hooks": {
     "pre-commit": "node scripts/guard-catalog.mjs"
