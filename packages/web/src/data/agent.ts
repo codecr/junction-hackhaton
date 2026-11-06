@@ -56,7 +56,11 @@ export function parseState(v: unknown): AppState {
   if (
     catalog !== null &&
     catalog !== undefined &&
-    !(isRecord(catalog) && typeof catalog.count === 'number' && typeof catalog.fetchedAt === 'string')
+    !(
+      isRecord(catalog) &&
+      typeof catalog.count === 'number' &&
+      typeof catalog.fetchedAt === 'string'
+    )
   )
     bad('a catalog summary');
   return {
@@ -90,7 +94,8 @@ function parseAction(v: unknown): ActionResult {
 }
 
 export function createAgentSource(doc: Document = document, f: typeof fetch = fetch): DataSource {
-  const secret = readSecret(doc) || (import.meta.env.VITE_JUNCTION_SECRET ?? '');
+  const secret =
+    readSecret(doc) || (import.meta.env.DEV ? (import.meta.env.VITE_JUNCTION_SECRET ?? '') : '');
 
   async function call(method: 'GET' | 'POST', path: string, body?: unknown): Promise<unknown> {
     let res: Response;

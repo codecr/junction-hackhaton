@@ -95,7 +95,10 @@ export function createDemoSource(input: DemoInput = loadDemoInput()): DataSource
   const settle = <T>(value: T): Promise<T> => Promise.resolve(value);
   const notInDemo = (what: string) =>
     Promise.reject(
-      new SourceError('demo', `${what} works in the app you run on your own machine, not in this demo.`),
+      new SourceError(
+        'demo',
+        `${what} works in the app you run on your own machine, not in this demo.`,
+      ),
     );
 
   return {
@@ -113,7 +116,11 @@ export function createDemoSource(input: DemoInput = loadDemoInput()): DataSource
           new SourceError('not-yours', 'Only the person it is meant for can accept this proposal.'),
         );
       accepted.set(id, { before: manifests, proposal });
-      manifests = applyProposal({ charter, catalog: snapshot, venueGraph: defaultVenueGraph }, manifests, proposal);
+      manifests = applyProposal(
+        { charter, catalog: snapshot, venueGraph: defaultVenueGraph },
+        manifests,
+        proposal,
+      );
       return settle({ results: sessionResults(proposal, codeOf, false), state: state() });
     },
     decline: (id) => {
@@ -123,7 +130,9 @@ export function createDemoSource(input: DemoInput = loadDemoInput()): DataSource
     undo: (id): Promise<ActionResult> => {
       const entry = accepted.get(id);
       if (!entry)
-        return Promise.reject(new SourceError('gone', 'There is nothing to undo for that proposal.'));
+        return Promise.reject(
+          new SourceError('gone', 'There is nothing to undo for that proposal.'),
+        );
       manifests = entry.before;
       accepted.delete(id);
       return settle({ results: sessionResults(entry.proposal, codeOf, true), state: state() });

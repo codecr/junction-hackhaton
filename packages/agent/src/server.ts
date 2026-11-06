@@ -95,7 +95,13 @@ export function startUiServer(
   };
 
   const serveStatic = (req: IncomingMessage, res: ServerResponse) => {
-    const urlPath = decodeURIComponent(new URL(req.url ?? '/', 'http://x').pathname);
+    let urlPath: string;
+    try {
+      urlPath = decodeURIComponent(new URL(req.url ?? '/', 'http://x').pathname);
+    } catch {
+      res.writeHead(400).end();
+      return;
+    }
     let file = normalize(join(dist, urlPath));
     if (!file.startsWith(dist + sep) && file !== dist) {
       res.writeHead(403).end();
@@ -167,6 +173,16 @@ export function startUiServer(
   };
 
   const server = createServer((req, res) => {
+    try {
+      route(req, res);
+    } catch {
+      // A malformed request from another site must never take the agent down.
+      if (!res.headersSent) res.writeHead(400);
+      res.end();
+    }
+  });
+
+  const route = (req: IncomingMessage, res: ServerResponse) => {
     if (!allowedHosts.has(req.headers.host ?? '')) {
       res.writeHead(421, { 'content-type': 'text/plain' }).end('Unknown host.');
       return;
@@ -174,7 +190,9 @@ export function startUiServer(
     const path = new URL(req.url ?? '/', 'http://x').pathname;
     if (path.startsWith('/api/')) {
       handleApi(req, res, path).catch((e: unknown) => {
-        fail(res, 500, 'failed', e instanceof Error ? e.message : 'Unexpected failure.');
+        if (!res.headersSent)
+          fail(res, 500, 'failed', e instanceof Error ? e.message : 'Unexpected failure.');
+        else res.end();
       });
       return;
     }
@@ -183,7 +201,7 @@ export function startUiServer(
       return;
     }
     serveStatic(req, res);
-  });
+  };
 
   return new Promise((ok, ko) => {
     server.once('error', (e: NodeJS.ErrnoException) =>

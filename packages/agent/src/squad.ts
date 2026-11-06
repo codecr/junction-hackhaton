@@ -50,7 +50,7 @@ export function ensureIdentity(name?: string): Identity {
     }
     return existing;
   }
-  const displayName = (name ?? process.env.USERNAME ?? process.env.USER ?? 'Me').slice(0, 40);
+  const displayName = (name ?? 'Member').slice(0, 40);
   writeJson(paths.key(), { seed: toBase64Url(randomBytes(32)), name: displayName });
   return loadIdentity()!;
 }

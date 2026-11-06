@@ -406,7 +406,17 @@ export class Junction {
     } catch (e) {
       for (const id of [...restoreFav, ...restoreRes]) notes.set(id, errorText(e));
     }
+    // Same rule as accept: release the added sessions only if every original came back, so an
+    // undo never leaves the member with neither (rule 4: read before deciding).
+    const mid = await this.api.getSchedule(EVENT_ID);
+    const restored = entry.removed.every(
+      (r) => mid.reserved.includes(r.sessionId) || mid.favorites.includes(r.sessionId),
+    );
     for (const a of entry.added) {
+      if (!restored) {
+        notes.set(a.sessionId, 'Kept, because the original session could not be restored.');
+        continue;
+      }
       try {
         if (a.as === 'reserved') await this.api.cancelReservation(EVENT_ID, a.sessionId);
         else await this.api.disassociateFavorite(EVENT_ID, a.sessionId);
@@ -436,12 +446,13 @@ export class Junction {
           : (notes.get(a.sessionId) ?? 'Still on your schedule.'),
       })),
     ];
-    saveLocal({
-      ...loadLocal(),
-      accepted: loadLocal().accepted.filter(
-        (a) => a !== entry && a.proposalId !== entry.proposalId,
-      ),
-    });
+    // Keep the entry unless everything was undone, so a failed undo can be tried again.
+    if (results.every((r) => r.ok)) {
+      saveLocal({
+        ...loadLocal(),
+        accepted: loadLocal().accepted.filter((a) => a.proposalId !== entry.proposalId),
+      });
+    }
     await this.publishManifest(after);
     return { results, state: this.state() };
   }
@@ -515,7 +526,11 @@ export class Junction {
         'Junction only changes personal time it created. That entry is not one of them.',
       );
     const tag = own.description.split(' ')[0] ?? '';
-    await this.api.updatePersonalTime(EVENT_ID, personalTimeId, personalTimeBody(tag, input));
+    try {
+      await this.api.updatePersonalTime(EVENT_ID, personalTimeId, personalTimeBody(tag, input));
+    } catch (e) {
+      if (!(e instanceof ApiError && e.code === 'unknown-outcome')) throw e;
+    }
     return (await this.listOwnPersonalTime()).find((p) => p.personalTimeId === personalTimeId);
   }
 
@@ -525,7 +540,12 @@ export class Junction {
       throw new Error(
         'Junction only deletes personal time it created. That entry is not one of them.',
       );
-    await this.api.deletePersonalTime(EVENT_ID, personalTimeId);
+    try {
+      await this.api.deletePersonalTime(EVENT_ID, personalTimeId);
+    } catch (e) {
+      if (!(e instanceof ApiError && e.code === 'unknown-outcome')) throw e;
+    }
+    // A 204 is not proof (Spike 0): the answer is what GetSchedule shows.
     return !(await this.listOwnPersonalTime()).some((p) => p.personalTimeId === personalTimeId);
   }
 }

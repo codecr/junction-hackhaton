@@ -61,9 +61,12 @@ describe('agent source', () => {
     const calls: { url: string; init: RequestInit }[] = [];
     const f = (async (url: string, init: RequestInit) => {
       calls.push({ url, init });
-      return new Response(JSON.stringify(url.endsWith('/accept') ? { results: [], state: empty } : empty), {
-        status: 200,
-      });
+      return new Response(
+        JSON.stringify(url.endsWith('/accept') ? { results: [], state: empty } : empty),
+        {
+          status: 200,
+        },
+      );
     }) as unknown as typeof fetch;
     const source = createAgentSource(doc, f);
     await source.getState();
@@ -77,9 +80,12 @@ describe('agent source', () => {
 
   it('shows the agent message on errors', async () => {
     const f = (async () =>
-      new Response(JSON.stringify({ error: { code: 'closed', message: 'Reservations open on 8 October.' } }), {
-        status: 409,
-      })) as unknown as typeof fetch;
+      new Response(
+        JSON.stringify({ error: { code: 'closed', message: 'Reservations open on 8 October.' } }),
+        {
+          status: 409,
+        },
+      )) as unknown as typeof fetch;
     await expect(createAgentSource(doc, f).accept('x')).rejects.toMatchObject({
       code: 'closed',
       message: 'Reservations open on 8 October.',
@@ -90,7 +96,9 @@ describe('agent source', () => {
     const f = (async () => {
       throw new TypeError('fetch failed');
     }) as unknown as typeof fetch;
-    await expect(createAgentSource(doc, f).getState()).rejects.toMatchObject({ code: 'agent-unreachable' });
+    await expect(createAgentSource(doc, f).getState()).rejects.toMatchObject({
+      code: 'agent-unreachable',
+    });
   });
 
   it('rejects a state it does not understand', () => {

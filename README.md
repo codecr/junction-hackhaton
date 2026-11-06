@@ -162,6 +162,8 @@ Deploy the squad server: `aws sso login`, then `npm run infra:diff` and `npm run
 | Squad name, member display names, topic labels | Session titles, abstracts, speakers, rooms |
 | | The catalog, your email |
 
+The squad server's API Gateway access logs keep the caller's IP address, route and status for 30 days (no headers, no bodies). Everything in the squad server expires 14 days after the event.
+
 ## Disclaimer
 
 Junction is an unofficial community project built for the re:Invent Event Catalog API Hackathon. It is not affiliated with or endorsed by Amazon Web Services. It uses the AWS Events API on behalf of each signed-in attendee and stores no catalog content. "AWS" and "re:Invent" are trademarks of Amazon.com, Inc. or its affiliates.

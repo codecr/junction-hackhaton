@@ -34,10 +34,12 @@ const getSessionSchema = z.looseObject({ session: z.looseObject({ sessionId: id 
 
 export const personalTimeSchema = z.looseObject({
   personalTimeId: id,
-  startDateTime: z.string(),
-  endDateTime: z.string(),
-  title: z.string(),
-  description: z.string(),
+  // Optional: an entry the attendee made elsewhere must never break GetSchedule. An entry without a
+  // description is never Junction's.
+  startDateTime: z.string().default(''),
+  endDateTime: z.string().default(''),
+  title: z.string().default(''),
+  description: z.string().default(''),
   location: z.string().optional(),
 });
 export type PersonalTime = z.infer<typeof personalTimeSchema>;

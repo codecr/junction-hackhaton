@@ -1,3 +1,4 @@
+import { chmodSync } from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import {
   catalogHash,
@@ -69,6 +70,13 @@ export class SqliteCatalogStore implements CatalogStore {
   constructor(file = paths.catalogDb()) {
     ensureDir(junctionHome());
     this.db = new DatabaseSync(file);
+    try {
+      // The catalog is not public: readable by this user only.
+      chmodSync(junctionHome(), 0o700);
+      chmodSync(file, 0o600);
+    } catch {
+      // Advisory on Windows.
+    }
     this.db.exec(`
       CREATE TABLE IF NOT EXISTS sessions (session_id TEXT PRIMARY KEY, json TEXT NOT NULL, first_seen TEXT NOT NULL);
       CREATE TABLE IF NOT EXISTS meta (k TEXT PRIMARY KEY, v TEXT NOT NULL);

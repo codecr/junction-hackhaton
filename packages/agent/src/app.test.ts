@@ -80,8 +80,12 @@ function fakeApi(state: FakeState): typeof fetch {
     }
     if (p === '/reservations' && method === 'POST') {
       const ids = (JSON.parse(String(init?.body)) as { sessionIds: string[] }).sessionIds;
-      ids.forEach((id) => state.reserved.add(id));
-      return json(200, { result: { successful: ids, failed: [] } });
+      const failed = ids
+        .filter((id) => state.full.has(id))
+        .map((sessionId) => ({ sessionId, code: 'sessionFull' }));
+      const ok = ids.filter((id) => !state.full.has(id));
+      ok.forEach((id) => state.reserved.add(id));
+      return json(200, { result: { successful: ok, failed } });
     }
     const res = /^\/reservations\/(.+)$/.exec(p);
     if (res && method === 'DELETE') {
@@ -175,6 +179,22 @@ describe('Junction agent, end to end against a fake Events API', () => {
     expect(removal.ok).toBe(false);
     expect(removal.detail).toMatch(/Kept/);
     expect(state.writes.some((w) => w.startsWith('DELETE'))).toBe(false);
+  });
+
+  it('undo keeps the new session when the original cannot come back, and can be retried', async () => {
+    const s = await app.sync();
+    const swap = s.squad!.proposals.find((p) => p.memberId === ana.memberId)!;
+    await app.accept(swap.id);
+    state.full.add(swap.remove![0]!);
+    const { results } = await app.undo(swap.id);
+    expect(results.find((r) => r.action === 'add')!.ok).toBe(false);
+    const kept = results.find((r) => r.action === 'remove')!;
+    expect(kept.ok).toBe(false);
+    expect(kept.detail).toMatch(/Kept/);
+    expect(state.favorites.has(swap.add![0]!)).toBe(true);
+    state.full.clear();
+    const retry = await app.undo(swap.id);
+    expect(retry.results.every((r) => r.ok)).toBe(true);
   });
 
   it('declining writes holds, so the proposal is not made again', async () => {
