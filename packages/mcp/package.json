@@ -8,10 +8,10 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.32.2",
-    "@junction/core": "*",
     "@junction/agent": "*",
-    "zod": "^4.6.5"
+    "@junction/core": "*",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
   },
   "bin": {
     "junction-mcp": "./src/index.ts"
