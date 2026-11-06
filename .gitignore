@@ -12,3 +12,6 @@ cdk.out/
 fixtures/private/
 *.catalog.json
 .junction/
+
+# Local worktrees for parallel agents
+.claude/worktrees/
