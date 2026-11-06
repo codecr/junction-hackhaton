@@ -84,7 +84,7 @@ try {
     });
     await page.goto(`${origin}/demo/`, { waitUntil: 'networkidle' });
     await page.waitForSelector('svg.chart');
-    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(() => globalThis.document.fonts.ready);
     await page.screenshot({ path: join(out, `${name}.png`), fullPage: true });
     console.log(`saved design/current/${name}.png`);
     await page.close();

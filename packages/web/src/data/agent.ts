@@ -112,7 +112,7 @@ export function createAgentSource(doc: Document = document, f: typeof fetch = fe
         'The Junction agent on this machine is not answering. Start the agent again, then reload this page.',
       );
     }
-    let payload: unknown = null;
+    let payload: unknown;
     try {
       payload = await res.json();
     } catch {

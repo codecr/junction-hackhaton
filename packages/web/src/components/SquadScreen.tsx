@@ -97,7 +97,7 @@ export function SquadScreen({
 
   const onTabKey = (e: KeyboardEvent<HTMLButtonElement>, i: number) => {
     const n = view.days.length;
-    let j = i;
+    let j: number;
     if (e.key === 'ArrowRight') j = (i + 1) % n;
     else if (e.key === 'ArrowLeft') j = (i - 1 + n) % n;
     else if (e.key === 'Home') j = 0;
