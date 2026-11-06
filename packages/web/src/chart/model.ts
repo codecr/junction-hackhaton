@@ -83,7 +83,10 @@ export function dayModel(view: SquadView, day: number): DayModel {
   });
 
   const shared: DayShared[] = view.coverage.duplicates
-    .filter((d) => d.day === day && view.sessions[d.sessionId] && at.has(view.sessions[d.sessionId]!.venue))
+    .filter(
+      (d) =>
+        d.day === day && view.sessions[d.sessionId] && at.has(view.sessions[d.sessionId]!.venue),
+    )
     .map((d) => ({
       session: view.sessions[d.sessionId]!,
       members: d.attendees.map((id) => memberById.get(id)).filter((m): m is ViewMember => !!m),
@@ -92,12 +95,16 @@ export function dayModel(view: SquadView, day: number): DayModel {
 
   const claims = new Map<string, string>();
   for (const p of view.proposals)
-    if (p.kind === 'CLAIM') for (const id of p.add ?? []) if (!claims.has(id)) claims.set(id, p.memberId);
+    if (p.kind === 'CLAIM')
+      for (const id of p.add ?? []) if (!claims.has(id)) claims.set(id, p.memberId);
 
   const open: DayOpen[] = view.coverage.gaps
     .filter((g) => g.day === day && g.reason === 'nobody')
     .map((g) => view.sessions[g.sessionId] && { g, s: view.sessions[g.sessionId]! })
-    .filter((x): x is { g: (typeof view.coverage.gaps)[number]; s: ViewSession } => !!x && at.has(x.s.venue))
+    .filter(
+      (x): x is { g: (typeof view.coverage.gaps)[number]; s: ViewSession } =>
+        !!x && at.has(x.s.venue),
+    )
     .map(({ g, s }) => {
       const ownerId = claims.get(s.sessionId);
       return {
@@ -120,7 +127,9 @@ export function dayModel(view: SquadView, day: number): DayModel {
 
 /** Members holding a session on this day, in squad order. */
 export function attendeesOf(model: DayModel, sessionId: string): ViewMember[] {
-  return model.runs.filter((r) => r.sessions.some((s) => s.sessionId === sessionId)).map((r) => r.member);
+  return model.runs
+    .filter((r) => r.sessions.some((s) => s.sessionId === sessionId))
+    .map((r) => r.member);
 }
 
 /** The day to open on: the first day with something to fix, otherwise the first day. */

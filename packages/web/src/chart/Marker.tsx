@@ -24,7 +24,16 @@ function Shape({
       return <circle cx={h} cy={h} r={h - 0.8} fill={color} stroke={stroke} strokeWidth={sw} />;
     case 'square':
       return (
-        <rect x={1} y={1} width={s - 2} height={s - 2} rx={1.5} fill={color} stroke={stroke} strokeWidth={sw} />
+        <rect
+          x={1}
+          y={1}
+          width={s - 2}
+          height={s - 2}
+          rx={1.5}
+          fill={color}
+          stroke={stroke}
+          strokeWidth={sw}
+        />
       );
     case 'diamond':
       return (
@@ -58,16 +67,36 @@ function Shape({
               fill="none"
             />
           )}
-          <path d={`M${h} 1 V${s - 1} M1 ${h} H${s - 1}`} stroke={color} strokeWidth={3} strokeLinecap="round" fill="none" />
+          <path
+            d={`M${h} 1 V${s - 1} M1 ${h} H${s - 1}`}
+            stroke={color}
+            strokeWidth={3}
+            strokeLinecap="round"
+            fill="none"
+          />
         </>
       );
   }
 }
 
 /** A standalone marker for chips, tables and lists. */
-export function Marker({ shape, color, size = 11 }: { shape: MemberShape; color: string; size?: number }) {
+export function Marker({
+  shape,
+  color,
+  size = 11,
+}: {
+  shape: MemberShape;
+  color: string;
+  size?: number;
+}) {
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden="true" className="marker">
+    <svg
+      width={size}
+      height={size}
+      viewBox={`0 0 ${size} ${size}`}
+      aria-hidden="true"
+      className="marker"
+    >
       <Shape shape={shape} size={size} color={cssVar(color)} />
     </svg>
   );

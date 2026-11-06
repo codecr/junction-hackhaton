@@ -44,7 +44,10 @@ describe('dayModel on the demo Tuesday', () => {
       ['OPS305-R', false],
     ]);
     expect(model.unplanned).toBe(1);
-    expect(attendeesOf(model, model.shared[1]!.session.sessionId).map((m) => m.name)).toEqual(['Ana', 'Luis']);
+    expect(attendeesOf(model, model.shared[1]!.session.sessionId).map((m) => m.name)).toEqual([
+      'Ana',
+      'Luis',
+    ]);
   });
 
   it('shows what nobody covers, with the claimant for a claimable session', () => {

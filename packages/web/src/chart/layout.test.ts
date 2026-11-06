@@ -152,3 +152,20 @@ describe('pillWidth', () => {
     expect(pillWidth('')).toBe(14);
   });
 });
+
+describe('venue rows that are next door', () => {
+  it('keep at least minRowGap between lines', async () => {
+    const { chartLayout, CHART } = await import('./layout');
+    const l = chartLayout(
+      [
+        { id: 'forum', name: 'Caesars Forum', at: 28 },
+        { id: 'palace', name: 'Caesars Palace', at: 34 },
+        { id: 'mgm', name: 'MGM Grand', at: 62 },
+      ],
+      { start: 480, end: 1140 },
+    );
+    const [a, b, c] = l.venues;
+    expect(b!.y - a!.y).toBe(CHART.minRowGap);
+    expect(c!.y - b!.y).toBeCloseTo(28 * CHART.kY);
+  });
+});

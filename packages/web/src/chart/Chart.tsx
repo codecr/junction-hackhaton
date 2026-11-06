@@ -66,7 +66,8 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
   const venueName = (id: string) => view.venues.find((v) => v.id === id)?.name ?? id;
   const count = view.members.length;
   const laneOf = (index: number) => laneOffset(index, count);
-  const yOf = (s: ViewSession, index: number) => (layout.yVenue(s.venue) ?? CHART.top) + laneOf(index);
+  const yOf = (s: ViewSession, index: number) =>
+    (layout.yVenue(s.venue) ?? CHART.top) + laneOf(index);
   const P = (p: Pt) => ({ x: x(p.t), y: p.y });
 
   // The one orchestrated moment: the day unfolds left to right, once, unless motion is reduced.
@@ -74,7 +75,10 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
     const rect = clipRef.current;
     if (!rect) return;
     const full = String(W + 40);
-    if (typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (
+      typeof matchMedia === 'function' &&
+      matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
       rect.setAttribute('width', full);
       return;
     }
@@ -236,7 +240,15 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
           const pa = P(a);
           const pb = P(b);
           lines.push(
-            <line key={`w${i}-${j}`} x1={pa.x} y1={pa.y} x2={pb.x} y2={pb.y} stroke={color} strokeWidth={1.6} />,
+            <line
+              key={`w${i}-${j}`}
+              x1={pa.x}
+              y1={pa.y}
+              x2={pb.x}
+              y2={pb.y}
+              stroke={color}
+              strokeWidth={1.6}
+            />,
           );
         });
       } else {
@@ -244,14 +256,7 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
         const e = P(g.end);
         const sz = 5;
         lines.push(
-          <line
-            key={`c${i}`}
-            x1={a.x}
-            y1={a.y}
-            x2={e.x}
-            y2={e.y}
-            className="cant-line"
-          />,
+          <line key={`c${i}`} x1={a.x} y1={a.y} x2={e.x} y2={e.y} className="cant-line" />,
           <path
             key={`x${i}`}
             d={`M${e.x - sz} ${e.y - sz} L${e.x + sz} ${e.y + sz} M${e.x - sz} ${e.y + sz} L${e.x + sz} ${e.y - sz}`}
@@ -259,7 +264,12 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
           />,
         );
         labels.push(
-          <text key={`cant-${m.memberId}-${i}`} x={e.x + 10} y={e.y + 4} className={`t-cant${dim(m.memberId)}`}>
+          <text
+            key={`cant-${m.memberId}-${i}`}
+            x={e.x + 10}
+            y={e.y + 4}
+            className={`t-cant${dim(m.memberId)}`}
+          >
             {g.haveMin < 0
               ? `${m.name} has two sessions at once`
               : `${m.name} needs ${g.needMin} min, has ${g.haveMin}`}
@@ -273,7 +283,12 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
       const with_ = attendeesOf(model, s.sessionId).filter((o) => o.memberId !== m.memberId);
       if (with_.length === 0)
         labels.push(
-          <text key={`code-${m.memberId}-${s.sessionId}`} x={x(s.startLocal)} y={y - 13} className={`t-code${dim(m.memberId)}`}>
+          <text
+            key={`code-${m.memberId}-${s.sessionId}`}
+            x={x(s.startLocal)}
+            y={y - 13}
+            className={`t-code${dim(m.memberId)}`}
+          >
             {s.code}
           </text>,
         );
@@ -346,7 +361,13 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
         aria-label={`Timeline of where each person is on ${dayName}, by venue`}
       >
         <defs>
-          <pattern id={hatchId} width={6} height={6} patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <pattern
+            id={hatchId}
+            width={6}
+            height={6}
+            patternUnits="userSpaceOnUse"
+            patternTransform="rotate(45)"
+          >
             <rect width={6} height={6} fill="transparent" />
             <line x1={0} y1={0} x2={0} y2={6} className="hatch-line" />
           </pattern>
@@ -380,7 +401,13 @@ export function Chart({ view, model, layout, dayName, hidden, focus, onFocus }: 
           ))}
           {layout.venues.map((v) => (
             <g key={v.id}>
-              <line className="venue-line" x1={CHART.marginLeft} x2={W - CHART.marginRight} y1={v.y} y2={v.y} />
+              <line
+                className="venue-line"
+                x1={CHART.marginLeft}
+                x2={W - CHART.marginRight}
+                y1={v.y}
+                y2={v.y}
+              />
               <text x={0} y={v.y + 4.5} className="t-venue">
                 {v.name}
               </text>

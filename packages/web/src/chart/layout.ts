@@ -11,6 +11,8 @@ export const CHART = {
   top: 92,
   /** Pixels per walking minute between venues. */
   kY: 3.1,
+  /** Minimum distance between venue lines, enough for five lanes. */
+  minRowGap: 40,
   /** Vertical distance between member lanes. */
   laneGap: 9,
   /** Space below the last venue. */
@@ -73,14 +75,26 @@ export function chartLayout(
   const x = scaleLinear()
     .domain([range.start, range.end])
     .range([cfg.marginLeft, cfg.width - cfg.marginRight]);
-  const origin = venues.length > 0 ? Math.min(...venues.map((v) => v.at)) : 0;
-  const ys = new Map(venues.map((v) => [v.id, cfg.top + (v.at - origin) * cfg.kY]));
+  // Rows follow walking minutes, but never sit closer than `minRowGap`, so two venues next door
+  // (Caesars Forum and Caesars Palace are 6 minutes apart) keep their lanes and labels apart.
+  const ys = new Map<string, number>();
+  let prev: { at: number; y: number } | undefined;
+  for (const v of venues) {
+    const y = prev ? prev.y + Math.max(cfg.minRowGap, (v.at - prev.at) * cfg.kY) : cfg.top;
+    ys.set(v.id, y);
+    prev = { at: v.at, y };
+  }
   const rows: VenueRow[] = venues.map((v, i) => {
     const y = ys.get(v.id) ?? cfg.top;
     const after = venues[i + 1];
     if (!after) return { id: v.id, name: v.name, y };
     const yNext = ys.get(after.id) ?? y;
-    return { id: v.id, name: v.name, y, next: { minutes: Math.abs(after.at - v.at), y: (y + yNext) / 2 } };
+    return {
+      id: v.id,
+      name: v.name,
+      y,
+      next: { minutes: Math.abs(after.at - v.at), y: (y + yNext) / 2 },
+    };
   });
   const lastY = rows.length > 0 ? Math.max(...rows.map((r) => r.y)) : cfg.top;
   const bottom = lastY + cfg.bottomPad;
@@ -128,7 +142,9 @@ export function hopGeometry(input: {
     input.impossible ?? (walkMin > haveMin ? { needMin: walkMin, haveMin } : undefined);
   if (impossible) {
     const f =
-      impossible.needMin > 0 ? Math.max(0, Math.min(1, impossible.haveMin / impossible.needMin)) : 0;
+      impossible.needMin > 0
+        ? Math.max(0, Math.min(1, impossible.haveMin / impossible.needMin))
+        : 0;
     const end = { t: toStart, y: fromY + (toY - fromY) * f };
     return {
       kind: 'cant',
@@ -139,7 +155,15 @@ export function hopGeometry(input: {
     };
   }
   if (walkMin === 0 || fromY === toY)
-    return { kind: 'walk', segments: [[{ t: fromEnd, y: fromY }, { t: toStart, y: toY }]] };
+    return {
+      kind: 'walk',
+      segments: [
+        [
+          { t: fromEnd, y: fromY },
+          { t: toStart, y: toY },
+        ],
+      ],
+    };
   const arrive = { t: fromEnd + walkMin, y: toY };
   const segments: [Pt, Pt][] = [[{ t: fromEnd, y: fromY }, arrive]];
   if (haveMin > walkMin) segments.push([arrive, { t: toStart, y: toY }]);
