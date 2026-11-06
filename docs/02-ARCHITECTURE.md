@@ -127,6 +127,9 @@ Estimated cost during the hackathon: under 5 USD a month, dominated by CloudFron
 | ADR-014 | Amplify Hosting for the static site, CDK for the backend | CI from GitHub with no hosting stacks to maintain, while signature checks and DynamoDB conditional writes stay in our own Lambda (Amplify Gen 2 data would put AppSync in front of them). |
 | ADR-015 | CI matrix on Linux, macOS and Windows, LF line endings enforced | Byte-identical solver output is the core promise and the author develops on Windows. `.gitattributes` forces LF so golden fixtures do not drift. |
 | ADR-016 | Local agent UI port is 4848, outside the OAuth callback range | 8484 is the first callback port and Claude Code's MCP setup uses it. |
+| ADR-017 | Amplify app connected at the repository root (`amplify.yml` at root), not with monorepo app root `packages/web` | The site is assembled from two sources (`site/landing` and `packages/web/dist-demo`) by `scripts/assemble-site.mjs` into `site-dist/`, which an app root inside `packages/web` cannot reach as an artifact directory. SPA rewrite rules are in `site/amplify-custom-rules.json`, applied in the console. |
+| ADR-018 | Relay reserved concurrency comes from CDK context `reservedConcurrency` (default 20, 0 leaves it unreserved) | New accounts can have a concurrency limit of 10, and reserving 20 then fails the deploy. |
+| ADR-019 | Custom domain only when `relayDomain`, `hostedZoneId` and `hostedZoneName` are all set | `HostedZone.fromHostedZoneAttributes` needs no lookup, so `infra:synth` runs without credentials. Without them the stack outputs the execute-api URL. |
 
 Add new records here as they are made.
 
