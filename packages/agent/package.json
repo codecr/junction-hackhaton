@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@junction/core": "*",
-    "zod": "^4.6.5"
+    "zod": "^4.6.5",
+    "@junction/relay": "*"
   }
 }

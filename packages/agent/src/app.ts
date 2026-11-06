@@ -200,6 +200,8 @@ export class Junction {
   /** GetSchedule, sign the picks, store them, and (when configured) exchange through the squad server. */
   async sync(options: { refreshCatalog?: boolean } = {}): Promise<AgentState> {
     if (options.refreshCatalog || !this.store.meta()) await this.refreshCatalog();
+    if (!loadCharter() && loadLocal().pendingSquadId && this.relaySync)
+      await this.relaySync(undefined);
     this.requireCharter();
     const schedule = await this.api.getSchedule(EVENT_ID);
     await this.publishManifest(schedule);
@@ -217,8 +219,11 @@ export class Junction {
   }
 
   /** Set by the squad server transport when one is configured. */
-  relaySync: ((myManifest: ReturnType<typeof signMessage>) => Promise<void>) | undefined;
+  relaySync:
+    ((myManifest: ReturnType<typeof signMessage> | undefined) => Promise<void>) | undefined;
 
+  /** The last squad server failure, shown to the member; never blocks their own schedule. */
+  lastRelayError: string | undefined;
   view(): SquadView | null {
     const charter = loadCharter();
     if (!charter) return null;

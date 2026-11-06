@@ -8,3 +8,4 @@ export * from './pacer';
 export * from './paths';
 export * from './server';
 export * from './squad';
+export * from './relay';

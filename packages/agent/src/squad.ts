@@ -68,7 +68,9 @@ export interface LocalSquad {
     added: { sessionId: string; as: 'favorite' | 'reserved' }[];
     removed: { sessionId: string; was: 'favorite' | 'reserved' }[];
   }[];
-  relayUrl?: string;
+  relayUrl?: string | undefined;
+  /** Set after a join request through the squad server, until the leader approves. */
+  pendingSquadId?: string | undefined;
 }
 
 export function loadLocal(): LocalSquad {
@@ -279,7 +281,12 @@ export function importBlock(text: string): ImportResult {
     };
     return result;
   }
-  const envelopes = block.envelopes ?? [];
+  return { ...result, ...importEnvelopes(block.envelopes ?? []) };
+}
+
+/** Verifies and stores a charter and member picks, from a pasted block or the squad server. */
+export function importEnvelopes(envelopes: readonly Envelope[]): ImportResult {
+  const result: ImportResult = { charterUpdated: false, manifestsAccepted: 0, rejected: [] };
   let charter = loadCharter();
   // Charters first: a newer charter may add the members whose manifests follow.
   for (const env of envelopes) {

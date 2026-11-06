@@ -7,6 +7,16 @@ import { EVENT_ID, Junction } from './app';
 import { catalogStats } from './catalog-store';
 import { ApiError } from './events-client';
 import { junctionHome } from './paths';
+import {
+  approveFromServer,
+  attachRelay,
+  DEFAULT_SQUAD_SERVER,
+  inviteCode,
+  joinThroughServer,
+  pendingRequests,
+  publishCharter,
+  relayClient,
+} from './relay';
 import { startUiServer } from './server';
 import {
   createSquad,
@@ -36,9 +46,11 @@ Usage: junction <command> [options]
   session <code|id>          Details of one session (GetSession, fetched live)
 
   squad create <name> [--topics file.json] [--must CODE,CODE] [--lunch 12:00-13:00]
-  squad invite               Print the invite secret and the picks block to share
-  squad join <secret>        Print a join block to send to the leader
-  squad approve <join-block> Leader: add the member to the squad rules
+  squad server [url]         Use the squad server (default ${DEFAULT_SQUAD_SERVER}) instead of pasting
+  squad invite               Print the invite (a code for the squad server, or a block to paste)
+  squad join <code|secret>   Join through the squad server with an invite code, or print a join block
+  squad requests             Leader: pending join requests on the squad server
+  squad approve <id|block>   Leader: add the member to the squad rules
   squad export [--out file]  Print or save your squad block (rules plus every member's picks)
   squad import <block|file>  Import a block from a squad member
   squad share <L0|L1|L2>     Choose what you share (L0: session ids and codes only)
@@ -132,7 +144,9 @@ function printStatus(view: SquadView): void {
   for (const h of view.coverage.hops) {
     const to = view.sessions[h.toSessionId]?.code ?? h.toSessionId;
     console.log(
-      h.overlap ? `Overlap: ${nameOf(view, h.memberId)} holds ${to} while another session runs (${-h.haveMin} min)` : `Can't make the walk: ${nameOf(view, h.memberId)} to ${to} needs ${h.needMin} min, has ${h.haveMin}`,
+      h.overlap
+        ? `Overlap: ${nameOf(view, h.memberId)} holds ${to} while another session runs (${-h.haveMin} min)`
+        : `Can't make the walk: ${nameOf(view, h.memberId)} to ${to} needs ${h.needMin} min, has ${h.haveMin}`,
     );
   }
   for (const g of view.coverage.gaps)
@@ -148,6 +162,7 @@ async function main(argv: string[]): Promise<void> {
   const [cmd, sub, ...rest] = argv;
   const args = [sub ?? '', ...rest].filter((a) => a !== '');
   const app = new Junction({ openBrowser });
+  attachRelay(app);
 
   switch (cmd) {
     case undefined:
@@ -297,8 +312,38 @@ async function main(argv: string[]): Promise<void> {
         console.log('Members run `junction squad join <secret>` and send you the block it prints.');
         return;
       }
+      if (sub === 'server') {
+        const url = rest[0] ?? DEFAULT_SQUAD_SERVER;
+        const client = relayClient(url)!;
+        if (!(await client.health()))
+          throw new Error(
+            `The squad server at ${url} did not answer. Check the URL, or keep exchanging blocks.`,
+          );
+        saveLocal({ ...loadLocal(), relayUrl: url });
+        const charter = loadCharter();
+        if (charter?.leader === me.memberId) {
+          await publishCharter(client);
+          console.log(
+            `Squad "${charter.name}" is on the squad server. Invite code: ${inviteCode()}`,
+          );
+        } else console.log(`Using the squad server at ${url}.`);
+        return;
+      }
+      if (sub === 'requests') {
+        const client = relayClient();
+        if (!client) throw new Error('No squad server configured. Run `junction squad server`.');
+        const reqs = await pendingRequests(client);
+        if (!reqs.length) console.log('No pending join requests.');
+        for (const r of reqs) console.log(`${r.memberId}  ${r.name}  (asked ${r.requestedAt})`);
+        return;
+      }
       if (sub === 'invite') {
         const local = loadLocal();
+        if (local.relayUrl && local.inviteSecret) {
+          console.log(`Invite code, share it privately:
+  junction squad join ${inviteCode()}`);
+          return;
+        }
         if (!local.inviteSecret)
           throw new Error('Only the leader who created the squad has the invite secret.');
         console.log(
@@ -306,9 +351,26 @@ async function main(argv: string[]): Promise<void> {
         );
         return;
       }
+      if (sub === 'join' && rest[0]?.startsWith('sq_')) {
+        const server = flag(rest, 'server') ?? DEFAULT_SQUAD_SERVER;
+        const r = await joinThroughServer(rest[0], server);
+        console.log(
+          r.status === 'member'
+            ? 'You are already a member. Run `junction sync`.'
+            : 'Join request sent. When the leader approves it, run `junction sync`.',
+        );
+        return;
+      }
       if (sub === 'join') {
         console.log('Send this join block to your squad leader:\n');
         console.log(exportJoinBlock(me, rest[0]));
+        return;
+      }
+      if (sub === 'approve' && rest[0]?.startsWith('m_')) {
+        const client = relayClient();
+        if (!client) throw new Error('No squad server configured. Paste their join block instead.');
+        const who = await approveFromServer(client, rest[0], nowIso());
+        console.log(`${who} added to the squad rules and published to the squad server.`);
         return;
       }
       if (sub === 'approve') {
@@ -386,6 +448,10 @@ async function main(argv: string[]): Promise<void> {
 
     case 'sync': {
       const state = await app.sync({ refreshCatalog: args.includes('--catalog') });
+      if (app.lastRelayError)
+        console.log(
+          `Squad server: ${app.lastRelayError} Your own schedule synced; exchange blocks meanwhile.`,
+        );
       if (state.squad) printStatus(state.squad);
       return;
     }

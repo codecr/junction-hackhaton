@@ -3,7 +3,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
 import type { SquadView } from '@junction/core';
-import { Junction } from '@junction/agent';
+import { attachRelay, Junction } from '@junction/agent';
 
 // Local MCP server (spec J1). It reads the squad view built on this machine and acts only on the
 // signed-in member's own schedule. It complements the official awsevents MCP server rather than
@@ -52,6 +52,7 @@ function text(t: string, structured?: Record<string, unknown>) {
 }
 
 export function createServer(app = new Junction()): McpServer {
+  attachRelay(app);
   const server = new McpServer({ name: 'junction', version: '0.1.0' });
 
   const view = (): SquadView => {
@@ -118,7 +119,9 @@ export function createServer(app = new Junction()): McpServer {
         );
       for (const h of v.coverage.hops.filter((y) => on(y.day)))
         out.push(
-          h.overlap ? `Overlap: ${name(v, h.memberId)} holds ${sessionLabel(v, h.toSessionId)} while another session runs.` : `Can't make the walk: ${name(v, h.memberId)} to ${sessionLabel(v, h.toSessionId)} needs ${h.needMin} min, has ${h.haveMin}.`,
+          h.overlap
+            ? `Overlap: ${name(v, h.memberId)} holds ${sessionLabel(v, h.toSessionId)} while another session runs.`
+            : `Can't make the walk: ${name(v, h.memberId)} to ${sessionLabel(v, h.toSessionId)} needs ${h.needMin} min, has ${h.haveMin}.`,
         );
       return text(out.join('\n') || 'No gaps.', {
         gaps: v.coverage.gaps,
