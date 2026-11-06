@@ -12,3 +12,6 @@ cdk.out/
 fixtures/private/
 *.catalog.json
 .junction/
+
+# Web builds
+dist-demo/
