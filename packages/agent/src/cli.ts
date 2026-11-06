@@ -222,11 +222,12 @@ async function main(argv: string[]): Promise<void> {
 
     case 'catalog': {
       if (sub === 'refresh') {
-        const r = await app.refreshCatalog((n, total) =>
-          process.stdout.write(`\r${n}${total ? ` of ${total}` : ''} sessions`),
-        );
+        const tty = process.stdout.isTTY === true;
+        const r = await app.refreshCatalog((n, total) => {
+          if (tty) process.stdout.write(`\r${n}${total ? ` of ${total}` : ''} sessions`);
+        });
         console.log(
-          `\nCatalog saved: ${r.count} sessions in ${r.pages} pages (totalCount ${r.totalCount ?? 'not reported'}).`,
+          `${tty ? '\n' : ''}Catalog saved: ${r.count} sessions in ${r.pages} pages (totalCount ${r.totalCount ?? 'not reported'}).`,
         );
         if (r.diff.added.length || r.diff.removed.length || r.diff.changed.length)
           console.log(
