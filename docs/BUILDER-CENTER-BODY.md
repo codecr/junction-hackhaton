@@ -2,8 +2,8 @@ Every year my team flies to Las Vegas with the same plan: "let's split up and co
 
 When AWS opened the re:Invent 2026 session catalog through the new **AWS Events API**, I wanted to fix that. **Junction** is a squad-coordination tool. A group of attendees decides together what to cover. Junction shows them, day by day, where the squad is exposed and proposes small changes to each person's own schedule.
 
-**Try it without signing in:** https://junction.gerardo.dev/demo/ (fictional data, runs entirely in your browser)
-**Source:** https://github.com/codecr/junction-hackhaton (MIT)
+**Try it without signing in:** [junction.gerardo.dev/demo](https://junction.gerardo.dev/demo/) (fictional data, runs entirely in your browser)
+**Source:** [github.com/codecr/junction-hackhaton](https://github.com/codecr/junction-hackhaton) (MIT)
 
 ## The constraint that became the design
 
