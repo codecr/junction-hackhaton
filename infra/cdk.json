@@ -1,0 +1,14 @@
+{
+  "app": "npx tsx bin/app.ts",
+  "watch": { "include": [] },
+  "context": {
+    "alertEmail": "gerardo@akarui.cloud",
+    "relayDomain": "api.junction.gerardo.dev",
+    "hostedZoneName": "",
+    "hostedZoneId": "",
+    "reservedConcurrency": 20,
+    "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
+    "@aws-cdk/core:checkSecretUsage": true,
+    "@aws-cdk/core:target-partitions": ["aws"]
+  }
+}
