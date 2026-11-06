@@ -17,3 +17,5 @@ export * from './api-session';
 export * from './claim';
 export * from './feasibility';
 export * from './solver';
+export * from './view';
+export * from './request-sig';
