@@ -12,3 +12,6 @@ schemas
 *.md
 design
 packages/web/src/styles
+.claude/worktrees
+site-dist
+dist-demo

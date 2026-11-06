@@ -37,6 +37,8 @@ export default tseslint.config(
       'fixtures/demo/**',
       'design/**',
       '**/dist-demo/**',
+      '.claude/worktrees/**',
+      'site-dist/**',
     ],
   },
   js.configs.recommended,
