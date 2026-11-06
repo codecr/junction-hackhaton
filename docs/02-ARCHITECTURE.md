@@ -128,6 +128,9 @@ Estimated cost during the hackathon: under 5 USD a month, dominated by CloudFron
 | ADR-015 | CI matrix on Linux, macOS and Windows, LF line endings enforced | Byte-identical solver output is the core promise and the author develops on Windows. `.gitattributes` forces LF so golden fixtures do not drift. |
 | ADR-016 | Local agent UI port is 4848, outside the OAuth callback range | 8484 is the first callback port and Claude Code's MCP setup uses it. |
 | ADR-017 | The web UI picks its data source at build time, and the demo build ships a `connect-src 'none'` CSP | `vite build` talks to the agent at `/api` with the `X-Junction-Secret` from the page's meta tag; `vite build --mode demo` (base `/demo/`) builds the `SquadView` in the browser from `fixtures/demo` with the same core functions. The CSP makes "the demo makes no network requests" something the browser enforces, and `npm run shots` fails if the demo requests anything outside its own files. |
+| ADR-018 | Amplify app connected at the repository root (`amplify.yml` at root), not with monorepo app root `packages/web` | The site is assembled from two sources (`site/landing` and `packages/web/dist-demo`) by `scripts/assemble-site.mjs` into `site-dist/`, which an app root inside `packages/web` cannot reach as an artifact directory. SPA rewrite rules are in `site/amplify-custom-rules.json`, applied in the console. |
+| ADR-019 | Relay reserved concurrency comes from CDK context `reservedConcurrency` (default 20, 0 leaves it unreserved) | New accounts can have a concurrency limit of 10, and reserving 20 then fails the deploy. |
+| ADR-020 | Custom domain only when `relayDomain`, `hostedZoneId` and `hostedZoneName` are all set | `HostedZone.fromHostedZoneAttributes` needs no lookup, so `infra:synth` runs without credentials. Without them the stack outputs the execute-api URL. |
 
 Add new records here as they are made.
 

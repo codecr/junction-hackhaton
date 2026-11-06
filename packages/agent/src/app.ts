@@ -1,6 +1,6 @@
 import {
   buildSquadView,
-  defaultVenueGraph,
+  reinvent2026VenueGraph,
   formatInstant,
   sessionCodeSchema,
   sha256Hex,
@@ -87,7 +87,7 @@ export class Junction {
 
   venueGraph(): VenueGraph {
     const custom = venueGraphSchema.safeParse(readJson(join(junctionHome(), 'venues.json')));
-    return custom.success ? custom.data : defaultVenueGraph;
+    return custom.success ? custom.data : reinvent2026VenueGraph;
   }
 
   // -- Sign-in ---------------------------------------------------------------------------------

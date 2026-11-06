@@ -2,7 +2,7 @@ import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    include: ['packages/*/{src,test}/**/*.test.ts', 'fixtures/**/*.test.ts'],
+    include: ['packages/*/{src,test}/**/*.test.ts', 'infra/test/**/*.test.ts', 'fixtures/**/*.test.ts'],
     exclude: ['**/node_modules/**', 'fixtures/private/**'],
     coverage: {
       provider: 'v8',

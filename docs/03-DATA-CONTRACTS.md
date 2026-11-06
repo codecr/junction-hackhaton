@@ -237,3 +237,18 @@ Everything above is implemented in `packages/core`. These are the places where t
 ### What the tests prove
 
 `solver.property.test.ts` runs the checks of "Properties to test" on random squads, with the rules re-implemented independently in `test/world.ts`: order independence, locked and pinned never moved, declined never added, feasibility, delta at least 50 and equal to an independent recomputation, tolerance, proposals standing alone, no repeated move across rounds with the value always rising, and at most 50 proposals. The golden fixture hash for the demo squad is pinned in `fixtures/generate.test.ts` and must match on Linux, macOS and Windows CI (not yet run: the repository has no remote CI result).
+
+## Addendum: squad server as built (2026-11-06)
+
+Implemented in `packages/relay` (`handler.ts`, `store.ts`, `client.ts`), tests in `packages/relay/src/*.test.ts`.
+
+- **Order of checks.** Body cap (64 KB, 413) then route, then the stored charter (404 if missing or past `expiresAt`), then the request signature against the charter member key, then the nonce (conditional put of `NONCE#<nonce>`, 10 minute TTL; a replay is 401), then the envelope with `openCharter` or `openMessage`. `POST /v1/squads` verifies the request against the leader key inside the submitted charter. A join request verifies against the public key in its body and checks `sha256(utf8(inviteSecret))` against `inviteVerifier` in constant time.
+- **`Authorization: Bearer` is refused** with 401 `bearer-refused` and never echoed.
+- **What an item holds.** The envelope as received (`env`) plus bookkeeping: `mid` (writer, for leave), `seq` (for the conditional seq-increasing put), `at` (server receive time), `ttl`. Join requests hold `publicKey`, `name` (1 to 40 characters, no control characters) and `at`; the invite secret is never stored. Announcements hold `mid` and `at` only.
+- **Announcement body** is exactly `{ "sessionId": "<id>" }`. 201 for the first, 200 with the earliest `memberId` and `announcedAt` for later calls.
+- **Claims.** 201 to the winner, 200 when the winner repeats its claim, 409 `already-claimed` with `winner` and the winning envelope otherwise.
+- **Signals** are keyed by server receive time, not the signed `issuedAt`, so `since` paging cannot be skipped by a backdated note. `GET .../signals?since=` takes an ISO instant or the `cursor` from the previous page; pages hold 100 and say `more`.
+- **`GET /v1/squads/{id}`** returns `{ charter, manifests }`, only manifests of current charter members, with a strong `ETag` (sha256 of the body). `If-None-Match` gives 304.
+- **Leave** (`DELETE .../members/{mid}`) deletes every item that member wrote. **Purge** deletes everything except nonces, which expire on their own so a recorded create request cannot be replayed.
+- A charter must expire in the future and at most 400 days ahead. At most 50 pending join requests per squad (429).
+- Logs carry `route`, `status` and `squadId` only.

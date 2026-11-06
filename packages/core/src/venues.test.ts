@@ -102,3 +102,14 @@ describe('normalizeVenue', () => {
     expect(normalizeVenue('Hall', b)).toBe('a');
   });
 });
+
+describe('reinvent2026VenueGraph', () => {
+  it('tells Caesars Palace from Caesars Forum and maps Wynn/Encore', async () => {
+    const { normalizeVenue, reinvent2026VenueGraph } = await import('./venues');
+    expect(normalizeVenue('Caesars Palace', reinvent2026VenueGraph)).toBe('caesars-palace');
+    expect(normalizeVenue('Caesars Forum', reinvent2026VenueGraph)).toBe('caesars-forum');
+    expect(normalizeVenue('Wynn/Encore', reinvent2026VenueGraph)).toBe('wynn');
+    expect(normalizeVenue('MGM Grand', reinvent2026VenueGraph)).toBe('mgm-grand');
+    expect(normalizeVenue('Venetian', reinvent2026VenueGraph)).toBe('venetian');
+  });
+});

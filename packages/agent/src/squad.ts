@@ -161,7 +161,7 @@ export function createSquad(
       : {}),
     ...(input.lunch ? { lunch: input.lunch } : {}),
     ...(input.maxPerDay ? { caps: { maxPerDay: input.maxPerDay } } : {}),
-    travel: { bufferMin: 5 },
+    travel: { bufferMin: 0 },
     tolerance: 0.2,
   };
   const envelope = signMessage(charter, me.memberId, me.secretKey);

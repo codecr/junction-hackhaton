@@ -132,7 +132,7 @@ function printStatus(view: SquadView): void {
   for (const h of view.coverage.hops) {
     const to = view.sessions[h.toSessionId]?.code ?? h.toSessionId;
     console.log(
-      `Can't make the walk: ${nameOf(view, h.memberId)} to ${to} needs ${h.needMin} min, has ${h.haveMin}`,
+      h.overlap ? `Overlap: ${nameOf(view, h.memberId)} holds ${to} while another session runs (${-h.haveMin} min)` : `Can't make the walk: ${nameOf(view, h.memberId)} to ${to} needs ${h.needMin} min, has ${h.haveMin}`,
     );
   }
   for (const g of view.coverage.gaps)

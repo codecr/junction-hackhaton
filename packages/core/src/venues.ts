@@ -88,3 +88,19 @@ export function walkMinutes(graph: VenueGraph, from: string, to: string): number
   if (!a || !b) return undefined;
   return Math.abs(a.at - b.at);
 }
+
+/**
+ * re:Invent 2026 venues as they appear in the real catalog (Spike 0, 2026-11-06): Wynn/Encore,
+ * Venetian, Caesars Forum, Caesars Palace and MGM Grand. No Mandalay Bay this year. Positions are
+ * approximate walking minutes along the Strip; the demo keeps `defaultVenueGraph`.
+ */
+export const reinvent2026VenueGraph: VenueGraph = {
+  approximate: true,
+  venues: [
+    { id: 'wynn', name: 'Wynn', at: 0, aliases: ['wynn encore', 'wynn las vegas', 'encore'] },
+    { id: 'venetian', name: 'Venetian', at: 14, aliases: ['the venetian', 'venetian expo', 'palazzo'] },
+    { id: 'caesars-forum', name: 'Caesars Forum', at: 28, aliases: ['forum'] },
+    { id: 'caesars-palace', name: 'Caesars Palace', at: 34 },
+    { id: 'mgm-grand', name: 'MGM Grand', at: 62, aliases: ['mgm'] },
+  ],
+};

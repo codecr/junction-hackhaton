@@ -24,9 +24,10 @@
     "shots": "npm run shots -w @junction/web",
     "fixtures": "tsx fixtures/cli.ts",
     "guard": "node scripts/guard-catalog.mjs",
-    "infra:synth": "node scripts/not-yet.mjs infra:synth T3.2 CDK stacks",
-    "infra:diff": "node scripts/not-yet.mjs infra:diff T3.2 CDK stacks",
-    "infra:deploy": "node scripts/not-yet.mjs infra:deploy T3.2 CDK stacks",
+    "site": "node scripts/assemble-site.mjs",
+    "infra:synth": "npm run synth -w @junction/infra",
+    "infra:diff": "npm run diff -w @junction/infra",
+    "infra:deploy": "npm run deploy -w @junction/infra",
     "prepare": "simple-git-hooks || exit 0",
     "build:web": "npm run build -w @junction/web && npm run build:demo -w @junction/web"
   },

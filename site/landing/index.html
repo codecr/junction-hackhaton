@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Junction</title>
+    <meta
+      name="description"
+      content="Cover re:Invent as a team without sharing accounts. Each member keeps their own schedule; Junction shows the squad what is covered and what is not."
+    />
+    <link rel="stylesheet" href="/tokens.css" />
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <header class="top">
+      <span class="wordmark">Junction</span>
+      <nav aria-label="Site">
+        <a href="/demo/">Demo</a>
+        <a href="https://github.com/codecr/junction-hackhaton">Source</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Cover re:Invent as a team without sharing accounts.</h1>
+        <p class="lede">
+          Your squad picks sessions as usual. Junction lays everyone’s day side by side, shows what
+          nobody covers, where two of you planned the same session, and which walks between venues
+          do not fit. Each person keeps their own sign-in and their own schedule.
+        </p>
+        <p class="actions">
+          <a class="button" href="/demo/">Try the demo</a>
+          <a class="quiet" href="https://github.com/codecr/junction-hackhaton">Read the source</a>
+        </p>
+
+        <figure class="lines" aria-labelledby="lines-caption">
+          <svg viewBox="0 0 640 180" role="img" aria-labelledby="lines-caption">
+            <line class="grid" x1="0" y1="30" x2="640" y2="30" />
+            <line class="grid" x1="0" y1="90" x2="640" y2="90" />
+            <line class="grid" x1="0" y1="150" x2="640" y2="150" />
+            <text class="venue" x="0" y="22">Venetian</text>
+            <text class="venue" x="0" y="82">Wynn</text>
+            <text class="venue" x="0" y="142">Mandalay Bay</text>
+
+            <polyline class="m m1" points="110,30 230,30 330,90 520,90" />
+            <polyline class="m m2" points="110,150 250,150 330,90 400,90 520,30" />
+            <polyline class="m m3" points="110,90 210,90 330,90 450,150 520,150" />
+
+            <circle class="meet" cx="330" cy="90" r="11" />
+
+            <circle class="mark m1" cx="110" cy="30" r="6" />
+            <rect class="mark m2" x="104" y="144" width="12" height="12" />
+            <polygon class="mark m3" points="110,82 118,90 110,98 102,90" />
+
+            <text class="who m1" x="530" y="94">Ana</text>
+            <text class="who m2" x="530" y="34">Luis</text>
+            <text class="who m3" x="530" y="154">Mia</text>
+          </svg>
+          <figcaption id="lines-caption">
+            Three schedules across the day. Where the lines meet, the squad is in the same room.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="how" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <div class="steps">
+          <div>
+            <h3>Everyone runs Junction on their own laptop</h3>
+            <p>
+              You sign in with your own AWS Builder ID. Junction reads and changes only your
+              schedule, and your sign-in never leaves your machine.
+            </p>
+          </div>
+          <div>
+            <h3>The squad shares picks, not accounts</h3>
+            <p>
+              Each member publishes a signed list of session codes and priorities. No titles, no
+              email, no tokens. The squad server only passes these lists around, and file exchange
+              works without it.
+            </p>
+          </div>
+          <div>
+            <h3>Every laptop reaches the same suggestions</h3>
+            <p>
+              The same rules run on the same picks, so everyone sees the same proposals: swap to a
+              repeat, drop a duplicate, take a session nobody covers. You accept or decline each one
+              yourself.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>
+        Junction is an unofficial community project built for the re:Invent Event Catalog API
+        Hackathon. It is not affiliated with or endorsed by Amazon Web Services.
+      </p>
+      <p>The demo uses invented sessions and people. It makes no network requests.</p>
+    </footer>
+  </body>
+</html>

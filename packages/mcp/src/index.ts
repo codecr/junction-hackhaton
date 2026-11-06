@@ -118,7 +118,7 @@ export function createServer(app = new Junction()): McpServer {
         );
       for (const h of v.coverage.hops.filter((y) => on(y.day)))
         out.push(
-          `Can't make the walk: ${name(v, h.memberId)} to ${sessionLabel(v, h.toSessionId)} needs ${h.needMin} min, has ${h.haveMin}.`,
+          h.overlap ? `Overlap: ${name(v, h.memberId)} holds ${sessionLabel(v, h.toSessionId)} while another session runs.` : `Can't make the walk: ${name(v, h.memberId)} to ${sessionLabel(v, h.toSessionId)} needs ${h.needMin} min, has ${h.haveMin}.`,
         );
       return text(out.join('\n') || 'No gaps.', {
         gaps: v.coverage.gaps,

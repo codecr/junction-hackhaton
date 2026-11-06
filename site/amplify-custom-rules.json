@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/demo",
+    "target": "/demo/",
+    "status": "301"
+  },
+  {
+    "source": "/demo/<*>",
+    "target": "/demo/index.html",
+    "status": "404-200"
+  }
+]
